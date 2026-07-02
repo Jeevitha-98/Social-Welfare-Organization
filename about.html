@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Welfare Foundation | Loading...</title>
+    <meta name="description" content="Stackly Foundation - Layering support, stacking hope, and building sustainable futures for communities worldwide.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Social Welfare Human-Centric Preloader -->
+    <div id="welfare-preloader">
+        <div class="preloader-bg-overlay">
+            <img src="https://unsplash.com" alt="Smiling children in community" class="bg-narrative-img">
+        </div>
+
+        <div class="preloader-body">
+            
+            <!-- Creative Visual Anchor: Responsive Vector Lifecycle Logo -->
+            <div class="vector-logo-container">
+                <svg xmlns="http://w3.org" viewBox="0 0 100 100" class="welfare-vector">
+                    <!-- Layer 1: Left Growing Leaf (Vector) -->
+                    <path class="vec-leaf-left" d="M35 50 C20 40, 20 20, 45 30 C45 45, 40 50, 35 50 Z" fill="none" stroke="#a5d6a7" stroke-width="2.5" stroke-linecap="round"/>
+                    
+                    <!-- Layer 2: Right Growing Leaf (Vector) -->
+                    <path class="vec-leaf-right" d="M65 50 C80 40, 80 20, 55 30 C55 45, 60 50, 65 50 Z" fill="none" stroke="#2e7d32" stroke-width="2.5" stroke-linecap="round"/>
+                    
+                    <!-- Layer 3: Central Supporting Hands Cradle (Vector) -->
+                    <path class="vec-hands-cradle" d="M30 65 C40 80, 60 80, 70 65 C60 68, 40 68, 30 65 Z" fill="none" stroke="#f57c00" stroke-width="3" stroke-linecap="round"/>
+                    <path class="vec-heart" d="M50 58 C45 52, 40 55, 50 63 C60 55, 55 52, 50 58 Z" fill="#f57c00"/>
+                </svg>
+            </div>
+
+            <!-- Brand Typography -->
+            <h1 class="brand-title">Stackly</h1>
+            <p class="brand-subtext">Welfare Foundation</p>
+
+            <!-- Creative Stacking Block Loader (Symbolizes building blocks of life) -->
+            <div class="building-blocks">
+                <div class="block block-1"></div>
+                <div class="block block-2"></div>
+                <div class="block block-3"></div>
+            </div>
+
+            <!-- Real-time Mission Statement Reveal -->
+            <div class="mission-ticker">
+                <span id="ticker-text">Stacking Hope...</span>
+            </div>
+        </div>
+    </div>
+
+   
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    const preloader = document.getElementById("welfare-preloader");
+    const tickerText = document.getElementById("ticker-text");
+
+    const structuralPhrases = [
+        "Stacking hope...",
+        "Layering community resources...",
+        "Building reliable foundations..."
+    ];
+
+    setTimeout(() => { tickerText.innerText = structuralPhrases[1]; }, 1000);
+    setTimeout(() => { tickerText.innerText = structuralPhrases[2]; }, 2000);
+
+    // Smooth exit animation
+    setTimeout(() => {
+        preloader.style.opacity = "0";
+        preloader.style.transform = "translateY(-40px)";
+        
+        setTimeout(() => {
+            preloader.remove();
+        }, 800);
+
+    }, 3400); 
+});
+
+   </script>
+
+ <!-- Floating Translucent Capsule Header Wrapper -->
+<!-- Fixed Transparent Header Capsule Layer -->
+<!-- Fixed Transparent Header Capsule Layer -->
+<header class="site-header-floating">
+    <div class="header-capsule-container">
+        
+        <!-- Brand Logo Block Area -->
+        <a href="#" class="brand-logo-link" id="logoLink" aria-label="Stackly Home, Refresh Platform">
+            <div class="logo-glow-layer"></div>
+            <img src="./Assests/Social welfare - logo.webp" alt="Stackly Logo" class="brand-logo-img" onerror="this.style.display='none';">
+           
+        </a>
+
+        <!-- Unified Slide-Out Sidebar Container (Exactly 75% Width on Mobile Layout Screens) -->
+        <nav class="navigation-bar" id="navigationBar" aria-label="Primary Platform Navigation">
+            
+            <!-- Core Navigation Menu Links Matrix -->
+            <ul class="menu-links-list" id="menuList">
+                <li class="menu-item"><a href="index.html" class="nav-anchor ">Home</a></li>
+                <li class="menu-item"><a href="about.html" class="nav-anchor active-route">About Us</a></li>
+                <li class="menu-item"><a href="campaigns.html" class="nav-anchor">Campaigns</a></li>
+                <li class="menu-item"><a href="blog.html" class="nav-anchor">Blog</a></li>
+                <li class="menu-item"><a href="contact.html" class="nav-anchor">Contact</a></li>
+            </ul>
+
+            <!-- Nested Access Portal buttons (Keeps layout grouped neatly inside mobile overlays) -->
+            <div class="auth-buttons-group" id="authGroup">
+                <a href="login.html" class="btn-gateway btn-login-glass">Login</a>
+                <a href="signup.html" class="btn-gateway btn-signup-glow">Sign Up</a>
+            </div>
+
+        </nav>
+
+        <!-- Touch Optimized Menu Open/Close Toggle Hamburger Trigger -->
+        <button class="hamburger-menu-trigger" id="hamburgerTrigger" aria-expanded="false" aria-controls="navigationBar" aria-label="Toggle Mobile Viewport Menu Openings">
+            <span class="burger-bar bar-top"></span>
+            <span class="burger-bar bar-mid"></span>
+            <span class="burger-bar bar-bottom"></span>
+        </button>
+
+    </div>
+</header>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const header = document.querySelector(".site-header-floating");
+    const hamburgerTrigger = document.getElementById("hamburgerTrigger");
+    const navAnchors = document.querySelectorAll(".nav-anchor");
+    const bodyElement = document.body;
+
+    // Hamburger State Switch Action Listener
+    hamburgerTrigger.addEventListener("click", () => {
+        const isMenuOpen = header.classList.toggle("mobile-active");
+        hamburgerTrigger.setAttribute("aria-expanded", isMenuOpen);
+
+        // Activates strict backdrop background navigation lock sequence
+        if (isMenuOpen) {
+            bodyElement.classList.add("scroll-locked");
+        } else {
+            bodyElement.classList.remove("scroll-locked");
+        }
+    });
+
+    // Close panel container layout structure when target link executes
+    navAnchors.forEach(anchor => {
+        anchor.addEventListener("click", () => {
+            header.classList.remove("mobile-active");
+            bodyElement.classList.remove("scroll-locked");
+            hamburgerTrigger.setAttribute("aria-expanded", "false");
+        });
+    });
+});
+
+</script>
+
+<!-- Fresh Asymmetrical Layered About Hero Component (SEO Friendly) -->
+<section class="stackly-about-hero-viewport" id="about-hero">
+    
+    <!-- Unified Section Matrix Background Grid with Native Image Asset -->
+    <div class="about-hero-backdrop-container">
+        <!-- High-visibility bright community infrastructure image background element -->
+        <img src="./Assests/about - bg.webp" alt="Bright organic networks mapping community connectivity" class="about-hero-bg-asset-img">
+        <!-- Deep Velvet Theme Core Background Image Matte Overlay matching #0a0f0b -->
+        <div class="about-hero-matte-mask"></div>
+    </div>
+
+    <!-- Radiant Ambient Light Accumulators -->
+    <div class="about-welfare-orb-glow glow-left-emerald"></div>
+    <div class="about-welfare-orb-glow glow-right-amber"></div>
+
+    <div class="about-hero-central-container">
+        <div class="about-asymmetrical-split-grid">
+            
+            <!-- Left Side Column: Narrative Content Presentation Layer -->
+            <div class="about-hero-content-card">
+                
+                <div class="about-hero-badge-pill">
+                    <span class="badge-heart-pulse">♥</span>
+                    <span class="badge-narrative-text">Our Mission & Identity</span>
+                </div>
+
+                <h1 class="about-hero-title-main">
+                    Stacked Intention.<br>
+                    <span class="highlight-green-text">Generational Impact.</span>
+                </h1>
+
+                <p class="about-hero-paragraph-description">
+                    Stackly Foundation is a multi-generational movement dedicated to deploying permanent stepping stones out of crisis ecosystems. By sequentially stacking educational facilities, pure water grids, and preventive medical enclaves, we convert direct global aid into durable local reliance.
+                </p>
+
+                <!-- Creative 404 Rescue Navigation Action Triggers -->
+                <div class="about-hero-button-cluster">
+                    <a href="404.html" class="btn-about-hero-solid error-rescue-route" aria-label="Explore active community campaigns layers via 404 routing safety">
+                        <span>Explore Our Layers</span>
+                        <svg class="about-arrow-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="404.html" class="btn-about-hero-bordered error-rescue-route" aria-label="Inspect audited financial ledger logs via 404 routing safety">
+                        <span>Verify Fiscal Ledger</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side Column: Creative Overlapping Layered Image Composites Frame Block -->
+            <div class="about-layered-visual-chassis">
+                <!-- Abstract glowing geometry accent ring inside layout block -->
+                <div class="visual-glow-ring-accent"></div>
+                
+                <!-- Primary Overlapping Image Frame -->
+                <div class="primary-visual-frame-container">
+                    <img src="./Assests/grp volu.webp" alt="Volunteers deploying community healthcare setups" class="layered-frame-img main-img">
+                </div>
+                
+                <!-- Secondary Offset Floating Image Frame Box -->
+                <div class="secondary-offset-floating-frame">
+                    <img src="./Assests/education.webp" alt="Children receiving interactive modular educational tools" class="layered-frame-img sub-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+
+    /* === Background Media Container Frame Controls === */
+.about-hero-backdrop-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.about-hero-bg-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    /* Subdued brightness ensures white text strings remain perfectly visible */
+    filter: brightness(0.22) contrast(1.02) saturate(1.05);
+    transform: scale(1.01);
+    transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.stackly-about-hero-viewport:hover .about-hero-bg-asset-img {
+    transform: scale(1.04); /* Seamless background image breathing zoom */
+}
+
+.about-hero-matte-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    /* Soft directional mask bleed locks colors directly to preloader theme token values (#0a0f0b) */
+    background: linear-gradient(90deg, 
+                    rgba(10, 15, 11, 0.98) 0%, 
+                    rgba(10, 15, 11, 0.88) 50%, 
+                    rgba(10, 15, 11, 0.35) 100%),
+                linear-gradient(0deg, 
+                    rgba(10, 15, 11, 1.00) 0%, 
+                    transparent 30%);
+}
+
+    /* About Hero Design Tokens Configuration Map - Matches Velvet Preloader Backdrop */
+:root {
+    --preloader-dark-bg: #0a0f0b; /* Absolute deep organic charcoal matching preloader */
+    --font-pure-white: #ffffff;
+    --font-muted-white: #b0bec5;
+    
+    --stackly-active-green: #2e7d32;
+    --stackly-hover-green: #1b5e20;
+    --stackly-neon-glow: #4caf50;
+    --card-surface-charcoal: rgba(25, 35, 28, 0.45);
+    --card-border-subtle: rgba(255, 255, 255, 0.08);
+    --fluid-bezier: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* === Structural Hero Frame & Tighter Padding Groundwork === */
+.stackly-about-hero-viewport {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 8% 60px 8%; 
+    background-color: var(--preloader-dark-bg);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.about-hero-backdrop-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.about-hero-matte-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, var(--preloader-dark-bg) 0%, transparent 50%, var(--preloader-dark-bg) 100%);
+}
+
+/* Ambient Radial Soft Orbs Accents */
+.about-welfare-orb-glow { position: absolute; border-radius: 50%; z-index: 2; pointer-events: none; filter: blur(120px); }
+.glow-left-emerald { width: 500px; height: 500px; background: radial-gradient(circle, rgba(76, 175, 80, 0.22) 0%, transparent 70%); top: 20%; left: -10%; }
+.glow-right-amber { width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 183, 77, 0.1) 0%, transparent 75%); bottom: -5%; right: 5%; }
+
+.about-hero-central-container { width: 100%; max-width: 1440px; margin: 0 auto; position: relative; z-index: 3; }
+
+/* === ASYMMETRICAL 2-COLUMN GRID SYSTEM LAYOUT CONFIGURATION === */
+.about-asymmetrical-split-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Splits screen field into balanced asymmetrical panels */
+    gap: 60px;
+    align-items: center;
+}
+
+/* Column 01 Layout: Narrative Text Stacks */
+.about-hero-content-card {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: entranceRevealLeft 0.85s var(--fluid-bezier) forwards;
+}
+
+.about-hero-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(46, 125, 50, 0.25);
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+.about-hero-badge-pill:hover { border-color: var(--stackly-neon-glow); box-shadow: 0 0 15px rgba(76, 175, 80, 0.4); }
+.badge-heart-pulse { color: #e53935; font-size: 1.1rem; animation: heartPumpRateAbout 1.4s infinite ease-in-out; display: inline-block; }
+.badge-narrative-text { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--font-pure-white); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
+
+.about-hero-title-main {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: var(--font-pure-white);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+}
+.highlight-green-text { color: var(--stackly-neon-glow); transition: text-shadow 0.4s; }
+.highlight-green-text:hover { text-shadow: 0 0 25px rgba(76, 175, 80, 0.6); }
+
+.about-hero-paragraph-description {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--font-muted-white);
+    margin-bottom: 35px;
+}
+
+.about-hero-button-cluster { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.btn-about-hero-solid { display: inline-flex; align-items: center; gap: 10px; font-family: 'Segoe UI', system-ui, sans-serif; text-decoration: none; color: var(--font-pure-white); background-color: var(--stackly-active-green); border: 1px solid var(--stackly-active-green); padding: 16px 34px; border-radius: 50px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3); transition: all 0.4s var(--fluid-bezier); }
+.btn-about-hero-solid:hover { background-color: var(--stackly-hover-green); border-color: var(--stackly-hover-green); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(76, 175, 80, 0.5); }
+.about-arrow-vector-icon { width: 16px; height: 16px; transition: transform 0.3s ease; }
+.btn-about-hero-solid:hover .about-arrow-vector-icon { transform: translateX(6px); }
+
+.btn-about-hero-bordered { display: inline-flex; font-family: 'Segoe UI', system-ui, sans-serif; text-decoration: none; color: var(--font-pure-white); background: rgba(255,255,255,0.02); border: 2px solid var(--stackly-active-green); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 0.95rem; transition: all 0.4s var(--fluid-bezier); }
+.btn-about-hero-bordered:hover { background: var(--stackly-active-green); transform: translateY(-2px); box-shadow: 0 6px 25px rgba(46, 125, 50, 0.4); }
+
+/* === Column 02 Layout: Overlapping Floating Layered Images Architecture === */
+.about-layered-visual-chassis {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(40px);
+    animation: entranceRevealRight 0.85s var(--fluid-bezier) 0.15s forwards;
+}
+
+.visual-glow-ring-accent {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 2px dashed rgba(76, 175, 80, 0.25);
+    border-radius: 50%;
+    top: 15%;
+    left: 10%;
+    animation: rotateSlowly 35s linear infinite;
+    pointer-events: none;
+}
+
+/* Primary Image Container Box */
+.primary-visual-frame-container {
+    position: absolute;
+    width: 75%;
+    height: 380px;
+    top: 0;
+    left: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--card-border-subtle);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+    z-index: 2;
+    transition: transform 0.5s var(--fluid-bezier);
+}
+
+/* Secondary Floating Offset Image Box */
+.secondary-offset-floating-frame {
+    position: absolute;
+    width: 55%;
+    height: 240px;
+    bottom: 0;
+    right: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid var(--stackly-active-green);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    z-index: 3;
+    transition: transform 0.5s var(--fluid-bezier);
+}
+
+.layered-frame-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.02);
+    transition: transform 0.8s var(--fluid-bezier);
+}
+
+/* Micro hover tracking parallax effects on graphic frame layers */
+.about-layered-visual-chassis:hover .primary-visual-frame-container { transform: translateY(-8px) rotate(-1deg); }
+.about-layered-visual-chassis:hover .secondary-offset-floating-frame { transform: translate(8px, -8px) rotate(1deg); }
+.about-layered-visual-chassis:hover .layered-frame-img { transform: scale(1.04); }
+
+/* === Layout Animation Tracks === */
+@keyframes entranceRevealLeft { to { transform: translateX(0); opacity: 1; } }
+@keyframes entranceRevealRight { to { transform: translateX(0); opacity: 1; } }
+@keyframes rotateSlowly { to { transform: rotate(360deg); } }
+@keyframes heartPumpRateAbout { 0%, 100% { transform: scale(1); } 30% { transform: scale(1.2); } }
+
+/* === DEVICE SIZING MATRIX RESPONSIVENESS OVERLAYS === */
+@media (max-width: 1024px) {
+    .about-hero-title-main { font-size: 3rem; }
+    .about-layered-visual-chassis { height: 400px; }
+    .primary-visual-frame-container { height: 320px; }
+    .secondary-offset-floating-frame { height: 200px; }
+}
+
+@media (max-width: 768px) {
+    .stackly-about-hero-viewport { padding-top: 140px; }
+    
+    /* Collapses the grid safely into stacked vertical items for mobile screens */
+    .about-asymmetrical-split-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .about-hero-content-card { display: flex; flex-direction: column; align-items: center; }
+    .about-hero-title-main { font-size: 2.4rem; }
+    .about-hero-paragraph-description { font-size: 1rem; }
+    .about-hero-button-cluster { width: 100%; justify-content: center; }
+    .btn-about-hero-solid, .btn-about-hero-bordered { width: 100%; justify-content: center; }
+    
+    .about-layered-visual-chassis { max-width: 480px; margin: 0 auto; height: 360px; }
+    .primary-visual-frame-container { height: 280px; width: 80%; }
+    .secondary-offset-floating-frame { height: 180px; width: 55%; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    const visualChassis = document.querySelector(".about-layered-visual-chassis");
+    const primaryFrame = document.querySelector(".primary-visual-frame-container");
+    const secondaryFrame = document.querySelector(".secondary-offset-floating-frame");
+
+    // Tracks fine desktop pointing devices to generate multi-layered visual offsets
+    if (window.matchMedia("(pointer: fine)").matches && visualChassis) {
+        
+        visualChassis.addEventListener("mousemove", (event) => {
+            const width = visualChassis.clientWidth;
+            const height = visualChassis.clientHeight;
+
+            const rect = visualChassis.getBoundingClientRect();
+            const mouseX = (event.clientX - rect.left) / width - 0.5;
+            const mouseY = (event.clientY - rect.top) / height - 0.5;
+
+            // Opposing calculation speeds map depth between frames
+            const pX = mouseX * -20;
+            const pY = mouseY * -20;
+            const sX = mouseX * 25;
+            const sY = mouseY * 25;
+
+            primaryFrame.style.transform = `translate(${pX}px, ${pY}px) rotate(-0.5deg)`;
+            secondaryFrame.style.transform = `translate(${sX}px, ${sY}px) rotate(0.5deg)`;
+        });
+
+        visualChassis.addEventListener("mouseleave", () => {
+            primaryFrame.style.transform = `translate(0px, 0px) rotate(0deg)`;
+            secondaryFrame.style.transform = `translate(0px, 0px) rotate(0deg)`;
+        });
+    }
+});
+
+</script>
+
+<!-- Humanitarian Generational Pillars Section (SEO Friendly & Accessibility Validated Architecture) -->
+<section class="stackly-pillars-section" id="pillars-framework" aria-label="Stackly Foundation Generational Pillars and Structural Methodology">
+    
+    <!-- Background Narrative Canvas with Explicit Image Tag -->
+    <div class="pillars-media-backdrop">
+        <!-- Bright, welcoming environmental recovery graphic texture pattern -->
+        <img src="./Assests/hero- bg.webp" alt="Intricate interlocking root systems mapping community support and social recovery loops" class="pillars-bg-asset-img">
+        <!-- Velvet charcoal overlay mask blending flawlessly into #0a0f0b -->
+        <div class="pillars-matte-mask"></div>
+    </div>
+
+    <!-- Radiant Ambient Light Accumulators -->
+    <div class="pillars-orb-glow glow-emerald"></div>
+    <div class="pillars-orb-glow glow-amber"></div>
+
+    <div class="pillars-central-container">
+        
+        <!-- Section Header Node with Compressed Spatial Margins -->
+        <div class="pillars-section-header">
+            <span class="pillars-mini-tag">Methodology Engine</span>
+            <h2 class="pillars-title-main">Our Generational Pillars</h2>
+            <p class="pillars-paragraph-description">
+                We do not deploy superficial fixes. Our multi-generational operational model builds self-reliance by layering fundamental resources sequentially over verified community blocks.
+            </p>
+        </div>
+
+        <!-- Creative Staggered Masonry Card Grid (Concept of "Layering Support") -->
+        <div class="pillars-masonry-grid">
+            
+            <!-- Pillar Card 01: Sustainable Empowerment -->
+            <article class="pillar-glow-card stack-layer-01">
+                <div class="card-glow-backplate"></div>
+                <div class="pillar-card-inner">
+                    <div class="pillar-vector-sphere sphere-green">
+                        <!-- Custom Vector Only Icon: Layered Foundations -->
+                        <svg class="pillar-svg-asset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-card-title">Durable Empowerment</h3>
+                    <p class="pillar-card-para">We hand over full ownership of filtration systems and modular classrooms to localized enclaves, training municipal managers to maintain the grid permanently.</p>
+                    <!-- Armed with 404 Route Recovery Safety Parameters -->
+                    <a href="404.html" class="btn-pillar-action-glow error-rescue-route" aria-label="Inspect empowerment blueprints via 404 navigation rescue">
+                        <span>Inspect Blueprints</span>
+                        <svg class="pillar-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Pillar Card 02: Generational Stewardship -->
+            <article class="pillar-glow-card stack-layer-02">
+                <div class="card-glow-backplate"></div>
+                <div class="pillar-card-inner">
+                    <div class="pillar-vector-sphere sphere-gold">
+                        <!-- Custom Vector Only Icon: Supportive Shield / Sprout -->
+                        <svg class="pillar-svg-asset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M12 8v8M9 11l3-3 3 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-card-title">Resource Stewardship</h3>
+                    <p class="pillar-card-para">Maximizing resource lifespans by allocating alternative energy backups. Every field setup runs on independent micro-solar cells to eliminate grid reliance links.</p>
+                    <a href="404.html" class="btn-pillar-action-glow error-rescue-route" aria-label="Verify environmental models via 404 navigation rescue">
+                        <span>Verify Stewardship Model</span>
+                        <svg class="pillar-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Pillar Card 03: Radical Fiscal Integrity -->
+            <article class="pillar-glow-card stack-layer-03">
+                <div class="card-glow-backplate"></div>
+                <div class="pillar-card-inner">
+                    <div class="pillar-vector-sphere sphere-blue">
+                        <!-- Custom Vector Only Icon: Transparent Cryptographic Block -->
+                        <svg class="pillar-svg-asset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-card-title">Radical Transparency</h3>
+                    <p class="pillar-card-para">We trace funding routes down to the individual dollar block. Donors receive live telemetry logging receipts, auditing raw component expenditures in real time.</p>
+                    <a href="404.html" class="btn-pillar-action-glow error-rescue-route" aria-label="Audit operational ledger files via 404 navigation rescue">
+                        <span>Audit Live Ledger</span>
+                        <svg class="pillar-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Pillars Framework Design Tokens Configuration Maps */
+:root {
+    /* Absolute deep organic charcoal backdrop matching your preloader theme exactly */
+    --preloader-dark-bg: #0a0f0b; 
+    
+    /* Enforced high contrast font color tokens mapping absolute visibility */
+    --font-pure-white: #ffffff;
+    --font-muted-white: #b0bec5;
+    
+    --stackly-welfare-green: #2e7d32;
+    --stackly-neon-glow: #4caf50;
+    --gold-sunlight-accent: #f57c00;
+    --info-blue: #0288d1;
+    --card-surface-charcoal: rgba(25, 35, 28, 0.45);
+    --card-border-subtle: rgba(255, 255, 255, 0.08);
+    --fluid-bezier: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* === Structural Frame & Tighter Padding Groundwork === */
+.stackly-pillars-section {
+    position: relative;
+    width: 100%;
+    /* Tight padding parameters isolate dead vertical space completely */
+    padding: 60px 8%; 
+    background-color: var(--preloader-dark-bg);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Background Media Framework Layout */
+.pillars-media-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.pillars-bg-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.13; /* Subdued backdrop ensures white text strings remain exceptionally clean */
+    filter: saturate(0.1);
+    transform: scale(1.01);
+    transition: transform 1.5s var(--fluid-bezier);
+}
+
+.stackly-pillars-section:hover .pillars-bg-asset-img {
+    transform: scale(1.04);
+}
+
+.pillars-matte-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Multi-directional gradient blends smoothly into adjacent page content */
+    background: linear-gradient(180deg, var(--preloader-dark-bg) 0%, transparent 50%, var(--preloader-dark-bg) 100%);
+}
+
+/* Ambient Soft Lighting Orbs */
+.pillars-orb-glow {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+    filter: blur(100px);
+    opacity: 0.4;
+}
+.glow-emerald { width: 450px; height: 450px; background: radial-gradient(circle, rgba(76,175,80,0.25) 0%, transparent 70%); top: -10%; left: 5%; }
+.glow-amber { width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,183,77,0.1) 0%, transparent 75%); bottom: -5%; right: 10%; }
+
+.pillars-central-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+/* === Header Blocks with Less Spacing === */
+.pillars-section-header {
+    max-width: 740px;
+    margin-bottom: 45px; /* Slashed vertical margin snaps the text tightly to the grid cards */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s var(--fluid-bezier), transform 0.6s var(--fluid-bezier);
+}
+
+.pillars-mini-tag {
+    display: inline-block;
+    color: var(--stackly-neon-glow);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.pillars-title-main {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--font-pure-white); /* Locked White Readability Header */
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.pillars-paragraph-description {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--font-muted-white);
+}
+
+/* === CREATIVE STAGGERED MASONRY GRID SYSTEM === */
+.pillars-masonry-grid {
+    display: grid;
+    /* 3-Column fluid track map alignment */
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* Card Module & Glassmorphic Backdrop Structure */
+.pillar-glow-card {
+    position: relative;
+    background-color: var(--card-surface-charcoal);
+    border: 1px solid var(--card-border-subtle);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.5s var(--fluid-bezier), box-shadow 0.5s var(--fluid-bezier), border-color 0.5s;
+}
+
+/* Custom interactive mouse cursor tracking radial light mask hook */
+.card-glow-backplate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(76, 175, 80, 0.16) 0%, transparent 65%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.pillar-glow-card:hover .card-glow-backplate {
+    opacity: 1;
+}
+
+.pillar-glow-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(46, 125, 50, 0.15);
+    border-color: var(--stackly-neon-glow);
+}
+
+/* Creative Staggered Layout Masonry Spacers for Large Displays */
+@media (min-width: 993px) {
+    .stack-layer-01 { transform: translateY(0px); }
+    .stack-layer-02 { transform: translateY(25px); } /* Offsets second card slightly down */
+    .stack-layer-03 { transform: translateY(50px); } /* Offsets third card further down */
+    
+    .pillar-glow-card:hover.stack-layer-02 { transform: translateY(19px); }
+    .pillar-glow-card:hover.stack-layer-03 { transform: translateY(44px); }
+}
+
+.pillar-card-inner {
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
+/* Sphere Vector Icon Settings */
+.pillar-vector-sphere {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 22px;
+    transition: transform 0.4s var(--fluid-bezier);
+}
+
+.pillar-svg-asset {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+}
+
+.sphere-green { background-color: rgba(46, 125, 50, 0.15); color: var(--stackly-neon-glow); }
+.sphere-gold { background-color: rgba(255, 183, 77, 0.12); color: var(--gold-sunlight-accent); }
+.sphere-blue { background-color: rgba(2, 136, 209, 0.12); color: var(--info-blue); }
+
+.pillar-glow-card:hover .pillar-vector-sphere { transform: scale(1.08) rotate(-3deg); }
+
+/* Typography Matrix - Absolute White High Contrast Readability Core */
+.pillar-card-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--font-pure-white); /* Locked White Heading */
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.pillar-card-para {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--font-muted-white); /* High visibility gray subtext description string */
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+/* Micro-Interactive Action Links (Equipped with 404 Route Parameters Overlay Styles) */
+.btn-pillar-action-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--font-pure-white);
+    transition: color 0.3s ease;
+}
+
+.pillar-btn-arrow {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s var(--fluid-bezier);
+}
+
+.btn-pillar-action-glow:hover {
+    color: var(--stackly-neon-glow);
+}
+
+.btn-pillar-action-glow:hover .pillar-btn-arrow {
+    transform: translateX(5px);
+}
+
+/* === Scroll Observer Activation Injections === */
+.stackly-pillars-section.active-reveal .pillars-section-header { opacity: 1; transform: translateY(0); }
+.stackly-pillars-section.active-reveal .pillar-glow-card { opacity: 1; }
+
+/* Stagger card entry thresholds rules */
+.stackly-pillars-section.active-reveal .pillar-glow-card:nth-child(1) { transition: transform 0.6s var(--fluid-bezier) 0.1s, opacity 0.6s; }
+.stackly-pillars-section.active-reveal .pillar-glow-card:nth-child(2) { transition: transform 0.6s var(--fluid-bezier) 0.22s, opacity 0.6s; }
+.stackly-pillars-section.active-reveal .pillar-glow-card:nth-child(3) { transition: transform 0.6s var(--fluid-bezier) 0.35s, opacity 0.6s; }
+
+/* === Strict Device Sizing Responsiveness === */
+@media (max-width: 992px) {
+    .stackly-pillars-section { padding-bottom: 60px; } /* Clears masonry offset requirements */
+    .pillars-title-main { font-size: 2.2rem; }
+    .pillars-masonry-grid { gap: 24px; }
+    .pillar-card-inner { padding: 30px 24px; }
+}
+
+@media (max-width: 600px) {
+    .stackly-pillars-section { padding: 45px 6%; }
+    .pillars-title-main { font-size: 2rem; }
+    .pillars-section-header { text-align: center; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    const pillarsSection = document.getElementById("pillars-framework");
+    const pillarCards = document.querySelectorAll(".pillar-glow-card");
+
+    // 1. Dynamic Coordinate Capture for Hover-Glow Backplates (Fine Desktop Pointer Check)
+    if (window.matchMedia("(pointer: fine)").matches) {
+        pillarCards.forEach(card => {
+            card.addEventListener("mousemove", (event) => {
+                const rect = card.getBoundingClientRect();
+                
+                // Track spatial mouse coordinate position inside target container elements
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+
+                card.style.setProperty("--mouse-x", `${x}px`);
+                card.style.setProperty("--mouse-y", `${y}px`);
+            });
+        });
+    }
+
+    // 2. SEO-Friendly Scroll Intersection Observer Lifecycle Engine
+    const observerConfiguration = {
+        root: null,
+        threshold: 0.12, // Launch animation once 12% of container surfaces inside viewport bounds
+        rootMargin: "0px"
+    };
+
+    const triggerEntranceSequence = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                pillarsSection.classList.add("active-reveal");
+                
+                // Forces loading animation coordinates updates
+                pillarCards.forEach(card => {
+                    card.classList.add("active-reveal");
+                });
+                
+                observer.unobserve(entry.target); // Kill window observer thread loop to optimize runtime RAM
+            }
+        });
+    };
+
+    const sectionObserver = new IntersectionObserver(triggerEntranceSequence, observerConfiguration);
+    if (pillarsSection) {
+        sectionObserver.observe(pillarsSection);
+    }
+});
+
+</script>
+</body>
