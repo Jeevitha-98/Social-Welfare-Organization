@@ -1,0 +1,470 @@
+/* Welfare Brand Design System Tokens */
+:root {
+    --welfare-green: #2e7d32;      /* Deep life-giving green */
+    --earth-gold: #f57c00;         /* Warm helper amber/orange */
+    --soft-mint: #e8f5e9;          /* Welcoming light green tint */
+    --deep-charcoal: #121813;     /* Soft dark background */
+    --text-light: #f4f6f4;
+    --transition-bezier: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    overflow-x: hidden;
+}
+
+/* === Welfare Preloader Main Layer === */
+#welfare-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--deep-charcoal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    overflow: hidden;
+    transition: opacity 0.8s var(--transition-bezier), transform 0.8s var(--transition-bezier);
+}
+
+.preloader-bg-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.12; 
+}
+
+.bg-narrative-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: gentleScale 6s ease-out forwards;
+}
+
+.preloader-body {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* === Vector Icon Layout & Path Animations === */
+.vector-logo-container {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.welfare-vector {
+    width: 100%;
+    height: 100%;
+}
+
+/* Smooth sequential drawing/fading paths */
+.vec-hands-cradle {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawVectorPath 2s ease-out forwards, steadyPulse 2.5s infinite ease-in-out 1.5s;
+}
+
+.vec-leaf-left {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawVectorPath 2s ease-out 0.4s forwards;
+}
+
+.vec-leaf-right {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawVectorPath 2s ease-out 0.7s forwards;
+}
+
+.vec-heart {
+    opacity: 0;
+    transform-origin: center;
+    animation: fadeInHeart 1.5s ease-out 1.2s forwards;
+}
+
+/* Typography Identity */
+.brand-title {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 4px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.brand-subtext {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 1rem;
+    color: var(--welfare-green);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+/* Building Blocks Progress Bar Layout */
+.building-blocks {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    height: 24px;
+    margin-bottom: 25px;
+}
+
+.block {
+    width: 45px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    position: relative;
+    transition: var(--transition-bezier);
+}
+
+.block-1 { height: 8px; animation: loadBlock1 2.8s var(--transition-bezier) forwards; }
+.block-2 { height: 16px; animation: loadBlock2 2.8s var(--transition-bezier) forwards; }
+.block-3 { height: 24px; animation: loadBlock3 2.8s var(--transition-bezier) forwards; }
+
+@keyframes loadBlock1 {
+    30%, 100% { background-color: var(--welfare-green); box-shadow: 0 0 15px var(--welfare-green); }
+}
+@keyframes loadBlock2 {
+    60%, 100% { background-color: var(--earth-gold); box-shadow: 0 0 15px var(--earth-gold); }
+}
+@keyframes loadBlock3 {
+    90%, 100% { background-color: #ffffff; box-shadow: 0 0 15px #ffffff; }
+}
+
+.mission-ticker {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.9rem;
+    color: #a5d6a7;
+    letter-spacing: 1px;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+/* === Functional Keyframes === */
+@keyframes drawVectorPath {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes fadeInHeart {
+    to { opacity: 1; }
+}
+
+@keyframes gentleScale {
+    from { transform: scale(1.08); }
+    to { transform: scale(1.0); }
+}
+
+@keyframes steadyPulse {
+    0%, 100% { filter: drop-shadow(0 0 2px transparent); }
+    50% { filter: drop-shadow(0 0 8px var(--earth-gold)); }
+}
+
+.main-homepage-preview {
+    padding: 100px 10%;
+    text-align: center;
+    font-family: system-ui, sans-serif;
+}
+.main-homepage-preview h2 { color: var(--welfare-green); margin-bottom: 12px; }
+
+@media (max-width: 600px) {
+    .brand-title { font-size: 2.8rem; }
+    .brand-subtext { font-size: 0.85rem; letter-spacing: 4px; }
+}
+
+
+/* Custom Variable Framework Syncing */
+/* Welfare Organization Branding Framework Design Tokens */
+/* Welfare Organization Branding Framework Design Tokens */
+:root {
+    --glass-background: rgba(240, 245, 241, 0.75);
+    --glass-border: rgba(46, 125, 50, 0.12);
+    
+    /* FIX FIX FIX: Absolute static black token enforcing extreme contrast over any scrolled white content background */
+    --fixed-contrast-black: #000000;
+    
+    --vibrant-green: #2e7d32;
+    --pure-white: #ffffff;
+    --smooth-curve: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* === STATIC FIXED DESKTOP CAPSULE LAYOUT ENGINE === */
+.site-header-floating {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 24px 0;
+    transition: padding 0.4s var(--smooth-curve);
+}
+
+.site-header-floating.scrolled-active {
+    padding: 12px 0;
+}
+
+.header-capsule-container {
+    max-width: 1320px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 14px 40px;
+    background: black;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(46, 125, 50, 0.04);
+    transition: all 0.4s var(--smooth-curve);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.site-header-floating.scrolled-active .header-capsule-container {
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(46, 125, 50, 0.2);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* Left Brand Logo Alignment Column */
+.brand-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    position: relative;
+    z-index: 1002;
+    flex-shrink: 0;
+}
+
+.brand-logo-img { width: 150px; height: 70px; object-fit: contain; }
+
+.brand-logo-text { 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    color: white; /* Locked Solid Black text content */
+    letter-spacing: -0.5px; 
+}
+
+/* Desktop Navigation Link Track Architecture */
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 40px;
+}
+
+.menu-links-list {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+
+.nav-anchor {
+    text-decoration: none;
+    color:white; /* Locked Solid Black menu text elements */
+    font-size: 0.95rem;
+    font-weight: 600;
+    position: relative;
+    padding: 6px 2px;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.nav-anchor::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--vibrant-green);
+    transition: var(--smooth-curve) 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-anchor:hover, .nav-anchor.active-route { color: var(--vibrant-green); }
+.nav-anchor:hover::after, .nav-anchor.active-route::after { width: 100%; }
+
+/* Desktop Authorization Portal Buttons Row Wrapper */
+.auth-buttons-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.btn-gateway {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 50px;
+    transition: var(--smooth-curve) 0.3s;
+    white-space: nowrap;
+}
+
+.btn-login-glass {
+    color: white; /* Enforced dark text framework */
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.btn-login-glass:hover { background: rgba(0, 0, 0, 0.12); transform: translateY(-1px); }
+
+.btn-signup-glow {
+    color: var(--pure-white);
+    background: var(--vibrant-green);
+    border: 1px solid var(--vibrant-green);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.18);
+}
+.btn-signup-glow:hover { background: #1b5e20; transform: translateY(-1px); }
+
+/* Hamburger Trigger Hidden on Desktop Displays */
+.hamburger-menu-trigger { display: none; }
+
+/* Global Scroll Freeze Flag */
+body.scroll-locked { overflow: hidden !important; height: 100vh !important; }
+
+
+/* === FIXED 75% DRAW SIDEBAR MEDIA RULES === */
+@media (max-width: 992px) {
+    
+    .hamburger-menu-trigger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 16px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1002;
+        position: relative;
+    }
+    
+    .burger-bar {
+        width: 100%;
+        height: 2.5px;
+        background-color: white; /* Mobile Hamburger bars locked to fixed Solid Black color */
+        border-radius: 2px;
+        transition: transform 0.4s var(--smooth-curve), opacity 0.3s ease, background-color 0.4s;
+    }
+
+    .header-capsule-container {
+        padding: 14px 24px;
+        border-radius: 30px;
+    }
+
+    /* Right-aligned mobile menu sidebar drawer panel */
+    .navigation-bar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;    /* EXACT MATCH SPECIFICATION LAYOUT LIMIT */
+        height: 100vh;
+        background: rgba(18, 23, 19, 0.98); /* Deep warm corporate charcoal welfare tone layer */
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+        margin-left: 0;
+        z-index: 1001;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 120px 40px 60px 40px;
+        gap: 45px;
+        
+        opacity: 0;
+        visibility: hidden;
+        transition: right 0.5s cubic-bezier(0.76, 0, 0.24, 1), 
+                    opacity 0.4s var(--smooth-curve), 
+                    visibility 0.4s var(--smooth-curve);
+    }
+
+    /* Stack links vertically inside overlay framework menu tracks */
+    .menu-links-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-anchor {
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, 0.85); /* Stays white for high readability inside the dark overlay */
+        padding: 4px 0;
+    }
+    .nav-anchor:hover, .nav-anchor.active-route { color: var(--pure-white); }
+    .nav-anchor::after { display: none; }
+
+    /* Stack authentication login clusters vertically underneath links */
+    .auth-buttons-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 14px;
+        margin-top: 15px;
+    }
+
+    .btn-gateway {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .btn-login-glass {
+        color: var(--pure-white);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-login-glass:hover { background: rgba(255, 255, 255, 0.15); }
+    
+    .btn-signup-glow {
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.25);
+    }
+
+    /* === INTERACTIVE INJECTION STATE MANAGEMENT === */
+    .site-header-floating.mobile-active .navigation-bar {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Change hamburger line colors inside the active layout overlay view */
+    .site-header-floating.mobile-active .burger-bar {
+        background-color: var(--pure-white);
+    }
+
+    /* Morphing Hamburger Cross Form Transformations */
+    .site-header-floating.mobile-active .bar-top { transform: translateY(6.5px) rotate(45deg); }
+    .site-header-floating.mobile-active .bar-mid { opacity: 0; transform: scaleX(0); }
+    .site-header-floating.mobile-active .bar-bottom { transform: translateY(-7px) rotate(-45deg); }
+}
