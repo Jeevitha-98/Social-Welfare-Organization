@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Welfare Foundation</title>
+    <meta name="description" content="Stackly Foundation - Layering support, stacking hope, and building sustainable futures for communities worldwide.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <div id="welfare-preloader">
+       
+
+        <div class="preloader-body">
+            
+            <!-- Creative Visual Anchor: Responsive Vector Lifecycle Logo -->
+            <div class="vector-logo-container">
+                <svg xmlns="http://w3.org" viewBox="0 0 100 100" class="welfare-vector">
+                    <!-- Layer 1: Left Growing Leaf (Vector) -->
+                    <path class="vec-leaf-left" d="M35 50 C20 40, 20 20, 45 30 C45 45, 40 50, 35 50 Z" fill="none" stroke="#a5d6a7" stroke-width="2.5" stroke-linecap="round"/>
+                    
+                    <!-- Layer 2: Right Growing Leaf (Vector) -->
+                    <path class="vec-leaf-right" d="M65 50 C80 40, 80 20, 55 30 C55 45, 60 50, 65 50 Z" fill="none" stroke="#2e7d32" stroke-width="2.5" stroke-linecap="round"/>
+                    
+                    <!-- Layer 3: Central Supporting Hands Cradle (Vector) -->
+                    <path class="vec-hands-cradle" d="M30 65 C40 80, 60 80, 70 65 C60 68, 40 68, 30 65 Z" fill="none" stroke="#f57c00" stroke-width="3" stroke-linecap="round"/>
+                    <path class="vec-heart" d="M50 58 C45 52, 40 55, 50 63 C60 55, 55 52, 50 58 Z" fill="#f57c00"/>
+                </svg>
+            </div>
+
+            <!-- Brand Typography -->
+            <h1 class="brand-title">Stackly</h1>
+            <p class="brand-subtext">Welfare Foundation</p>
+
+            <!-- Creative Stacking Block Loader (Symbolizes building blocks of life) -->
+            <div class="building-blocks">
+                <div class="block block-1"></div>
+                <div class="block block-2"></div>
+                <div class="block block-3"></div>
+            </div>
+
+            <!-- Real-time Mission Statement Reveal -->
+            <div class="mission-ticker">
+                <span id="ticker-text">Stacking Hope...</span>
+            </div>
+        </div>
+    </div>
+
+   
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    const preloader = document.getElementById("welfare-preloader");
+    const tickerText = document.getElementById("ticker-text");
+
+    const structuralPhrases = [
+        "Stacking hope...",
+        "Layering community resources...",
+        "Building reliable foundations..."
+    ];
+
+    setTimeout(() => { tickerText.innerText = structuralPhrases[1]; }, 1000);
+    setTimeout(() => { tickerText.innerText = structuralPhrases[2]; }, 2000);
+
+    // Smooth exit animation
+    setTimeout(() => {
+        preloader.style.opacity = "0";
+        preloader.style.transform = "translateY(-40px)";
+        
+        setTimeout(() => {
+            preloader.remove();
+        }, 800);
+
+    }, 3400); 
+});
+
+   </script>
+
+ <!-- Floating Translucent Capsule Header Wrapper -->
+<!-- Fixed Transparent Header Capsule Layer -->
+<!-- Fixed Transparent Header Capsule Layer -->
+<header class="site-header-floating">
+    <div class="header-capsule-container">
+        
+        <!-- Brand Logo Block Area -->
+        <a href="#" class="brand-logo-link" id="logoLink" aria-label="Stackly Home, Refresh Platform">
+            <div class="logo-glow-layer"></div>
+            <img src="./Assests/Social welfare - logo.webp" alt="Stackly Logo" class="brand-logo-img" onerror="this.style.display='none';">
+           
+        </a>
+
+        <!-- Unified Slide-Out Sidebar Container (Exactly 75% Width on Mobile Layout Screens) -->
+        <nav class="navigation-bar" id="navigationBar" aria-label="Primary Platform Navigation">
+            
+            <!-- Core Navigation Menu Links Matrix -->
+            <ul class="menu-links-list" id="menuList">
+                <li class="menu-item"><a href="index.html" class="nav-anchor active-route">Home</a></li>
+                <li class="menu-item"><a href="about.html" class="nav-anchor">About Us</a></li>
+                <li class="menu-item"><a href="campaigns.html" class="nav-anchor">Campaigns</a></li>
+                <li class="menu-item"><a href="blog.html" class="nav-anchor">Blog</a></li>
+                <li class="menu-item"><a href="contact.html" class="nav-anchor">Contact</a></li>
+            </ul>
+
+            <!-- Nested Access Portal buttons (Keeps layout grouped neatly inside mobile overlays) -->
+            <div class="auth-buttons-group" id="authGroup">
+                <a href="login.html" class="btn-gateway btn-login-glass">Login</a>
+                <a href="signup.html" class="btn-gateway btn-signup-glow">Sign Up</a>
+            </div>
+
+        </nav>
+
+        <!-- Touch Optimized Menu Open/Close Toggle Hamburger Trigger -->
+        <button class="hamburger-menu-trigger" id="hamburgerTrigger" aria-expanded="false" aria-controls="navigationBar" aria-label="Toggle Mobile Viewport Menu Openings">
+            <span class="burger-bar bar-top"></span>
+            <span class="burger-bar bar-mid"></span>
+            <span class="burger-bar bar-bottom"></span>
+        </button>
+
+    </div>
+</header>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const header = document.querySelector(".site-header-floating");
+    const hamburgerTrigger = document.getElementById("hamburgerTrigger");
+    const navAnchors = document.querySelectorAll(".nav-anchor");
+    const bodyElement = document.body;
+
+    // Hamburger State Switch Action Listener
+    hamburgerTrigger.addEventListener("click", () => {
+        const isMenuOpen = header.classList.toggle("mobile-active");
+        hamburgerTrigger.setAttribute("aria-expanded", isMenuOpen);
+
+        // Activates strict backdrop background navigation lock sequence
+        if (isMenuOpen) {
+            bodyElement.classList.add("scroll-locked");
+        } else {
+            bodyElement.classList.remove("scroll-locked");
+        }
+    });
+
+    // Close panel container layout structure when target link executes
+    navAnchors.forEach(anchor => {
+        anchor.addEventListener("click", () => {
+            header.classList.remove("mobile-active");
+            bodyElement.classList.remove("scroll-locked");
+            hamburgerTrigger.setAttribute("aria-expanded", "false");
+        });
+    });
+});
+
+</script>
+
+    <!-- Main Semantic Header Container for SEO crawling -->
+    <main>
+        <section class="contact-hero" aria-label="Contact Section Title Header">
+            
+            <!-- Optimized Semantic Responsive Image Component for SEO Performance -->
+            <picture class="hero-bg-wrapper">
+                <source media="(max-width: 600px)" srcset="./Assests/clean water.webp" />
+                <source media="(max-width: 1200px)" srcset="./Assests/healthcare.webp" />
+                <img 
+                    src="./Assests/education.webp" 
+                    alt="Abstract dark emerald luxury geometric background texture" 
+                    class="hero-bg-img"
+                    loading="eager"
+                    decoding="async">
+            </picture>
+
+            <!-- Glow Effect Decorative Orbs -->
+            <div class="ambient-glow orb-one" aria-hidden="true"></div>
+            <div class="ambient-glow orb-two" aria-hidden="true"></div>
+
+            <!-- Main Interactive Content Container Layout -->
+            <div class="hero-content-wrapper">
+                <header class="text-block">
+                    <span class="category-tag">DIRECT PORTAL CONNECT</span>
+                    <h1 class="glow-text">Initiate Secure <br><span class="accent-gold">Communication</span></h1>
+                    <p class="description">
+                        Bridge the gap between vision and reality. Whether seeking institutional integration, administrative clearing, or secure account recovery—our dedicated desk is standing by.
+                    </p>
+                </header>
+
+                <!-- Modern Interactive Utility Callouts -->
+                <div class="interactive-grid">
+                    <div class="glow-card" data-tilt>
+                        <div class="card-glow-overlay"></div>
+                        <span class="card-icon"></span>
+                        <h3>Priority Desk</h3>
+                        <p>Direct response execution routing setup</p>
+                        <a href="#form-section" class="card-action">Initialize Route &rsaquo;</a>
+                    </div>
+
+                    <div class="glow-card" data-tilt>
+                        <div class="card-glow-overlay"></div>
+                        <span class="card-icon"></span>
+                        <h3>Key Inquiries</h3>
+                        <p>Private corporate solutions deployment channels</p>
+                        <a href="mailto:vault@innercircle.com" class="card-action">Request Protocol &rsaquo;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Interactive Scroll Indicator Animation -->
+            <div class="scroll-indicator" aria-hidden="true">
+                <div class="mouse-wheel"></div>
+                <span>DISCOVER CHANNELS</span>
+            </div>
+
+        </section>
+    </main>
+
+   <style>
+    /* Custom variables matching existing theme schema */
+:root {
+    --bg-dark: #030d0a;
+    --card-green-rgba: rgba(8, 29, 23, 0.65);
+    --gold: #dfb141;
+    --gold-glow: rgba(223, 177, 65, 0.45);
+    --emerald-glow: rgba(18, 68, 54, 0.6);
+    --border-color: rgba(18, 44, 36, 0.5);
+    --border-hover: rgba(223, 177, 65, 0.4);
+    --txt-main: #ffffff;
+    --txt-muted: #9bb0aa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Inter', sans-serif;
+    color: var(--txt-main);
+    overflow-x: hidden;
+}
+
+/* Hero Section Base Wrapper Styling Container */
+.contact-hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    z-index: 1;
+    background: radial-gradient(circle at 50% 50%, transparent 10%, var(--bg-dark) 90%);
+}
+
+/* Background Image Layer Optimization Engine */
+.hero-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: luminosity;
+    opacity: 0.18;
+    transform: scale(1.05);
+    transition: transform 10s ease-out;
+}
+
+.contact-hero:hover .hero-bg-img {
+    transform: scale(1.01); /* Slow fluid background push animation */
+}
+
+/* Ambient Backdrop Glow Orbs Setup */
+.ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.45;
+    animation: pulseGlow 8s infinite alternate ease-in-out;
+}
+
+.orb-one {
+    width: 45vw;
+    height: 45vw;
+    background: var(--emerald-glow);
+    top: -10%;
+    right: -5%;
+}
+
+.orb-two {
+    width: 35vw;
+    height: 35vw;
+    background: var(--gold-glow);
+    bottom: -5%;
+    left: -5%;
+    animation-delay: -4s;
+}
+
+@keyframes pulseGlow {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.35; }
+    100% { transform: translate(4vw, -3vw) scale(1.15); opacity: 0.55; }
+}
+
+/* Core Layout Structure Grid Placement Wrapper */
+.hero-content-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Typography Headings Styling Layout Rules */
+.text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.category-tag {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.glow-text {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(32px, 4.5vw, 56px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    text-shadow: 0 0 40px rgba(255,255,255,0.05);
+}
+
+.accent-gold {
+    color: var(--gold);
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 0 35px var(--gold-glow);
+}
+
+.description {
+    font-size: clamp(14px, 1.2vw, 17px);
+    color: white;
+    line-height: 1.7;
+    max-width: 540px;
+    font-weight: 300;
+}
+
+/* Card Presentation Mechanics and Dynamic Shadow Glow Glow Effects */
+.interactive-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    perspective: 1000px; /* Activates 3D space tracking environment depth */
+}
+
+.glow-card {
+    position: relative;
+    background-color: var(--card-green-rgba);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+/* Core Card Hover Glow System UI Engine */
+.glow-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 15px 35px rgba(5, 20, 16, 0.6), 0 0 25px rgba(223, 177, 65, 0.12);
+}
+
+/* Radial Glow Overlay Follow Cursor Target Placeholder */
+.card-glow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(223,177,65,0.08), transparent 40%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.card-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+    transform: translateZ(20px); /* Extrudes elements on 3D depth axis overlay layer */
+}
+
+.glow-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: var(--txt-main);
+    letter-spacing: 0.5px;
+    transform: translateZ(25px);
+}
+
+.glow-card p {
+    font-size: 13px;
+    color: var(--txt-muted);
+    font-weight: 300;
+    line-height: 1.5;
+    transform: translateZ(15px);
+}
+
+.card-action {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    transform: translateZ(20px);
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.glow-card:hover .card-action {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+/* Decorative Footer Wheel Unit */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.6;
+}
+
+.scroll-indicator span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--txt-muted);
+}
+
+.mouse-wheel {
+    width: 18px;
+    height: 28px;
+    border: 1px solid var(--txt-muted);
+    border-radius: 10px;
+    position: relative;
+}
+
+.mouse-wheel::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 6px;
+    background-color: var(--gold);
+    border-radius: 1px;
+    animation: scrollMove 1.8s infinite ease-in-out;
+}
+
+@keyframes scrollMove {
+    0% { top: 6px; opacity: 1; }
+    50% { top: 14px; opacity: 0.1; }
+    100% { top: 6px; opacity: 1; }
+}
+
+/* High Fidelity Responsive Screen View Media Adapters */
+@media (max-width: 1024px) {
+    .hero-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+    .description {
+        margin: 0 auto;
+    }
+    .interactive-grid {
+        max-width: 550px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .glow-card {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-hero {
+        padding: 100px 24px 60px 24px;
+    }
+    .scroll-indicator {
+        display: none; /* Hide clutter on compact viewport rows */
+    }
+}
+
+   </style>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.glow-card');
+
+    cards.forEach(card => {
+        // 1. Interactive Mouse Pointer Cursor Proximity Glow Calculation Handler
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            
+            // Derive tracking coordinates mapping localized element square bounds space
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Pass execution tracking pointers directly to standard CSS layout variables
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+
+            // 2. High-Performance 3D Perspective Tilt Mechanics Simulation Vector Engine
+            const cardWidth = rect.width;
+            const cardHeight = rect.height;
+            
+            // Normalize axis calculation parameters (-0.5 to 0.5 index tracking)
+            const centerX = x / cardWidth - 0.5;
+            const centerY = y / cardHeight - 0.5;
+
+            // Set max deflection threshold indexes (e.g., max 10 degrees tilt swing limit counters)
+            const tiltX = (centerY * 12).toFixed(2);
+            const tiltY = (-centerX * 12).toFixed(2);
+
+            card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
+        });
+
+        // 3. Reset Layout Transformations Instantly Upon Blur Mouseout States
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+            card.style.setProperty('--mouse-x', '0px');
+            card.style.setProperty('--mouse-y', '0px');
+        });
+    });
+});
+
+   </script>
+</body>
+</html>
