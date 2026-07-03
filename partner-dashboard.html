@@ -1,0 +1,2898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Integration Dashboard | HopeHands Grid</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-root-body">
+
+    <!-- MASTER HEADER LAYER -->
+    <header class="dash-master-header">
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+        
+        <!-- Left: Brand Logo Node with Dashboard Refresh Action Mapping -->
+        <div class="header-brand-block" id="dashBrandRefresh" title="Refresh Dashboard Engine">
+            <!-- Inline template placeholder image slot for the organization branding logo asset -->
+            
+            <span class="brand-logo-text">Stackly // <span>Partner Grid</span></span>
+        </div>
+
+        <!-- Right: Real-time Telemetry Profiles Controls Block -->
+       <div class="header-profile-ecosystem">
+            
+    <!-- FIX: Converted from div to an anchor tag targeting your 404 page directly -->
+    <a href="404.html" class="bell-alert-trigger" aria-label="View notifications queue">
+        <svg class="header-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+        <div class="bell-pulse-indicator"></div>
+    </a>
+
+
+            <div class="header-divider" aria-hidden="true"></div>
+
+            <!-- Profile Info Display Terminal holding Extracted User Node Properties -->
+            <div class="user-terminal-display">
+                <div class="user-avatar-sphere">
+                    <svg class="avatar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <div class="user-meta-strings">
+                    <span class="meta-label">PARTNER IDENTITY ACTIVE</span>
+                    <!-- Dynamic Name Hook placeholder logic displays parsed string properties -->
+                    <span class="parsed-user-string" id="headerProfileName">Loading User Node...</span>
+                </div>
+            </div>
+
+        </div>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Open Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+    </header>
+
+    <!-- MAIN VIEWPORT CONTAINER LAYER -->
+    <div class="dash-viewport-wrapper">
+        
+        <!-- SIDEBAR PLATFORM NAVIGATION CONTROL -->
+        <nav class="dash-sidebar-panel" aria-label="Dashboard platform controls hierarchy">
+            <div class="sidebar-links-stack">
+                
+                <!-- Menu Node 1: Metrics Overview Dashboard -->
+                <button class="side-nav-anchor active" data-target-section="allocation-metrics-dashboard">
+                    <svg class="sidebar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="9"></rect>
+                        <rect x="14" y="3" width="7" height="5"></rect>
+                        <rect x="14" y="12" width="7" height="9"></rect>
+                        <rect x="3" y="16" width="7" height="5"></rect>
+                    </svg>
+                    <span>ALLOCATION METRICS</span>
+                </button>
+
+                <!-- Menu Node 2: Regional Operational Deployment Cells -->
+                <button class="side-nav-anchor" data-target-section="operational-deployment-cells">
+                    <svg class="sidebar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <span>OPERATIONAL CELLS</span>
+                </button>
+
+                <!-- Menu Node 3: Open Audit Cash Ledger Registry -->
+                <button class="side-nav-anchor" data-target-section="open-audit-ledger-registry">
+                    <svg class="sidebar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <span>OPEN AUDIT LEDGER</span>
+                </button>
+
+                <!-- Menu Node 4: Resource Distribution Protocols -->
+                <button class="side-nav-anchor" data-target-section="resource-distribution-protocols">
+                    <svg class="sidebar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>DISTRIBUTION CHANNELS</span>
+                </button>
+
+                <!-- Menu Node 5: Corporate Impact Partner Metrics -->
+                <button class="side-nav-anchor" data-target-section="corporate-impact-partner-metrics">
+                    <svg class="sidebar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>PARTNERSHIP PROFILE</span>
+                </button>
+
+            </div>
+
+            <!-- Absolute Base Layer Logout Navigation Action Anchor -->
+            <button class="sidebar-logout-trigger" id="dashLogoutTrigger" title="Secure Terminate Platform Connection Session">
+                <svg class="logout-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                <span>TERMINATE GRID SESSION</span>
+            </button>
+        </nav>
+
+        <!-- MASTER VIEWPORT VIEWABLE NODE STACK -->
+        <main class="dash-content-canvas-panel" id="dashMainCanvas">
+            
+            <!-- PAGE COMPONENT 1: ALLOCATION METRICS DASHBOARD -->
+           <!-- PAGE COMPONENT 1: ENHANCED ALLOCATION METRICS DASHBOARD -->
+<section id="allocation-metrics-dashboard" class="canvas-dynamic-page active-page" aria-labelledby="metrics-title">
+    
+    <!-- Verified Layered Background Infrastructure using requested img tag -->
+    <div class="metrics-bg-canvas">
+        <img src="./Assests/digital edu.webp" 
+             alt="Abstract futuristic technical node networks, representing social welfare asset routing" 
+             loading="lazy" 
+             class="metrics-canvas-image">
+        <div class="metrics-canvas-curtain"></div>
+    </div>
+
+    <!-- Glowing Ambient Energy Vectors -->
+    <div class="metrics-plasma-orb orb-alpha-glow"></div>
+    <div class="metrics-plasma-orb orb-beta-glow"></div>
+
+    <div class="metrics-inner-grid">
+        
+        <!-- Header Utility Row -->
+        <header class="metrics-panel-header">
+            <div class="header-strings">
+                <span class="telemetry-pill">LIVE TELEMETRY MATRIX</span>
+                <h2 id="metrics-title">Allocation Metrics Overview</h2>
+            </div>
+            <!-- Creative 404 Navigation Anchor -->
+            <a href="404.html" class="metrics-fallback-trigger" title="Simulate System Disconnect Error Route">
+                <span>FORCE DISCONNECT LAYER</span>
+                <svg class="trigger-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </header>
+
+        <!-- 3-Column Premium Glassmorphic Data Analytics Grid -->
+        <div class="metrics-cards-ecosystem">
+            
+            <!-- Data Node 1: Capital Routing Matrix -->
+            <article class="analytics-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                
+                    <div class="card-vector-box">
+                        <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>Capital Routing Index</h3>
+                </header>
+                <div class="card-numeric-display">
+                    <span class="metric-big-num text-glow-sweep">$1,424,900</span>
+                    <span class="metric-percentage pos-trend">+14.2%</span>
+                </div>
+                <div class="metric-mini-bar-track">
+                    <div class="metric-mini-bar-fill" style="width: 82%;"></div>
+                </div>
+                <p class="card-descriptive-text">Verified capital streams routed straight to deep-well hydration projects and mobile clinics.</p>
+            </article>
+
+            <!-- Data Node 2: Network Sync Factor -->
+            <article class="analytics-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                
+                    <div class="card-vector-box">
+                        <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Field Sync Factor</h3>
+                </header>
+                <div class="card-numeric-display">
+                    <span class="metric-big-num">98.64%</span>
+                    <span class="metric-percentage pos-trend">OPTIMAL</span>
+                </div>
+                <div class="metric-mini-bar-track">
+                    <div class="metric-mini-bar-fill emerald-fill" style="width: 98%;"></div>
+                </div>
+                <p class="card-descriptive-text">Active data pipeline synchronization rating across decentralized group operational assemblies.</p>
+            </article>
+
+            <!-- Data Node 3: Active Impact Footprint -->
+            <article class="analytics-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                
+                    <div class="card-vector-box">
+                        <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Impact Footprint</h3>
+                </header>
+                <div class="card-numeric-display">
+                    <span class="metric-big-num">14,200+</span>
+                    <span class="metric-percentage stable-trend">LIVES</span>
+                </div>
+                <div class="metric-mini-bar-track">
+                    <div class="metric-mini-bar-fill amber-fill" style="width: 68%;"></div>
+                </div>
+                <p class="card-descriptive-text">Marginalized family units secured with direct sustainable nutrition and cloud education nodes.</p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- ENHANCED ALLOCATION METRICS COMPONENT INTERACTION MECHANICS --- */
+.canvas-dynamic-page {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 75px);
+    box-sizing: border-box;
+}
+
+/* 1. Balanced Contrast Stacking Depth - Image Fully Visible & Colorful */
+.metrics-bg-canvas {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Under section content layout wrappers */
+    overflow: hidden;
+}
+
+.metrics-canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Balanced color filters match the target aesthetic without severe brightness washing */
+    filter: brightness(60%) contrast(110%) saturate(75%);
+    transform: scale(1.02);
+    animation: metricCanvasPan 45s infinite alternate ease-in-out;
+}
+
+.metrics-canvas-curtain {
+    position: absolute;
+    inset: 0;
+    /* Soft dark tech gradient curtains balance raw lighting arrays securely */
+    background: linear-gradient(
+        180deg,
+        rgba(7, 10, 14, 0.85) 0%,
+        rgba(14, 20, 26, 0.60) 60%,
+        #070a0e 100%
+    );
+    z-index: 2; /* Sits directly over picture asset, under content grids */
+}
+
+/* 2. Soft Ambient Plasma Energy Fields */
+.metrics-plasma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    z-index: 2;
+    opacity: 0.15;
+    pointer-events: none;
+    animation: metricOrbDrift 25s infinite alternate ease-in-out;
+}
+.orb-alpha-glow {
+    width: 450px;
+    height: 450px;
+    background: #1b5e20;
+    top: -10%;
+    left: 10%;
+}
+.orb-beta-glow {
+    width: 400px;
+    height: 400px;
+    background: #81c784;
+    bottom: -5%;
+    right: 5%;
+    animation-delay: -6s;
+}
+
+/* 3. Central Content Framing Layer */
+.metrics-inner-grid {
+    position: relative;
+    z-index: 3; /* Highest priority unlocks cursor mouse interactions and text visibility */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Page Component Header Group */
+.metrics-panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.telemetry-pill {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #81c784;
+    margin-bottom: 8px;
+}
+
+.metrics-panel-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Creative 404 Route Button Trigger */
+.metrics-fallback-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(198, 40, 40, 0.05);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.trigger-vector {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+}
+
+.metrics-fallback-trigger:hover {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 4. 3-Column Responsive Interactive Grid Architecture */
+.metrics-cards-ecosystem {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+/* 5. Glassmorphic Analytics Cards with Active Focus & Glow Layers */
+.analytics-glass-card {
+    position: relative;
+    background: rgba(14, 19, 26, 0.65);
+    border: 1px solid rgba(129, 199, 132, 0.12);
+    border-radius: 14px;
+    padding: 30px;
+    overflow: hidden;
+    outline: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* Flashlight cursor tracking overlay background layer */
+.card-flashlight-sweep {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--sweep-x, 50%) var(--sweep-y, 50%), rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.analytics-glass-card:hover .card-flashlight-sweep,
+.analytics-glass-card:focus .card-flashlight-sweep {
+    opacity: 1;
+}
+
+.analytics-glass-card:hover, .analytics-glass-card:focus {
+    transform: translateY(-5px);
+    border-color: rgba(129, 199, 132, 0.35);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(46, 125, 50, 0.08);
+}
+
+/* Card Header Tiers */
+.card-identity-tier {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.card-vector-box {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    transition: all 0.3s ease;
+}
+
+.card-svg {
+    width: 16px;
+    height: 16px;
+}
+
+.analytics-glass-card:hover .card-vector-box,
+.analytics-glass-card:focus .card-vector-box {
+    color: #81c784;
+    background-color: rgba(46, 125, 50, 0.12);
+    border-color: rgba(129, 199, 132, 0.2);
+}
+
+.card-identity-tier h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.1px;
+}
+
+/* Numeric Readouts & Text Glow Sweeps */
+.card-numeric-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.metric-big-num {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.text-glow-sweep {
+    background: linear-gradient(90deg, #ffffff, #81c784, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: metricTitleSweep 6s linear infinite;
+}
+
+.metric-percentage {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+.pos-trend { color: #66bb6a; }
+.stable-trend { color: #94a3b8; }
+
+/* Mini Progress Progress Bars */
+.metric-mini-bar-track {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.metric-mini-bar-fill {
+    height: 100%;
+    background-color: #2e7d32;
+    border-radius: 4px;
+    box-shadow: 0 0 8px #2e7d32;
+}
+.emerald-fill { background-color: #4caf50; box-shadow: 0 0 8px #4caf50; }
+.amber-fill { background-color: #ffa726; box-shadow: 0 0 8px #ffa726; }
+
+.card-descriptive-text {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+}
+
+/* 6. Motion Arrays Keyframes */
+@keyframes metricCanvasPan {
+    0% { transform: scale(1.02) translate(0px, 0px); }
+    100% { transform: scale(1.06) translate(-10px, -5px); }
+}
+
+@keyframes metricOrbDrift {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(20px, -15px) scale(1.04); }
+}
+
+@keyframes metricTitleSweep {
+    to { background-position: 200% center; }
+}
+
+/* Viewport Adjustments for Main Body Containers */
+@media (max-width: 768px) {
+    .metrics-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .metrics-fallback-trigger {
+        width: 100%;
+    }
+}
+
+</style>
+
+
+           <!-- PAGE COMPONENT 2: ENHANCED REGIONAL OPERATIONAL DEPLOYMENT CELLS -->
+<section id="operational-deployment-cells" class="canvas-dynamic-page" aria-labelledby="cells-title">
+    
+    <!-- Immersive Background Canvas using requested img tag -->
+    <div class="cells-bg-canvas">
+        <img src="./Assests/education.webp" 
+             alt="Vibrant geographic grid blueprint outlining global community deployment matrices" 
+             loading="lazy" 
+             class="cells-canvas-image">
+        <div class="cells-canvas-curtain"></div>
+    </div>
+
+    <!-- Soft Ambient Plasma Energy Fields -->
+    <div class="cells-plasma-orb orb-north-glow"></div>
+    <div class="cells-plasma-orb orb-south-glow"></div>
+
+    <div class="cells-inner-grid">
+        
+        <!-- Header Utility Row -->
+        <header class="cells-panel-header">
+            <div class="header-strings">
+                <span class="telemetry-pill">DECENTRALIZED OPERATIONS</span>
+                <h2 id="cells-title">Operational Deployment Cells</h2>
+            </div>
+            <!-- Creative 404 Navigation Anchor -->
+            <a href="404.html" class="cells-fallback-trigger" title="Simulate Mission Link Disconnect Route">
+                <span>TERMINATE CELL NODE</span>
+                <svg class="trigger-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </header>
+
+        <!-- Asymmetrical Multi-Row Active Cell Deployment Log Grid -->
+        <div class="cells-log-stack">
+            
+            <!-- Cell Row 1 -->
+            <article class="cell-terminal-row" tabindex="0">
+                <div class="row-flashlight-sweep"></div>
+                <div class="cell-status-cluster">
+                    <div class="cell-ping-wave critical-ping"></div>
+                    <div class="cell-blip-dot critical-dot"></div>
+                </div>
+                <div class="cell-core-details">
+                    <span class="cell-id">CELL_NODE // SLM-04</span>
+                    <h3>Salem Quadrant Hydration Net</h3>
+                    <p>Installing deep-well filtration matrix networks inside drought-impacted communities.</p>
+                </div>
+                <div class="cell-meta-metrics">
+                    <span class="meta-label">DEPLOYMENT STABILITY</span>
+                    <span class="meta-value value-critical">74% CAPACITY</span>
+                </div>
+            </article>
+
+            <!-- Cell Row 2 -->
+            <article class="cell-terminal-row" tabindex="0">
+                <div class="row-flashlight-sweep"></div>
+                <div class="cell-status-cluster">
+                    <div class="cell-ping-wave active-ping"></div>
+                    <div class="cell-blip-dot active-dot"></div>
+                </div>
+                <div class="cell-core-details">
+                    <span class="cell-id">CELL_NODE // MED-09</span>
+                    <h3>Mobile Pediatric Outreach Hubs</h3>
+                    <p>Deploying off-road clinical support vans equipped with life-saving medicine vectors.</p>
+                </div>
+                <div class="cell-meta-metrics">
+                    <span class="meta-label">DEPLOYMENT STABILITY</span>
+                    <span class="meta-value value-optimal">OPTIMAL SYNC LINK</span>
+                </div>
+            </article>
+
+            <!-- Cell Row 3 -->
+            <article class="cell-terminal-row" tabindex="0">
+                <div class="row-flashlight-sweep"></div>
+                <div class="cell-status-cluster">
+                    <div class="cell-ping-wave active-ping"></div>
+                    <div class="cell-blip-dot active-dot"></div>
+                </div>
+                <div class="cell-core-details">
+                    <span class="cell-id">CELL_NODE // EDU-12</span>
+                    <h3>Solar Off-Grid Cloud Learning Matrix</h3>
+                    <p>Equipping remote village classrooms with open-source solar-powered digital tablets.</p>
+                </div>
+                <div class="cell-meta-metrics">
+                    <span class="meta-label">DEPLOYMENT STABILITY</span>
+                    <span class="meta-value value-optimal">91% DISPATCH RATIO</span>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- ENHANCED OPERATIONAL CELLS INTERACTION MECHANICS --- */
+
+/* 1. Balanced Contrast Stacking Depth - Image Fully Visible & Colorful */
+.cells-bg-canvas {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Below content layers */
+    overflow: hidden;
+}
+
+.cells-canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Keeps rich color vectors fully visible without washing out text layers */
+    filter: brightness(55%) contrast(105%) saturate(80%);
+    transform: scale(1.02);
+    animation: cellsCanvasPan 50s infinite alternate ease-in-out;
+}
+
+.cells-canvas-curtain {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 10, 14, 0.88) 0%,
+        rgba(11, 22, 14, 0.65) 60%,
+        #070a0e 100%
+    );
+    z-index: 2; /* Directly over image, under text blocks */
+}
+
+/* 2. Soft Ambient Plasma Energy Fields */
+.cells-plasma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 2;
+    opacity: 0.14;
+    pointer-events: none;
+    animation: cellsOrbDrift 28s infinite alternate ease-in-out;
+}
+.orb-north-glow {
+    width: 480px;
+    height: 480px;
+    background: #2e7d32;
+    top: -5%;
+    right: 8%;
+}
+.orb-south-glow {
+    width: 420px;
+    height: 420px;
+    background: #81c784;
+    bottom: -10%;
+    left: 8%;
+    animation-delay: -7s;
+}
+
+/* 3. Central Content Framing Layer */
+.cells-inner-grid {
+    position: relative;
+    z-index: 3; /* Unlocks cursor mouse clicks and complete content visibility */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Page Component Header Group */
+.cells-panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.cells-panel-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Creative 404 Route Button Trigger */
+.cells-fallback-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(198, 40, 40, 0.05);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cells-fallback-trigger:hover {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 4. Multi-Row Terminal List Layout */
+.cells-log-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Premium Terminal Rows with Flashlight Tracking & Glow Effects */
+.cell-terminal-row {
+    position: relative;
+    background: rgba(14, 19, 26, 0.65);
+    border: 1px solid rgba(129, 199, 132, 0.12);
+    border-left: 4px solid #2e7d32; /* Welfare signature green bar */
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    outline: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* Flashlight tracking backdrop layer */
+.row-flashlight-sweep {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--row-x, 50%) var(--row-y, 50%), rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cell-terminal-row:hover .row-flashlight-sweep,
+.cell-terminal-row:focus .row-flashlight-sweep {
+    opacity: 1;
+}
+
+.cell-terminal-row:hover, .cell-terminal-row:focus {
+    transform: translateX(8px);
+    border-color: rgba(129, 199, 132, 0.35);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(46, 125, 50, 0.08);
+}
+
+/* Real-Time Blinking Status Radar Wave */
+.cell-status-cluster {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 25px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.cell-blip-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cell-ping-wave {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: cellBlink 2.2s infinite ease-out;
+}
+
+/* Critical Cell Color Variations */
+.critical-dot { background-color: #ef5350; box-shadow: 0 0 8px #ef5350; }
+.critical-ping { background-color: #ef5350; }
+
+/* Optimal Active Cell Color Variations */
+.active-dot { background-color: #66bb6a; box-shadow: 0 0 8px #66bb6a; }
+.active-ping { background-color: #66bb6a; }
+
+/* Text Content Tier */
+.cell-core-details {
+    flex: 1;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    padding-right: 30px;
+}
+
+.cell-id {
+    display: block;
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--dash-neon-welfare);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.cell-core-details h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+}
+
+.cell-core-details p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* Right Metric Metadata Block */
+.cell-meta-metrics {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.value-critical { color: #ef5350; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px;}
+.value-optimal { color: #66bb6a; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px;}
+
+/* 5. Keyframes */
+@keyframes cellsCanvasPan {
+    0% { transform: scale(1.02) translate(0px, 0px); }
+    100% { transform: scale(1.07) translate(-12px, -6px); }
+}
+
+@keyframes cellsOrbDrift {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(25px, -15px) scale(1.05); }
+}
+
+@keyframes cellBlink {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(3.8); opacity: 0; }
+}
+
+/* Viewport Adjustments */
+@media (max-width: 900px) {
+    .cell-terminal-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .cell-status-cluster {
+        margin-right: 0;
+    }
+    .cell-meta-metrics {
+        text-align: left;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 15px;
+        width: 100%;
+    }
+    .cells-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .cells-fallback-trigger {
+        width: 100%;
+    }
+}
+
+</style>
+
+<script>
+    // --- 5. OPERATIONAL CELL ROWS KINETIC LIGHTING TRACK LOOP ---
+const terminalRows = document.querySelectorAll('.cell-terminal-row');
+
+terminalRows.forEach(row => {
+    row.addEventListener('mousemove', (e) => {
+        // Compute position inside element bounds
+        const bounds = row.getBoundingClientRect();
+        const computeX = ((e.clientX - bounds.left) / bounds.width) * 100;
+        const computeY = ((e.clientY - bounds.top) / bounds.height) * 100;
+
+        // Route properties dynamically to the active element style context
+        row.style.setProperty('--row-x', `${computeX}%`);
+        row.style.setProperty('--row-y', `${computeY}%`);
+    });
+});
+
+</script>
+
+            <!-- PAGE COMPONENT 3: OPEN AUDIT CASH LEDGER REGISTRY -->
+           <!-- PAGE COMPONENT 3: ENHANCED OPEN AUDIT CASH LEDGER REGISTRY -->
+<section id="open-audit-ledger-registry" class="canvas-dynamic-page" aria-labelledby="ledger-title">
+    
+    <!-- Immersive Background Canvas using requested img tag -->
+    <div class="ledger-bg-canvas">
+        <img src="./Assests/grp volu.webp" 
+             alt="Vibrant financial matrix streams mapping corporate resource transparently across sectors" 
+             loading="lazy" 
+             class="ledger-canvas-image">
+        <div class="ledger-canvas-curtain"></div>
+    </div>
+
+    <!-- Soft Ambient Plasma Energy Fields -->
+    <div class="ledger-plasma-orb orb-east-glow"></div>
+    <div class="ledger-plasma-orb orb-west-glow"></div>
+
+    <div class="ledger-inner-grid">
+        
+        <!-- Header Utility Row -->
+        <header class="ledger-panel-header">
+            <div class="header-strings">
+                <span class="telemetry-pill">PUBLIC AUDIT COMPLIANCE</span>
+                <h2 id="ledger-title">Open Audit Cash Ledger Registry</h2>
+            </div>
+            <!-- Creative 404 Navigation Anchor -->
+            <a href="404.html" class="ledger-fallback-trigger" title="Simulate Ledger Transaction Stream Disconnect Route">
+                <span>BREAK TRANSACTION GATEWAY</span>
+                <svg class="trigger-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </header>
+
+        <!-- Immersive Tabular Ledger Infrastructure Container Area -->
+        <div class="ledger-table-wrapper" tabindex="0">
+            <div class="table-flashlight-sweep"></div>
+            
+            <table class="ledger-core-table">
+                <thead>
+                    <tr>
+                        <th scope="col">TRANSACTION HASH / ID</th>
+                        <th scope="col">TARGET SECTOR CELL</th>
+                        <th scope="col">ALLOCATED CAPITAL</th>
+                        <th scope="col">AUDIT COMPLIANCE STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <!-- Table Item Row 1 -->
+                    <tr class="ledger-data-row">
+                        <td class="hash-id-text">TXN_NODE // #8F2A90D</td>
+                        <td class="cell-sector-text">Hydration Net [SLM-04]</td>
+                        <td class="capital-value-text">$37,000.00</td>
+                        <td><span class="status-pill status-verified">VERIFIED SECURE</span></td>
+                    </tr>
+
+                    <!-- Table Item Row 2 -->
+                    <tr class="ledger-data-row">
+                        <td class="hash-id-text">TXN_NODE // #4C1D77X</td>
+                        <td class="cell-sector-text">Outreach Clinic [MED-09]</td>
+                        <td class="capital-value-text">$24,000.00</td>
+                        <td><span class="status-pill status-verified">VERIFIED SECURE</span></td>
+                    </tr>
+
+                    <!-- Table Item Row 3 -->
+                    <tr class="ledger-data-row">
+                        <td class="hash-id-text">TXN_NODE // #11E58B2</td>
+                        <td class="cell-sector-text">Learning Matrix [EDU-12]</td>
+                        <td class="capital-value-text">$45,500.00</td>
+                        <td><span class="status-pill status-verified">VERIFIED SECURE</span></td>
+                    </tr>
+
+                    <!-- Table Item Row 4 -->
+                    <tr class="ledger-data-row">
+                        <td class="hash-id-text">TXN_NODE // #9A3F12C</td>
+                        <td class="cell-sector-text">Eco Infrastructure [ECO-01]</td>
+                        <td class="capital-value-text">$12,800.00</td>
+                        <td><span class="status-pill status-pending">PENDING RECON</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- ENHANCED OPEN LEDGER REGISTRY INTERACTION MECHANICS --- */
+
+/* 1. Balanced Contrast Stacking Depth - Image Fully Visible & Colorful */
+.ledger-bg-canvas {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Locked below content layout structures */
+    overflow: hidden;
+}
+
+.ledger-canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Retains underlying color grids completely sharp and responsive without bleaching readability lines */
+    filter: brightness(50%) contrast(105%) saturate(85%);
+    transform: scale(1.02);
+    animation: ledgerCanvasPan 55s infinite alternate ease-in-out;
+}
+
+.ledger-canvas-curtain {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 10, 14, 0.90) 0%,
+        rgba(13, 20, 30, 0.65) 60%,
+        #070a0e 100%
+    );
+    z-index: 2; /* Sits directly over picture element, below content layers */
+}
+
+/* 2. Soft Ambient Plasma Energy Fields */
+.ledger-plasma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 2;
+    opacity: 0.12;
+    pointer-events: none;
+    animation: ledgerOrbDrift 30s infinite alternate ease-in-out;
+}
+.orb-east-glow {
+    width: 500px;
+    height: 500px;
+    background: #1b5e20;
+    top: -10%;
+    right: -5%;
+}
+.orb-west-glow {
+    width: 450px;
+    height: 450px;
+    background: #81c784;
+    bottom: -5%;
+    left: -5%;
+    animation-delay: -8s;
+}
+
+/* 3. Central Content Framing Layer */
+.ledger-inner-grid {
+    position: relative;
+    z-index: 3; /* Highest prioritisation forces complete cursor mouse click accessibility */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Page Component Header Group */
+.ledger-panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.ledger-panel-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Creative 404 Route Button Trigger */
+.ledger-fallback-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(198, 40, 40, 0.05);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ledger-fallback-trigger:hover {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 4. Glassmorphic Data Table Wrapper Dashboard Panel */
+.ledger-table-wrapper {
+    position: relative;
+    width: 100%;
+    background: rgba(14, 19, 26, 0.65);
+    border: 1px solid rgba(129, 199, 132, 0.12);
+    border-radius: 16px;
+    overflow-x: auto; /* Guarantees horizontal scroll clearance on ultra-tight compressed viewports */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    outline: none;
+    transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.ledger-table-wrapper:hover, .ledger-table-wrapper:focus-within {
+    border-color: rgba(129, 199, 132, 0.3);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), 0 0 20px rgba(46, 125, 50, 0.06);
+}
+
+/* Flashlight cursor tracking layer setup */
+.table-flashlight-sweep {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--table-x, 50%) var(--table-y, 50%), rgba(255, 255, 255, 0.04) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ledger-table-wrapper:hover .table-flashlight-sweep {
+    opacity: 1;
+}
+
+/* Tabular Element Architecture Grid Core Rules */
+.ledger-core-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.ledger-core-table th, .ledger-core-table td {
+    padding: 22px 28px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.ledger-core-table th {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+/* Shifting & Glowing Row Transition Parameters */
+.ledger-data-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background-color 0.3s ease, border-color 0.3s;
+}
+
+.ledger-data-row:last-child {
+    border-bottom: none;
+}
+
+.ledger-data-row:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-color: rgba(129, 199, 132, 0.15);
+}
+
+/* Text Core Columns Styles */
+.hash-id-text {
+    font-family: monospace;
+    font-weight: 700;
+    color: var(--dash-neon-welfare);
+    letter-spacing: 0.5px;
+}
+
+.cell-sector-text {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.capital-value-text {
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* Compliance Status Micro Badges */
+.status-pill {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+.status-verified {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #66bb6a;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.05);
+}
+
+.status-pending {
+    background-color: rgba(255, 167, 38, 0.1);
+    color: #ffa726;
+    border: 1px solid rgba(255, 167, 38, 0.2);
+}
+
+/* 5. Keyframes System */
+@keyframes ledgerCanvasPan {
+    0% { transform: scale(1.02) translate(0px, 0px); }
+    100% { transform: scale(1.06) translate(-15px, -8px); }
+}
+
+@keyframes ledgerOrbDrift {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(30px, -20px) scale(1.04); }
+}
+
+/* Responsive Grid Collapsing Clearances */
+@media (max-width: 768px) {
+    .ledger-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .ledger-fallback-trigger {
+        width: 100%;
+    }
+    .ledger-core-table th, .ledger-core-table td {
+        padding: 18px 20px;
+    }
+}
+
+</style>
+
+<script>
+    // --- 6. PUBLIC AUDIT LEDGER TABLE LIGHTING TRACK LOOP ---
+const ledgerTableWrapper = document.querySelector('.ledger-table-wrapper');
+
+if (ledgerTableWrapper) {
+    ledgerTableWrapper.addEventListener('mousemove', (e) => {
+        // Calculate offsets relative to the element bounds
+        const rect = ledgerTableWrapper.getBoundingClientRect();
+        const xPercent = ((e.clientX - rect.left) / rect.width) * 100;
+        const yPercent = ((e.clientY - rect.top) / rect.height) * 100;
+
+        // Route properties dynamically to the active elements style parameters
+        ledgerTableWrapper.style.setProperty('--table-x', `${xPercent}%`);
+        ledgerTableWrapper.style.setProperty('--table-y', `${yPercent}%`);
+    });
+}
+
+</script>
+
+           <!-- PAGE COMPONENT 4: ENHANCED RESOURCE DISTRIBUTION PROTOCOLS -->
+<section id="resource-distribution-protocols" class="canvas-dynamic-page" aria-labelledby="distribution-title">
+    
+    <!-- Immersive Background Canvas using requested img tag -->
+    <div class="dispatch-bg-canvas">
+        <img src="./Assests/hand shake.webp" 
+             alt="Vibrant field maps and asset routing logs representing precise tactical distribution networks" 
+             loading="lazy" 
+             class="dispatch-canvas-image">
+        <div class="dispatch-canvas-curtain"></div>
+    </div>
+
+    <!-- Soft Ambient Muted Glow Orbs -->
+    <div class="dispatch-plasma-orb orb-north-star"></div>
+    <div class="dispatch-plasma-orb orb-south-star"></div>
+
+    <div class="dispatch-inner-grid">
+        
+        <!-- Header Utility Row -->
+        <header class="dispatch-panel-header">
+            <div class="header-strings">
+                <span class="telemetry-pill">SUPPLY CHAIN LOGISTICS</span>
+                <h2 id="distribution-title">Resource Distribution Protocols</h2>
+            </div>
+            <!-- Creative 404 Navigation Anchor -->
+            <a href="404.html" class="dispatch-fallback-trigger" title="Simulate Distribution Link Disconnect Route">
+                <span>SEVER SUPPLY CHANNEL</span>
+                <svg class="trigger-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </header>
+
+        <!-- 2-Column Responsive Channels Grid System -->
+        <div class="dispatch-cards-ecosystem">
+            
+            <!-- Logistics Channel Node 1 -->
+            <article class="dispatch-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                
+                <header class="dispatch-card-header">
+                    <div class="dispatch-vector-frame">
+                        <svg class="dispatch-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="5" r="3"></circle>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="12" y1="16" x2="8" y2="22"></line>
+                            <line x1="12" y1="16" x2="16" y2="22"></line>
+                            <line x1="8" y1="11" x2="16" y2="11"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="dispatch-node-id">ROUTE_PATH // ALPH-01</span>
+                        <h3>Last-Mile Human Capital Routing</h3>
+                    </div>
+                </header>
+
+                <p class="dispatch-card-desc">Direct micro-allocation channels delivering foundational books, instructional materials, and emergency clothing through specialized local volunteer assemblies.</p>
+                
+                <!-- Meter Telemetry -->
+                <div class="dispatch-meter-box">
+                    <div class="meter-labels">
+                        <span class="meter-meta">BANDWIDTH DELIVERY VOLUME</span>
+                        <span class="meter-value">84% OPERATIONAL</span>
+                    </div>
+                    <div class="meter-bar-track">
+                        <div class="meter-bar-fill glow-green-fill" style="width: 84%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Logistics Channel Node 2 -->
+            <article class="dispatch-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                
+                <header class="dispatch-card-header">
+                    <div class="dispatch-vector-frame">
+                        <svg class="dispatch-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="dispatch-node-id">ROUTE_PATH // CURE-02</span>
+                        <h3>Cold-Chain Clinical Inventory</h3>
+                    </div>
+                </header>
+
+                <p class="dispatch-card-desc">Sustaining constant thermal tracking nodes over vulnerable medical inventories routed to off-road rapid-response clinical support vans.</p>
+                
+                <!-- Meter Telemetry -->
+                <div class="dispatch-meter-box">
+                    <div class="meter-labels">
+                        <span class="meter-meta">BANDWIDTH DELIVERY VOLUME</span>
+                        <span class="meter-value">96% CRITICAL DEPTH</span>
+                    </div>
+                    <div class="meter-bar-track">
+                        <div class="meter-bar-fill glow-cyan-fill" style="width: 96%;"></div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- ENHANCED DISTRIBUTION PROTOCOLS INTERACTION MECHANICS --- */
+
+/* 1. Balanced Contrast Stacking Depth - Image Fully Visible & Colorful */
+.dispatch-bg-canvas {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Below text and layout grids */
+    overflow: hidden;
+}
+
+.dispatch-canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Retains vibrant map vectors cleanly without bleaching typography fields */
+    filter: brightness(55%) contrast(105%) saturate(80%);
+    transform: scale(1.02);
+    animation: dispatchCanvasPan 48s infinite alternate ease-in-out;
+}
+
+.dispatch-canvas-curtain {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 10, 14, 0.90) 0%,
+        rgba(10, 16, 26, 0.65) 60%,
+        #070a0e 100%
+    );
+    z-index: 2; /* Over image, under card items */
+}
+
+/* 2. Soft Ambient Plasma Energy Fields */
+.dispatch-plasma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 2;
+    opacity: 0.13;
+    pointer-events: none;
+    animation: dispatchOrbDrift 26s infinite alternate ease-in-out;
+}
+.orb-north-star {
+    width: 460px;
+    height: 460px;
+    background: #81c784;
+    top: -8%;
+    left: 5%;
+}
+.orb-south-star {
+    width: 480px;
+    height: 480px;
+    background: #1b5e20;
+    bottom: -12%;
+    right: 5%;
+    animation-delay: -5s;
+}
+
+/* 3. Central Content Framing Layer */
+.dispatch-inner-grid {
+    position: relative;
+    z-index: 3; /* Unlocks absolute visibility and mouse clicking accessibility tracks */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Page Component Header Group */
+.dispatch-panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.dispatch-panel-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Creative 404 Route Button Trigger */
+.dispatch-fallback-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(198, 40, 40, 0.05);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.dispatch-fallback-trigger:hover {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 4. 2-Column Responsive Interface Framework Grid */
+.dispatch-cards-ecosystem {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* Glassmorphic Dispatch Cards with Real-Time Focus Glows */
+.dispatch-glass-card {
+    position: relative;
+    background: rgba(14, 19, 26, 0.65);
+    border: 1px solid rgba(129, 199, 132, 0.12);
+    border-radius: 16px;
+    padding: 35px;
+    overflow: hidden;
+    outline: none;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* Flashlight tracking backdrop background layer setup */
+.card-flashlight-sweep {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--card-x, 50%) var(--card-y, 50%), rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dispatch-glass-card:hover .card-flashlight-sweep,
+.dispatch-glass-card:focus .card-flashlight-sweep {
+    opacity: 1;
+}
+
+.dispatch-glass-card:hover, .dispatch-glass-card:focus {
+    transform: translateY(-5px);
+    border-color: rgba(129, 199, 132, 0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(46, 125, 50, 0.08);
+}
+
+/* Card Header Cluster Blocks */
+.dispatch-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.dispatch-vector-frame {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.dispatch-svg {
+    width: 20px;
+    height: 20px;
+}
+
+.dispatch-glass-card:hover .dispatch-vector-frame,
+.dispatch-glass-card:focus .dispatch-vector-frame {
+    color: #81c784;
+    background-color: rgba(46, 125, 50, 0.12);
+    border-color: rgba(129, 199, 132, 0.2);
+}
+
+.dispatch-node-id {
+    display: block;
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--dash-neon-welfare);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.dispatch-card-header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+}
+
+.dispatch-card-desc {
+    font-size: 0.92rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Operational Supply Telemetry Meters */
+.dispatch-meter-box {
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.meter-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.meter-meta {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.meter-value {
+    color: #ffffff;
+}
+
+.meter-bar-track {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.meter-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.glow-green-fill { background-color: #2e7d32; box-shadow: 0 0 8px #2e7d32; }
+.glow-cyan-fill { background-color: #0097a7; box-shadow: 0 0 8px #0097a7; }
+
+/* 5. Keyframes */
+@keyframes dispatchCanvasPan {
+    0% { transform: scale(1.02) translate(0px, 0px); }
+    100% { transform: scale(1.07) translate(-15px, -6px); }
+}
+
+@keyframes dispatchOrbDrift {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(20px, -20px) scale(1.04); }
+}
+
+/* Viewport Responsiveness Adjustments */
+@media (max-width: 768px) {
+    .dispatch-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .dispatch-fallback-trigger {
+        width: 100%;
+    }
+    .dispatch-glass-card {
+        padding: 25px;
+    }
+}
+
+</style>
+
+<script>
+    // --- 7. RESOURCE CHANNELS GLASS CARDS LIGHTING TRACK LOOP ---
+const dispatchCards = document.querySelectorAll('.dispatch-glass-card');
+
+dispatchCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        // Calculate coordinate offsets inside bounds
+        const boundsBox = card.getBoundingClientRect();
+        const xPercent = ((e.clientX - boundsBox.left) / boundsBox.width) * 100;
+        const yPercent = ((e.clientY - boundsBox.top) / boundsBox.height) * 100;
+
+        // Map calculation parameters live into the target context style
+        card.style.setProperty('--card-x', `${xPercent}%`);
+        card.style.setProperty('--card-y', `${yPercent}%`);
+    });
+});
+
+</script>
+
+       <!-- PAGE COMPONENT 5: ENHANCED CORPORATE IMPACT PARTNER METRICS -->
+<section id="corporate-impact-partner-metrics" class="canvas-dynamic-page" aria-labelledby="partner-title">
+    
+    <!-- Immersive Semantic Background Infrastructure using requested img tag -->
+    <div class="partner-bg-canvas">
+        <img src="./Assests/grp volu.webp" 
+             alt="Vibrant interconnected network arrays with bright background lighting, representing partner ecosystem depth" 
+             loading="lazy" 
+             class="partner-canvas-image">
+        <div class="partner-canvas-curtain"></div>
+    </div>
+
+    <!-- Soft Ambient Muted Glow Orbs -->
+    <div class="partner-plasma-orb orb-north-glow-profile"></div>
+    <div class="partner-plasma-orb orb-south-glow-profile"></div>
+
+    <div class="partner-inner-grid">
+        
+        <!-- Header Utility Row -->
+        <header class="partner-panel-header">
+            <div class="header-strings">
+                <span class="telemetry-pill">CORPORATE INTEGRATION GRID</span>
+                <h2 id="partner-title">Partnership Profile Overview</h2>
+            </div>
+            <!-- Creative 404 Navigation Anchor -->
+            <a href="404.html" class="partner-fallback-trigger" title="Simulate Profile Sync Disconnect Route">
+                <span>SEVER PROFILE NODE</span>
+                <svg class="trigger-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </header>
+
+        <!-- Asymmetrical Profile Grid Layout -->
+        <div class="partner-profile-layout">
+            
+            <!-- Left Grid Segment: Profile Summary Plate -->
+            <article class="partner-glass-card profile-summary-plate" tabindex="0">
+                <div class="profile-avatar-node">
+                    <svg class="avatar-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3 class="profile-card-name">Active Integration Node</h3>
+                <p class="profile-card-status">HopeHands Authorized Tier-1 Corporate Partner</p>
+                
+                <div class="profile-metrics-row">
+                    <div class="mini-metric-node">
+                        <span class="mini-metric-value">4 Cells</span>
+                        <span class="mini-metric-label">FUNDED OPERATION</span>
+                    </div>
+                    <div class="mini-metric-divider" aria-hidden="true"></div>
+                    <div class="mini-metric-node">
+                        <span class="mini-metric-value">98.6%</span>
+                        <span class="mini-metric-label">TRUSTINDEX RATIO</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Right Grid Segment: Secure Metadata Parameters & Key-Value Matrix Tiers -->
+            <div class="partner-metadata-stack">
+                <article class="partner-glass-card meta-matrix-item" tabindex="0">
+                    <span class="meta-label">INTEGRATION GATEWAY</span>
+                    <h4 class="meta-value">SECURE ENCRYPTED PROXY [ACTIVE]</h4>
+                </article>
+
+                <article class="partner-glass-card meta-matrix-item" tabindex="0">
+                    <span class="meta-label">TOTAL CAPITAL CONTRIBUTED TO DATE</span>
+                    <h4 class="meta-value text-glow-sweep">$119,450.00 USD</h4>
+                </article>
+
+                <article class="partner-glass-card meta-matrix-item" tabindex="0">
+                    <span class="meta-label">NEXT COMPLIANCE SYNC CYCLEED</span>
+                    <h4 class="meta-value">PROGRAMMATIC TIMELINE STATUS // CALIBRATED</h4>
+                </article>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- ENHANCED PARTNERSHIP PROFILE INTERACTION MECHANICS --- */
+
+/* 1. Balanced Contrast Stacking Depth - Image Fully Visible & Colorful */
+.partner-bg-canvas {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Locked at bottom layer below content wrappers */
+    overflow: hidden;
+}
+
+.partner-canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Rich branding hues remain fully visible without blinding typography layers */
+    filter: brightness(55%) contrast(105%) saturate(85%);
+    transform: scale(1.02);
+    animation: partnerCanvasPan 45s infinite alternate ease-in-out;
+}
+
+.partner-canvas-curtain {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 10, 14, 0.90) 0%,
+        rgba(14, 20, 26, 0.65) 60%,
+        #070a0e 100%
+    );
+    z-index: 2; /* Directly over image, under profile layout items */
+}
+
+/* 2. Soft Ambient Plasma Energy Fields */
+.partner-plasma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 2;
+    opacity: 0.12;
+    pointer-events: none;
+    animation: partnerOrbDrift 25s infinite alternate ease-in-out;
+}
+.orb-north-glow-profile {
+    width: 450px;
+    height: 450px;
+    background: #1b5e20;
+    top: -8%;
+    left: 5%;
+}
+.orb-south-glow-profile {
+    width: 400px;
+    height: 400px;
+    background: #81c784;
+    bottom: -10%;
+    right: 5%;
+    animation-delay: -6s;
+}
+
+/* 3. Central Content Framing Layer */
+.partner-inner-grid {
+    position: relative;
+    z-index: 3; /* Unlocks cursor mouse clicks and complete content visibility */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Page Component Header Group */
+.partner-panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.partner-panel-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Creative 404 Route Button Trigger */
+.partner-fallback-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(198, 40, 40, 0.05);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.partner-fallback-trigger:hover {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 4. Asymmetrical 2-Segment Layout Grid */
+.partner-profile-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Glassmorphic Core Container Items */
+.partner-glass-card {
+    position: relative;
+    background: rgba(14, 19, 26, 0.65);
+    border: 1px solid rgba(129, 199, 132, 0.12);
+    border-radius: 16px;
+    padding: 35px;
+    overflow: hidden;
+    outline: none;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* Flashlight cursor tracking overlay background layer setup */
+.partner-glass-card .card-flashlight-sweep {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--card-x, 50%) var(--card-y, 50%), rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.partner-glass-card:hover .card-flashlight-sweep,
+.partner-glass-card:focus .card-flashlight-sweep {
+    opacity: 1;
+}
+
+.partner-glass-card:hover, .partner-glass-card:focus {
+    transform: translateY(-4px);
+    border-color: rgba(129, 199, 132, 0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(46, 125, 50, 0.08);
+}
+
+/* Left Segment Specific Elements */
+.profile-summary-plate {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.profile-avatar-node {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.avatar-svg {
+    width: 32px;
+    height: 32px;
+}
+
+.profile-summary-plate:hover .profile-avatar-node,
+.profile-summary-plate:focus .profile-avatar-node {
+    color: #81c784;
+    background-color: rgba(46, 125, 50, 0.12);
+    border-color: rgba(129, 199, 132, 0.2);
+    box-shadow: 0 0 15px rgba(46, 125, 50, 0.15);
+}
+
+.profile-card-name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-card-status {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Mini Metrics Row inside the Left Panel */
+.profile-metrics-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 25px;
+}
+
+.mini-metric-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mini-metric-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.mini-metric-label {
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.mini-metric-divider {
+    width: 1px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Right Segment Parameter Stack list items */
+.partner-metadata-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.meta-matrix-item {
+    padding: 24px 30px;
+}
+
+.meta-matrix-item .meta-label {
+    font-size: 0.62rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+.meta-matrix-item .meta-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+/* Shifting Text Capital Glow Effect */
+.partner-metadata-stack .text-glow-sweep {
+    background: linear-gradient(90deg, #ffffff, #81c784, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: profileTitleSweep 6s linear infinite;
+    font-weight: 800;
+}
+
+/* 5. Keyframes System */
+@keyframes partnerCanvasPan {
+    0% { transform: scale(1.02) translate(0px, 0px); }
+    100% { transform: scale(1.06) translate(-12px, -8px); }
+}
+
+@keyframes partnerOrbDrift {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(20px, -15px) scale(1.04); }
+}
+
+@keyframes profileTitleSweep {
+    to { background-position: 200% center; }
+}
+
+/* Viewport Responsiveness Adjustments for Partner Grids */
+@media (max-width: 900px) {
+    .partner-profile-layout {
+        grid-template-columns: 1fr;
+    }
+    .partner-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .partner-fallback-trigger {
+        width: 100%;
+    }
+}
+
+</style>
+<script>
+    // --- 8. PARTNER PROFILE CARDS KINETIC LIGHTING TRACK LOOP ---
+const partnerProfileCards = document.querySelectorAll('.partner-glass-card');
+
+partnerProfileCards.forEach(card => {
+    // Inject the structural flashlight sweep node on runtime to maintain cleaner parent HTML
+    const flashlightNode = document.createElement('div');
+    flashlightNode.className = 'card-flashlight-sweep';
+    card.appendChild(flashlightNode);
+
+    card.addEventListener('mousemove', (e) => {
+        // Calculate bounds offsets
+        const propertiesBox = card.getBoundingClientRect();
+        const computeX = ((e.clientX - propertiesBox.left) / propertiesBox.width) * 100;
+        const computeY = ((e.clientY - propertiesBox.top) / propertiesBox.height) * 100;
+
+        // Push layout properties live into inline styling contexts
+        card.style.setProperty('--card-x', `${computeX}%`);
+        card.style.setProperty('--card-y', `${computeY}%`);
+    });
+});
+
+</script>
+        </main>
+
+    </div>
+
+<style>
+
+    /* --- CORRECTED SIDEBAR LAYOUT CONFIGURATION --- */
+.dash-sidebar-panel {
+    position: relative;
+    z-index: 90;
+    width: 280px;
+    /* FIX: Force calculation constraints to sit comfortably within viewport bounds */
+    height: calc(100vh - 75px); 
+    background: rgba(14, 19, 26, 0.65);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+    /* FIX: Layout alignment structure forces elements to space out perfectly */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    
+    padding: 25px 15px;
+    flex-shrink: 0;
+    overflow-y: auto; /* FIX: Prevents items clipping on low-resolution screens */
+    box-sizing: border-box;
+}
+
+/* FIX: Forces the links stack to pull upwards, keeping logout pushed downwards */
+.sidebar-links-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* --- CORRECTED LOGOUT TRIGGER PLACEMENT --- */
+.sidebar-logout-trigger {
+    width: 100%;
+    background: rgba(198, 40, 40, 0.04);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    padding: 14px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #ef5350;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    
+    /* FIX: Locks item directly to the absolute floor of the sidebar panel container */
+    margin-top: 30px; 
+    flex-shrink: 0;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.sidebar-logout-trigger:hover, .sidebar-logout-trigger:focus {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+/* --- CORRECTED MOBILE MEDIA RESPONSIVE PIPELINES --- */
+@media (max-width: 768px) {
+    .dash-sidebar-panel {
+        width: 100%;
+        height: auto; /* Drops down horizontal dimensions dynamically */
+        flex-direction: row; /* Converts vertical layouts to clean side rows */
+        align-items: center;
+        padding: 12px 15px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .sidebar-links-stack {
+        flex-direction: row; /* Horizontal grid flow */
+        gap: 8px;
+        width: auto;
+        flex: 1;
+        overflow-x: auto; /* Unlocks scrolling for compressed mobile navigation items */
+        padding-right: 10px;
+    }
+    
+    .side-nav-anchor {
+        width: max-content;
+        padding: 10px 14px;
+        white-space: nowrap;
+    }
+    
+    .sidebar-logout-trigger {
+        margin-top: 0; /* Clears top margins to keep row alignment balanced */
+        width: auto;
+        padding: 10px 14px;
+        white-space: nowrap;
+    }
+}
+
+    /* --- WELFARE DASHBOARD SYSTEM INTERACTIVE LAYOUT mecánico --- */
+:root {
+    --dash-neon-welfare: #81c784;     
+    --dash-emerald-core: #2e7d32;     
+    --dash-abyss-void: #070a0e;       
+    --dash-plate-dark: #0e131a;       
+    --dash-input-bg: #05070a;        
+    --dash-border-slate: #1e293b;     
+    --dash-text-pure: #ffffff;
+    --dash-text-slate: #94a3b8;
+    --dash-text-ghost: rgba(255, 255, 255, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-root-body {
+    background-color: var(--dash-abyss-void);
+    color: var(--dash-text-pure);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+/* 1. Header Layout Grid */
+.dash-master-header {
+    height: 75px;
+    width: 100%;
+    background-color: var(--dash-plate-dark);
+    border-bottom: 1px solid var(--dash-border-slate);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(20px, 4vw);
+    position: relative;
+    z-index: 100;
+}
+
+.header-brand-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s ease;
+}
+
+.header-brand-block:hover {
+    opacity: 0.85;
+}
+
+.brand-logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--dash-border-slate);
+}
+
+.brand-logo-text {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--dash-text-pure);
+}
+
+.brand-logo-text span {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--dash-text-slate);
+}
+
+/* Profile controls and bell */
+.header-profile-ecosystem {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.bell-alert-trigger {
+    position: relative;
+    color: var(--dash-text-slate);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+    outline: none;
+}
+
+.header-vector-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.bell-alert-trigger:hover, .bell-alert-trigger:focus {
+    color: var(--dash-neon-welfare);
+    filter: drop-shadow(0 0 8px rgba(129, 199, 132, 0.4));
+}
+
+.bell-pulse-indicator {
+    position: absolute;
+    top: -2px;
+    right: -1px;
+    width: 6px;
+    height: 6px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #4caf50;
+}
+
+.header-divider {
+    width: 1px;
+    height: 30px;
+    background-color: var(--dash-border-slate);
+}
+
+.user-terminal-display {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.user-avatar-sphere {
+    width: 40px;
+    height: 40px;
+    background-color: var(--dash-input-bg);
+    border: 1px solid var(--dash-border-slate);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dash-text-slate);
+}
+
+.avatar-vector {
+    width: 18px;
+    height: 18px;
+}
+
+.user-meta-strings {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.meta-label {
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--dash-text-ghost);
+}
+
+.parsed-user-string {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--dash-neon-welfare);
+    text-transform: capitalize; /* Cleaner user presentation */
+}
+
+/* 2. Main Viewport & Sidebar Grid */
+.dash-viewport-wrapper {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.dash-sidebar-panel {
+    width: 280px;
+    background-color: var(--dash-plate-dark);
+    border-right: 1px solid var(--dash-border-slate);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 20px;
+    flex-shrink: 0;
+    z-index: 90;
+}
+
+.sidebar-links-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Sidebar Nav anchor items */
+.side-nav-anchor, .sidebar-logout-trigger {
+    width: 100%;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 16px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--dash-text-slate);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    text-align: left;
+}
+
+.sidebar-vector, .logout-vector {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.side-nav-anchor:hover, .side-nav-anchor:focus {
+    color: var(--dash-text-pure);
+    background-color: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(4px);
+}
+
+/* Active navigation track highlighting */
+.side-nav-anchor.active {
+    background-color: rgba(46, 125, 50, 0.08);
+    border-color: rgba(129, 199, 132, 0.2);
+    color: var(--dash-neon-welfare);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar terminate logout row trigger */
+.sidebar-logout-trigger {
+    border-color: rgba(198, 40, 40, 0.1);
+    background-color: rgba(198, 40, 40, 0.02);
+    color: #ef5350;
+    margin-top: auto;
+}
+
+.sidebar-logout-trigger:hover, .sidebar-logout-trigger:focus {
+    background-color: #c62828;
+    color: var(--dash-text-pure);
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.25);
+    transform: none;
+}
+
+/* 3. Main Dynamic Content Canvas Panel */
+.dash-content-canvas-panel {
+    flex: 1;
+    overflow-y: auto;
+    padding: 50px;
+    background-color: var(--dash-abyss-void);
+    position: relative;
+}
+
+/* Dynamic view segment configurations toggled via Javascript logic elements */
+.canvas-dynamic-page {
+    display: none;
+    width: 100%;
+    animation: contentFadeIn 0.4s ease-out;
+}
+
+.canvas-dynamic-page.active-page {
+    display: block;
+}
+
+/* Testing Block Content Styles */
+.isolated-testing-header {
+    background-color: var(--dash-plate-dark);
+    border: 1px solid var(--dash-border-slate);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: left;
+    max-width: 800px;
+    border-left: 4px solid var(--dash-emerald-core);
+}
+
+.isolated-testing-header h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--dash-text-pure);
+    margin-bottom: 10px;
+}
+
+.isolated-testing-header p {
+    font-size: 0.92rem;
+    color: var(--dash-text-slate);
+    line-height: 1.5;
+}
+
+/* Dynamic Animation layers */
+@keyframes contentFadeIn {
+    0% { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Full Viewport Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .dash-sidebar-panel {
+        width: 80px;
+        padding: 35px 12px;
+        align-items: center;
+    }
+    .side-nav-anchor span, .sidebar-logout-trigger span, .user-meta-strings {
+        display: none; /* Strip text descriptions safely to compress space arrays */
+    }
+    .side-nav-anchor, .sidebar-logout-trigger {
+        justify-content: center;
+        padding: 16px;
+    }
+}
+/*==============================
+Mobile Hamburger
+===============================*/
+
+.mobile-menu-toggle{
+    display:none;
+    width:45px;
+    height:45px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    z-index:1200;
+}
+
+.mobile-menu-toggle span{
+    width:24px;
+    height:2px;
+    background:#fff;
+    border-radius:10px;
+    transition:.35s;
+}
+
+/*==============================
+Overlay
+===============================*/
+
+.mobile-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(4px);
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    z-index:998;
+}
+
+.mobile-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+/*==============================
+Responsive Sidebar
+===============================*/
+
+@media(max-width:768px){
+
+.mobile-menu-toggle{
+    display:flex;
+}
+
+.dash-sidebar-panel{
+
+    position:fixed;
+
+    top:75px;
+
+    left:-300px;
+
+    width:280px;
+
+    height:calc(100vh - 75px);
+
+    background:#0e131a;
+
+    transition:.4s ease;
+
+    z-index:999;
+
+    overflow-y:auto;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:25px 15px;
+}
+
+.dash-sidebar-panel.active{
+
+    left:0;
+
+}
+
+.sidebar-links-stack{
+
+    flex-direction:column;
+
+    overflow:visible;
+
+    width:100%;
+}
+
+.side-nav-anchor{
+
+    width:100%;
+
+}
+
+.sidebar-logout-trigger{
+
+    width:100%;
+
+    margin-top:25px;
+
+}
+
+.dash-content-canvas-panel{
+
+    padding:25px 18px;
+
+}
+
+body.sidebar-open{
+
+    overflow:hidden;
+
+}
+
+}
+
+@media (max-width:768px){
+
+    .dash-sidebar-panel{
+        width:75%;
+        max-width:320px;
+        left:-75%;
+    }
+
+    .dash-sidebar-panel.active{
+        left:0;
+    }
+
+    .side-nav-anchor span,
+    .sidebar-logout-trigger span{
+        display:block;
+    }
+
+    .side-nav-anchor,
+    .sidebar-logout-trigger{
+
+        justify-content:flex-start;
+
+        padding:15px 18px;
+
+        gap:16px;
+    }
+
+    .sidebar-links-stack{
+
+        flex-direction:column;
+
+        width:100%;
+    }
+
+    .sidebar-vector,
+    .logout-vector{
+
+        width:18px;
+        height:18px;
+    }
+
+}
+
+.bell-alert-trigger {
+    text-decoration: none; /* Prevents default browser link underlines */
+    display: inline-flex;  /* Keeps the alignment identical to your div structure */
+}
+
+/* Body parameters freeze scroll channels without shifting structural positioning */
+body.sidebar-open {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- OBLIGATORY INITIALIZATION DOM SELECTORS ---
+    const mobileBtn = document.getElementById("mobileMenuBtn");
+    const sidebar = document.querySelector(".dash-sidebar-panel");
+    const overlay = document.getElementById("mobileOverlay");
+    
+    const profileTextNode = document.getElementById('headerProfileName');
+    const sidebarAnchors = document.querySelectorAll('.side-nav-anchor');
+    const structuralPages = document.querySelectorAll('.canvas-dynamic-page');
+    const logoutTrigger = document.getElementById('dashLogoutTrigger');
+    const brandRefreshTrigger = document.getElementById('dashBrandRefresh');
+
+    let scrollPosition = 0;
+
+    // --- 1. DYNAMIC MOBILE RESPONSIVE HAMBURGER & SCROLL LOCK ENGINE ---
+    function openSidebar() {
+        if (!sidebar || !overlay) return;
+        scrollPosition = window.pageYOffset;
+
+        sidebar.classList.add("active");
+        overlay.classList.add("active");
+
+        document.body.classList.add("sidebar-open");
+        document.body.style.top = `-${scrollPosition}px`;
+    }
+
+    function closeSidebar() {
+        if (!sidebar || !overlay) return;
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+
+        document.body.classList.remove("sidebar-open");
+        document.body.style.top = "";
+
+        window.scrollTo(0, scrollPosition);
+    }
+
+    // Toggle menu state cleanly
+    if (mobileBtn) {
+        mobileBtn.addEventListener("click", () => {
+            if (sidebar && !sidebar.classList.contains("active")) {
+                openSidebar();
+            } else {
+                closeSidebar();
+            }
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener("click", closeSidebar);
+    }
+
+    // Auto-close sidebar on mobile formats after selecting a tab row
+    sidebarAnchors.forEach(item => {
+        item.addEventListener("click", closeSidebar);
+    });
+
+
+    // --- 2. DYNAMIC PARTNER MAIL IDENTITY PARSING AND DISPLAY SYSTEM ---
+    /* FIX: Replaced the static hardcoded variable with your direct localStorage key 
+       so that what the user enters on the login page reflects right here */
+    const dynamicSessionEmail = localStorage.getItem('userEmailAddress') || "partner@stackly.com"; 
+
+    const parsePartnerNameFromEmail = (emailString) => {
+        if (!emailString || !emailString.includes('@')) {
+            return "Partner Profile";
+        }
+        // Extract the user identity substring before the '@' character symbol break
+        const namePart = emailString.split('@')[0];
+        return namePart;
+    };
+
+    if (profileTextNode) {
+        profileTextNode.textContent = parsePartnerNameFromEmail(dynamicSessionEmail);
+    }
+
+
+    // --- 3. ASYMMETRICAL MULTI-PAGE SECTION SWITCH ROUTING MECHANICS ---
+    sidebarAnchors.forEach(anchor => {
+        anchor.addEventListener('click', () => {
+            const targetPageId = anchor.getAttribute('data-target-section');
+
+            // Deactivate and reset previously highlighted menu anchor selectors
+            sidebarAnchors.forEach(btn => btn.classList.remove('active'));
+            anchor.classList.add('active');
+
+            // Route block displays safely, filtering hidden nodes out of active viewing streams
+            structuralPages.forEach(page => {
+                if (page.getAttribute('id') === targetPageId) {
+                    page.classList.add('active-page');
+                } else {
+                    page.classList.remove('active-page');
+                }
+            });
+        });
+    });
+
+
+    // --- 4. NAVIGATION DESTRUCTION OVERRIDES & TRANSACTION FLUSH ---
+    if (logoutTrigger) {
+        logoutTrigger.addEventListener('click', () => {
+            const confirmExitSession = confirm("Are you sure you want to terminate your secure integration grid session?");
+            if (confirmExitSession) {
+                
+                /* FIX: Wipes the storage token right before redirecting 
+                   so a different user logging in next won't see your name */
+                localStorage.removeItem('userEmailAddress'); 
+
+                // Redirects back to the login script page gateway layout
+                window.location.href = 'login.html';
+            }
+        });
+    }
+
+    // Brand logo acts as a refresh engine trigger
+    if (brandRefreshTrigger) {
+        brandRefreshTrigger.addEventListener('click', () => {
+            window.location.reload();
+        });
+    }
+
+});
+</script>
+</body>
+</html>

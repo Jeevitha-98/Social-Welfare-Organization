@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Assistance Dashboard | HopeHands Grid</title>
+    <link rel="stylesheet" href="client-dashboard.css">
+</head>
+<body class="client-dash-body">
+
+    <!-- MASTER HEADER LAYER -->
+    <header class="dash-master-header">
+        
+        <!-- Left: Brand Logo Node & Mobile Hamburger Trigger -->
+        <div class="header-left-cluster">
+            <button class="hamburger-menu-btn" id="mobileMenuToggle" aria-label="Toggle Navigation Side Menu" aria-expanded="false">
+                <span class="hamburger-bar bar-top"></span>
+                <span class="hamburger-bar bar-mid"></span>
+                <span class="hamburger-bar bar-bottom"></span>
+            </button>
+
+            <div class="header-brand-block" id="dashBrandRefresh" title="Refresh Dashboard Engine">
+               
+                <span class="brand-logo-text">Stackly // <span>Client Grid</span></span>
+            </div>
+        </div>
+
+        <!-- Right: Real-time Telemetry Profiles Controls Block -->
+        <div class="header-profile-ecosystem">
+            
+            <!-- Converted to anchor tag targeting 404 page directly -->
+            <a href="404.html" class="bell-alert-trigger" aria-label="View notifications queue">
+                <svg class="header-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+                <div class="bell-pulse-indicator"></div>
+            </a>
+
+            <div class="header-divider" aria-hidden="true"></div>
+
+            <div class="user-terminal-display">
+                <div class="user-avatar-sphere">
+                    <svg class="avatar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <div class="user-meta-strings">
+                    <span class="meta-label">CLIENT PROFILE ACTIVE</span>
+                    <!-- Dynamic Name placeholder displays parsed email name strings -->
+                    <span class="parsed-user-string" id="headerProfileName">Loading User...</span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MAIN VIEWPORT CONTAINER LAYER -->
+    <div class="dash-viewport-wrapper">
+        
+        <!-- Screen Blur Backdrop Overlay Layer for Mobile Hamburger Mode -->
+        <div class="sidebar-blur-overlay" id="sidebarOverlay"></div>
+        
+        <!-- SIDEBAR PLATFORM NAVIGATION CONTROL -->
+        <nav class="dash-sidebar-panel" id="dashSidebar" aria-label="Dashboard platform controls hierarchy">
+            <div class="sidebar-links-stack">
+                
+                <!-- Menu Node 1: My Welfare Tracking Dashboard -->
+                <button class="side-nav-anchor active" data-target-section="client-welfare-tracking">
+                    <svg class="sidebar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                    <span>MY ASSISTANCE TRACKING</span>
+                </button>
+
+                <!-- Menu Node 2: Resource Allocations Requests Form -->
+                <button class="side-nav-anchor" data-target-section="client-resource-requests">
+                    <svg class="sidebar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span>REQUEST ASSISTANCE</span>
+                </button>
+
+                <!-- Menu Node 3: Open Community Hub Logs -->
+                <button class="side-nav-anchor" data-target-section="client-community-logs">
+                    <svg class="sidebar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>COMMUNITY HUBS</span>
+                </button>
+
+                <!-- Menu Node 4: Micro-Impact Ledger Updates -->
+                <button class="side-nav-anchor" data-target-section="client-impact-ledger">
+                    <svg class="sidebar-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span>MY IMPACT SUMMARY</span>
+                </button>
+
+            </div>
+
+            <!-- Absolute Base Layer Logout Trigger Navigation Action Anchor -->
+            <button class="sidebar-logout-trigger" id="dashLogoutTrigger">
+                <svg class="logout-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                <span>TERMINATE CLIENT SESSION</span>
+            </button>
+        </nav>
+
+        <!-- MASTER CONTENT CANVAS VIEWPORT -->
+        <main class="dash-content-canvas-panel">
+
+    <div class="dashboard-content-wrapper">
+
+    
+            
+            <!-- PAGE COMPONENT 1: ENHANCED CLIENT WELFARE ASSISTANCE TRACKING -->
+<section id="client-welfare-tracking" class="canvas-dynamic-page active-page" aria-labelledby="client-tracking-title">
+    
+    <!-- Immersive Semantic Background Infrastructure using requested img tag -->
+    <div class="client-track-bg-canvas">
+        <img src="./Assests/clean water.webp" 
+             alt="Vibrant environmental morning sunrise illuminating community growth patterns" 
+             loading="lazy" 
+             class="client-track-canvas-image">
+        <div class="client-track-canvas-curtain"></div>
+    </div>
+
+    <!-- Soft Ambient Plasma Energy Fields -->
+    <div class="client-track-plasma-orb orb-alpha-glow"></div>
+    <div class="client-track-plasma-orb orb-beta-glow"></div>
+
+    <div class="client-track-inner-grid">
+        
+        <!-- Header Utility Row -->
+        <header class="client-track-panel-header">
+            <div class="header-strings">
+                <span class="telemetry-pill">LIVE SYSTEM TRACKING</span>
+                <h2 id="client-tracking-title">My Assistance Tracking</h2>
+            </div>
+            <!-- Creative 404 Navigation Anchor -->
+            <a href="404.html" class="client-track-fallback-trigger" title="Simulate Client Link Disconnect Route">
+                <span>DISCONNECT TRACKING NODE</span>
+                <svg class="trigger-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </header>
+
+        <!-- 3-Column Premium Glassmorphic Data Analytics Grid -->
+        <div class="client-track-cards-ecosystem">
+            
+            <!-- Card Node 1: Allocation Progress -->
+            <article class="client-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                
+                    <div class="card-vector-box">
+                        <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 14 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Active Applications</h3>
+                </header>
+                <div class="card-numeric-display">
+                    <span class="metric-big-num text-glow-sweep">02 Cells</span>
+                    <span class="metric-percentage status-active-blink">IN REVIEW</span>
+                </div>
+                <div class="metric-mini-bar-track">
+                    <div class="metric-mini-bar-fill green-fill-glow" style="width: 70%;"></div>
+                </div>
+                <p class="card-descriptive-text">Welfare asset allocations mapped to your current localized quadrant fields.</p>
+            </article>
+
+            <!-- Card Node 2: Total Dispatched Units -->
+            <article class="client-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                
+                    <div class="card-vector-box">
+                        <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Resources Cleared</h3>
+                </header>
+                <div class="card-numeric-display">
+                    <span class="metric-big-num">18 Units</span>
+                    <span class="metric-percentage pos-trend-text">DISPATCHED</span>
+                </div>
+                <div class="metric-mini-bar-track">
+                    <div class="metric-mini-bar-fill optimal-fill-glow" style="width: 100%;"></div>
+                </div>
+                <p class="card-descriptive-text">Total sustainable resources, filtration assets, and learning tools safely cleared to your area.</p>
+            </article>
+
+            <!-- Card Node 3: Current Hub Proximity -->
+            <article class="client-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                
+                    <div class="card-vector-box">
+                        <svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Nearest Hub Grid</h3>
+                </header>
+                <div class="card-numeric-display">
+                    <span class="metric-big-num">0.8 KM</span>
+                    <span class="metric-percentage pos-trend-text">SLM-NODE</span>
+                </div>
+                <div class="metric-mini-bar-track">
+                    <div class="metric-mini-bar-fill amber-fill-glow" style="width: 90%;"></div>
+                </div>
+                <p class="card-descriptive-text">Your structural coordinates show extreme proximity to our active Salem community distribution center.</p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- ENHANCED CLIENT ASSISTANCE TRACKING DESIGN MECHANICS --- */
+
+/* 1. Balanced Contrast Stacking Depth - Image Fully Visible & Colorful */
+.client-track-bg-canvas {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Under section content layout wrappers */
+    overflow: hidden;
+}
+
+.client-track-canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Retains vibrant background environment photography without losing white text visibility */
+    filter: brightness(55%) contrast(108%) saturate(80%);
+    transform: scale(1.02);
+    animation: clientCanvasPan 45s infinite alternate ease-in-out;
+}
+
+.client-track-canvas-curtain {
+    position: absolute;
+    inset: 0;
+    /* Dark grid filter curtain overlay paths balance text strings securely */
+    background: linear-gradient(
+        180deg,
+        rgba(7, 10, 14, 0.88) 0%,
+        rgba(14, 22, 16, 0.65) 60%,
+        #070a0e 100%
+    );
+    z-index: 2; /* Directly over image, under cards */
+}
+
+/* 2. Soft Ambient Plasma Energy Fields */
+.client-track-plasma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 2;
+    opacity: 0.14;
+    pointer-events: none;
+    animation: clientOrbDrift 28s infinite alternate ease-in-out;
+}
+.orb-alpha-glow {
+    width: 480px;
+    height: 480px;
+    background: #1b5e20;
+    top: -10%;
+    left: 8%;
+}
+.orb-beta-glow {
+    width: 420px;
+    height: 420px;
+    background: #81c784;
+    bottom: -5%;
+    right: 8%;
+    animation-delay: -6s;
+}
+
+/* 3. Central Content Framing Layer */
+.client-track-inner-grid {
+    position: relative;
+    z-index: 3; /* Highest priority value unlocks complete cursor visibility and click routes */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Page Component Header Group */
+.client-track-panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.telemetry-pill {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #81c784;
+    margin-bottom: 8px;
+}
+
+.client-track-panel-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Creative 404 Route Button Trigger */
+.client-track-fallback-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(198, 40, 40, 0.05);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.trigger-vector {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+}
+
+.client-track-fallback-trigger:hover {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 4. 3-Column Responsive Interactive Grid Architecture */
+.client-track-cards-ecosystem {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+/* 5. Glassmorphic Analytics Cards with Active Focus & Glow Layers */
+.client-glass-card {
+    position: relative;
+    background: rgba(14, 19, 26, 0.65);
+    border: 1px solid rgba(129, 199, 132, 0.12);
+    border-radius: 14px;
+    padding: 30px;
+    overflow: hidden;
+    outline: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* Flashlight cursor tracking overlay background layer setup */
+.client-glass-card .card-flashlight-sweep {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--sweep-x, 50%) var(--sweep-y, 50%), rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.client-glass-card:hover .card-flashlight-sweep,
+.client-glass-card:focus .card-flashlight-sweep {
+    opacity: 1;
+}
+
+.client-glass-card:hover, .client-glass-card:focus {
+    transform: translateY(-5px);
+    border-color: rgba(129, 199, 132, 0.35);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(46, 125, 50, 0.08);
+}
+
+/* Card Header Tiers */
+.card-identity-tier {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.card-vector-box {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    transition: all 0.3s ease;
+}
+
+.card-svg {
+    width: 16px;
+    height: 16px;
+}
+
+.client-glass-card:hover var(--card-vector-box),
+.client-glass-card:focus var(--card-vector-box) {
+    color: #81c784;
+    background-color: rgba(46, 125, 50, 0.12);
+    border-color: rgba(129, 199, 132, 0.2);
+}
+
+.card-identity-tier h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.1px;
+}
+
+/* Numeric Readouts & Text Glow Sweeps */
+.card-numeric-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.metric-big-num {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.text-glow-sweep {
+    background: linear-gradient(90deg, #ffffff, #81c784, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: clientTitleSweep 6s linear infinite;
+}
+
+.metric-percentage {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+.status-active-blink { 
+    color: #ffa726; 
+    animation: simpleBlink 1.5s infinite alternate ease-in-out;
+}
+.pos-trend-text { color: #66bb6a; }
+
+/* Mini Progress Progress Bars */
+.metric-mini-bar-track {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.metric-mini-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+.green-fill-glow { background-color: #2e7d32; box-shadow: 0 0 8px #2e7d32; }
+.optimal-fill-glow { background-color: #4caf50; box-shadow: 0 0 8px #4caf50; }
+.amber-fill-glow { background-color: #ffa726; box-shadow: 0 0 8px #ffa726; }
+
+.card-descriptive-text {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+}
+
+/* 6. Motion Arrays Keyframes */
+@media (prefers-reduced-motion: no-preference) {
+    .client-track-canvas-image {
+        animation: clientCanvasPan 45s infinite alternate ease-in-out;
+    }
+    .client-track-plasma-orb {
+        animation: clientOrbDrift 28s infinite alternate ease-in-out;
+    }
+}
+
+@keyframes clientCanvasPan {
+    0% { transform: scale(1.02) translate(0px, 0px); }
+    100% { transform: scale(1.07) translate(-10px, -5px); }
+}
+
+@keyframes clientOrbDrift {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(20px, -15px) scale(1.04); }
+}
+
+@keyframes clientTitleSweep {
+    to { background-position: 200% center; }
+}
+
+@keyframes simpleBlink {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; filter: drop-shadow(0 0 4px #ffa726); }
+}
+
+/* Viewport Adjustments for Main Body Containers */
+@media (max-width: 768px) {
+    .client-track-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .client-track-fallback-trigger {
+        width: 100%;
+    }
+}
+
+</style>
+<script>
+    // --- 5. CLIENT WELFARE CARDS FLASHLIGHT LIGHTING LOOP ---
+const clientTrackingCards = document.querySelectorAll('.client-glass-card');
+
+clientTrackingCards.forEach(card => {
+    // Generate the tracking overlay element dynamically to keep source codes clean
+    const trackingSweepLayer = document.createElement('div');
+    trackingSweepLayer.className = 'card-flashlight-sweep';
+    card.appendChild(trackingSweepLayer);
+
+    card.addEventListener('mousemove', (e) => {
+        const dimensions = card.getBoundingClientRect();
+        const cursorX = ((e.clientX - dimensions.left) / dimensions.width) * 100;
+        const cursorY = ((e.clientY - dimensions.top) / dimensions.height) * 100;
+
+        // Map calculation parameters live into the target stylesheet layer
+        card.style.setProperty('--sweep-x', `${cursorX}%`);
+        card.style.setProperty('--sweep-y', `${cursorY}%`);
+    });
+});
+
+</script>
+            <!-- PAGE COMPONENT 2: ENHANCED RESOURCE ASSISTANCE REQUEST FORM -->
+<section id="client-resource-requests" class="canvas-dynamic-page" aria-labelledby="requests-title">
+    
+    <!-- Immersive Background Canvas using requested img tag -->
+    <div class="requests-bg-canvas">
+        <img src="./Assests/grp volu.webp" 
+             alt="Vibrant community resource mapping logs representing global social welfare grid allocation requests" 
+             loading="lazy" 
+             class="requests-canvas-image">
+        <div class="requests-canvas-curtain"></div>
+    </div>
+
+    <!-- Soft Ambient Plasma Energy Fields -->
+    <div class="requests-plasma-orb orb-alpha-glow-req"></div>
+    <div class="requests-plasma-orb orb-beta-glow-req"></div>
+
+    <div class="requests-inner-grid">
+        
+        <!-- Header Utility Row -->
+        <header class="requests-panel-header">
+            <div class="header-strings">
+                <span class="telemetry-pill">RESOURCE ROUTING MATRICES</span>
+                <h2 id="requests-title">Request Assistance</h2>
+            </div>
+            <!-- Creative 404 Navigation Anchor -->
+            <a href="404.html" class="requests-fallback-trigger" title="Simulate Database Link Disconnect Route">
+                <span>TERMINATE DATA CONSOLE</span>
+                <svg class="trigger-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </header>
+
+        <!-- Glassmorphic Logistics Assistance Intake Form Panel -->
+        <div class="requests-form-card" tabindex="0">
+            <div class="form-flashlight-sweep"></div>
+            
+            <form id="assistanceIntakeForm" class="requests-core-form" novalidate>
+                
+                <div class="form-grid-2-col">
+                    <div class="form-input-node">
+                        <label for="reqFullName">FULL PROFILE NAME</label>
+                        <input type="text" id="reqFullName" placeholder="Verify your profile name..." required>
+                    </div>
+
+                    <div class="form-input-node">
+                        <label for="reqContactPhone">10-DIGIT MOBILE NUMBER</label>
+                        <input type="tel" id="reqContactPhone" placeholder="Enter contact track numbers..." required>
+                    </div>
+                </div>
+
+                <div class="form-input-node">
+                    <label for="reqAssistanceCategory">CHOOSE ALLOCATION CATAGORY</label>
+                    <select id="reqAssistanceCategory" required>
+                        <option value="" disabled selected>Select a delivery category matrix...</option>
+                        <option value="hydration">Clean Water Infrastructure Support</option>
+                        <option value="medical">Mobile Health Clinic Deployment</option>
+                        <option value="education">Solar Digital Classroom Resourcing</option>
+                        <option value="emergency">Rapid Crisis Guard Assets</option>
+                    </select>
+                </div>
+
+                <div class="form-input-node">
+                    <label for="reqLogisticsMessage">SPECIFICATION COPIES / INVOICE METRICS</label>
+                    <textarea id="reqLogisticsMessage" rows="5" placeholder="Tell us about your target performance matrix size, torque timeline metrics, or color theme preferences..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-trigger-btn">
+                    <span>DISPATCH ALLOCATION REQUEST →</span>
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- ENHANCED REQUEST ASSISTANCE COMPONENT INTERACTION MECHANICS --- */
+
+/* 1. Balanced Contrast Stacking Depth - Image Fully Visible & Colorful */
+.requests-bg-canvas {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Below text and form layout structures */
+    overflow: hidden;
+}
+
+.requests-canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Retains vibrant map vectors cleanly without bleaching typography fields */
+    filter: brightness(55%) contrast(105%) saturate(80%);
+    transform: scale(1.02);
+    animation: requestsCanvasPan 48s infinite alternate ease-in-out;
+}
+
+.requests-canvas-curtain {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 10, 14, 0.90) 0%,
+        rgba(10, 16, 26, 0.65) 60%,
+        #070a0e 100%
+    );
+    z-index: 2; /* Over image, under card items */
+}
+
+/* 2. Soft Ambient Plasma Energy Fields */
+.requests-plasma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 2;
+    opacity: 0.13;
+    pointer-events: none;
+    animation: requestsOrbDrift 26s infinite alternate ease-in-out;
+}
+.orb-alpha-glow-req {
+    width: 460px;
+    height: 460px;
+    background: #81c784;
+    top: -8%;
+    left: 5%;
+}
+.orb-beta-glow-req {
+    width: 480px;
+    height: 480px;
+    background: #1b5e20;
+    bottom: -12%;
+    right: 5%;
+    animation-delay: -5s;
+}
+
+/* 3. Central Content Framing Layer */
+.requests-inner-grid {
+    position: relative;
+    z-index: 3; /* Unlocks absolute visibility and mouse clicking accessibility tracks */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Page Component Header Group */
+.requests-panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.requests-panel-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Creative 404 Route Button Trigger */
+.requests-fallback-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(198, 40, 40, 0.05);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.requests-fallback-trigger:hover {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 4. Glassmorphic Form Card Panel with Active Focus Glows */
+.requests-form-card {
+    position: relative;
+    background: rgba(14, 19, 26, 0.65);
+    border: 1px solid rgba(129, 199, 132, 0.12);
+    border-radius: 16px;
+    padding: 40px;
+    overflow: hidden;
+    outline: none;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+.requests-form-card:hover, .requests-form-card:focus-within {
+    border-color: rgba(129, 199, 132, 0.35);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(46, 125, 50, 0.08);
+}
+
+/* Flashlight tracking backdrop background layer setup */
+.requests-form-card .form-flashlight-sweep {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--form-x, 50%) var(--form-y, 50%), rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.requests-form-card:hover .form-flashlight-sweep,
+.requests-form-card:focus-within .form-flashlight-sweep {
+    opacity: 1;
+}
+
+/* Form Layout Nodes Settings */
+.requests-core-form {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-input-node {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-input-node label {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: #8a99a8;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.requests-form-card input[type="text"],
+.requests-form-card input[type="tel"],
+.requests-form-card select,
+.requests-form-card textarea {
+    width: 100%;
+    background-color: #070a0e;
+    border: 1px solid #1e293b;
+    padding: 14px 16px;
+    border-radius: 6px;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Focus illumination boundary loops */
+.requests-form-card input:focus, 
+.requests-form-card select:focus, 
+.requests-form-card textarea:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.4);
+}
+
+.requests-form-card select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' stroke='%238a99a8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 12px;
+}
+
+/* Creative dispatch submission trigger button */
+.form-trigger-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    padding: 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.form-trigger-btn:hover {
+    background-color: #f8fafc;
+    color: #070a0e;
+    border-color: #f8fafc;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Keyframes */
+@keyframes requestsCanvasPan {
+    0% { transform: scale(1.02) translate(0px, 0px); }
+    100% { transform: scale(1.07) translate(-15px, -6px); }
+}
+
+@keyframes requestsOrbDrift {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(20px, -20px) scale(1.04); }
+}
+
+/* Viewport Responsiveness Adjustments */
+@media (max-width: 768px) {
+    .requests-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .requests-fallback-trigger {
+        width: 100%;
+    }
+    .form-grid-2-col {
+        grid-template-columns: 1fr;
+    }
+    .requests-form-card {
+        padding: 25px 20px;
+    }
+}
+
+</style>
+
+<script>
+    // --- 6. ASSISTANCE REQUEST FORM SYSTEM VALIDATION ENGINE ---
+const requestFormCard = document.querySelector('.requests-form-card');
+const assistanceForm = document.getElementById('assistanceIntakeForm');
+
+if (requestFormCard) {
+    requestFormCard.addEventListener('mousemove', (e) => {
+        const dimensions = requestFormCard.getBoundingClientRect();
+        const cursorX = ((e.clientX - dimensions.left) / dimensions.width) * 100;
+        const cursorY = ((e.clientY - dimensions.top) / dimensions.height) * 100;
+
+        requestFormCard.style.setProperty('--form-x', `${cursorX}%`);
+        requestFormCard.style.setProperty('--form-y', `${cursorY}%`);
+    });
+}
+
+if (assistanceForm) {
+    const fullNameInput = document.getElementById('reqFullName');
+    const contactPhoneInput = document.getElementById('reqContactPhone');
+
+    // 1. Strict Name Rule: Rejects numerical values instantly on input keystrokes
+    fullNameInput.addEventListener('input', (e) => {
+        e.target.value = e.target.value.replace(/[0-9]/g, '');
+    });
+
+    // 2. Strict Phone Rule: Rejects alphabets instantly, enforcing numerical entries capped at 10 digits
+    contactPhoneInput.addEventListener('input', (e) => {
+        let cleanValue = e.target.value.replace(/[^0-9]/g, '');
+        if (cleanValue.length > 10) {
+            cleanValue = cleanValue.substring(0, 10);
+        }
+        e.target.value = cleanValue;
+    });
+
+    // 3. Complete Field Verification Checks Before Submission Trigger
+    assistanceForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nameValue = fullNameInput.value.trim();
+        const phoneValue = contactPhoneInput.value.trim();
+        const categoryValue = document.getElementById('reqAssistanceCategory').value;
+        const messageValue = document.getElementById('reqLogisticsMessage').value.trim();
+
+        // Enforce strict completion parameter validation rules across all items
+        if (!nameValue || !phoneValue || !categoryValue || !messageValue) {
+            alert('Validation Failed: Please fill out every field completely before submitting.');
+            return;
+        }
+
+        // Validate complete 10-digit mobile number layout length
+        if (phoneValue.length !== 10) {
+            alert('Validation Failed: Mobile numbers must contain exactly 10 numerical digits.');
+            return;
+        }
+
+        alert('Success! Allocation request safely dispatched to active operational networks.');
+        assistanceForm.reset();
+    });
+}
+
+</script>
+
+           <!-- PAGE COMPONENT 3: ENHANCED OPEN COMMUNITY HUB LOGS -->
+<section id="client-community-logs" class="canvas-dynamic-page" aria-labelledby="hubs-title">
+    
+    <!-- Immersive Background Canvas using requested img tag -->
+    <div class="hubs-bg-canvas">
+        <img src="./Assests/digital edu.webp" 
+             alt="Vibrant team brainstorming layout representing cooperative social welfare development networks" 
+             loading="lazy" 
+             class="hubs-canvas-image">
+        <div class="hubs-canvas-curtain"></div>
+    </div>
+
+    <!-- Soft Ambient Plasma Energy Fields -->
+    <div class="hubs-plasma-orb orb-alpha-glow-hubs"></div>
+    <div class="hubs-plasma-orb orb-beta-glow-hubs"></div>
+
+    <div class="hubs-inner-grid">
+        
+        <!-- Header Utility Row -->
+        <header class="hubs-panel-header">
+            <div class="header-strings">
+                <span class="telemetry-pill">DECENTRALIZED OPERATIONS</span>
+                <h2 id="hubs-title">Community Hub Logs</h2>
+            </div>
+            <!-- Creative 404 Navigation Anchor -->
+            <a href="404.html" class="hubs-fallback-trigger" title="Simulate Hub Telemetry Disconnect Route">
+                <span>TERMINATE HUB LINK</span>
+                <svg class="trigger-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </header>
+
+        <!-- 3-Column Premium Glassmorphic Hub Ecosystem Grid -->
+        <div class="hubs-cards-ecosystem">
+            
+            <!-- Hub Element 1 -->
+            <article class="hub-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                <header class="hub-card-header">
+                    <div class="hub-status-cluster">
+                        <div class="hub-ping-wave active-ping"></div>
+                        <div class="hub-blip-dot active-dot"></div>
+                    </div>
+                    <div>
+                        <span class="hub-node-id">HUB_NODE // SLM-MAIN</span>
+                        <h3>Salem Central Quadrant</h3>
+                    </div>
+                </header>
+                <p class="hub-card-desc">Our primary logistics assembly node coordinating deep-filtration mechanics routing and emergency resource dispatches across the immediate territory.</p>
+                <div class="hub-footer-meta">
+                    <span class="meta-label">GRID AVAILABILITY</span>
+                    <span class="meta-value value-optimal">98.4% LINK SYNC</span>
+                </div>
+            </article>
+
+            <!-- Hub Element 2 -->
+            <article class="hub-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                <header class="hub-card-header">
+                    <div class="hub-status-cluster">
+                        <div class="hub-ping-wave active-ping"></div>
+                        <div class="hub-blip-dot active-dot"></div>
+                    </div>
+                    <div>
+                        <span class="hub-node-id">HUB_NODE // PKY-02</span>
+                        <h3>Periyakollappatty Node</h3>
+                    </div>
+                </header>
+                <p class="hub-card-desc">Mobile rapid-response clinic cell handling primary pediatric inventory deployments and localized field testing infrastructure assets.</p>
+                <div class="hub-footer-meta">
+                    <span class="meta-label">GRID AVAILABILITY</span>
+                    <span class="meta-value value-optimal">ACTIVE FLUID CELL</span>
+                </div>
+            </article>
+
+            <!-- Hub Element 3 -->
+            <article class="hub-glass-card" tabindex="0">
+                <div class="card-flashlight-sweep"></div>
+                <header class="hub-card-header">
+                    <div class="hub-status-cluster">
+                        <div class="hub-ping-wave critical-ping"></div>
+                        <div class="hub-blip-dot critical-dot"></div>
+                    </div>
+                    <div>
+                        <span class="hub-node-id">HUB_NODE // CHN-07</span>
+                        <h3>Chinna Thirupathi Matrix</h3>
+                    </div>
+                </header>
+                <p class="hub-card-desc">Solar-powered decentralized classroom learning pipeline framework streaming programmatic data assets to youth networks.</p>
+                <div class="hub-footer-meta">
+                    <span class="meta-label">GRID AVAILABILITY</span>
+                    <span class="meta-value value-critical">72% STANDBY CODES</span>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- ENHANCED COMMUNITY HUBS INTERACTION MECHANICS --- */
+
+/* 1. Balanced Contrast Stacking Depth - Image Fully Visible & Colorful */
+.hubs-bg-canvas {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Below text and layout grids */
+    overflow: hidden;
+}
+
+.hubs-canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Retains underlying design tones cleanly without bleaching text readability layers */
+    filter: brightness(55%) contrast(105%) saturate(80%);
+    transform: scale(1.02);
+    animation: hubsCanvasPan 48s infinite alternate ease-in-out;
+}
+
+.hubs-canvas-curtain {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 10, 14, 0.90) 0%,
+        rgba(10, 16, 26, 0.65) 60%,
+        #070a0e 100%
+    );
+    z-index: 2; /* Over image, under card items */
+}
+
+/* 2. Soft Ambient Plasma Energy Fields */
+.hubs-plasma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 2;
+    opacity: 0.13;
+    pointer-events: none;
+    animation: hubsOrbDrift 26s infinite alternate ease-in-out;
+}
+.orb-alpha-glow-hubs {
+    width: 460px;
+    height: 460px;
+    background: #1b5e20;
+    top: -8%;
+    right: 5%;
+}
+.orb-beta-glow-hubs {
+    width: 480px;
+    height: 480px;
+    background: #81c784;
+    bottom: -12%;
+    left: 5%;
+    animation-delay: -5s;
+}
+
+/* 3. Central Content Framing Layer */
+.hubs-inner-grid {
+    position: relative;
+    z-index: 3; /* Unlocks absolute visibility and mouse clicking accessibility tracks */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Page Component Header Group */
+.hubs-panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.hubs-panel-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Creative 404 Route Button Trigger */
+.hubs-fallback-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(198, 40, 40, 0.05);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hubs-fallback-trigger:hover {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 4. 3-Column Responsive Interface Framework Grid */
+.hubs-cards-ecosystem {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+/* Glassmorphic Hub Cards with Real-Time Focus Glows */
+.hub-glass-card {
+    position: relative;
+    background: rgba(14, 19, 26, 0.65);
+    border: 1px solid rgba(129, 199, 132, 0.12);
+    border-radius: 16px;
+    padding: 30px;
+    overflow: hidden;
+    outline: none;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* Flashlight tracking backdrop background layer setup */
+.hub-glass-card .card-flashlight-sweep {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--card-x, 50%) var(--card-y, 50%), rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hub-glass-card:hover .card-flashlight-sweep,
+.hub-glass-card:focus .card-flashlight-sweep {
+    opacity: 1;
+}
+
+.hub-glass-card:hover, .hub-glass-card:focus {
+    transform: translateY(-5px);
+    border-color: rgba(129, 199, 132, 0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(46, 125, 50, 0.08);
+}
+
+/* Card Header Cluster Blocks */
+.hub-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hub-node-id {
+    display: block;
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--dash-neon-welfare);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.hub-card-header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+}
+
+.hub-card-desc {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Real-Time Blinking Radar Status Blip elements */
+.hub-status-cluster {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hub-blip-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.hub-ping-wave {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: hubBlinkWave 2.2s infinite ease-out;
+}
+
+.critical-dot { background-color: #ef5350; box-shadow: 0 0 8px #ef5350; }
+.critical-ping { background-color: #ef5350; }
+
+.active-dot { background-color: #66bb6a; box-shadow: 0 0 8px #66bb6a; }
+.active-ping { background-color: #66bb6a; }
+
+/* Metadata Card Footer Blocks */
+.hub-footer-meta {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+}
+
+.value-critical { color: #ef5350; font-weight: 700; font-size: 0.82rem; }
+.value-optimal { color: #66bb6a; font-weight: 700; font-size: 0.82rem; }
+
+/* 5. Keyframes */
+@keyframes hubsCanvasPan {
+    0% { transform: scale(1.02) translate(0px, 0px); }
+    100% { transform: scale(1.07) translate(-15px, -6px); }
+}
+
+@keyframes hubsOrbDrift {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(20px, -20px) scale(1.04); }
+}
+
+@keyframes hubBlinkWave {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(3.8); opacity: 0; }
+}
+
+/* Viewport Responsiveness Adjustments */
+@media (max-width: 768px) {
+    .hubs-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .hubs-fallback-trigger {
+        width: 100%;
+    }
+}
+
+</style>
+
+<script>
+    // --- 7. COMMUNITY HUBS CARDS FLASHLIGHT LIGHTING LOOP ---
+const communityHubCards = document.querySelectorAll('.hub-glass-card');
+
+communityHubCards.forEach(card => {
+    // Generate the tracking overlay element dynamically to keep source codes clean
+    const sweepOverlay = document.createElement('div');
+    sweepOverlay.className = 'card-flashlight-sweep';
+    card.appendChild(sweepOverlay);
+
+    card.addEventListener('mousemove', (e) => {
+        const boundsRect = card.getBoundingClientRect();
+        const cursorPercentX = ((e.clientX - boundsRect.left) / boundsRect.width) * 100;
+        const cursorPercentY = ((e.clientY - boundsRect.top) / boundsRect.height) * 100;
+
+        // Map calculation parameters live into the target stylesheet layer
+        card.style.setProperty('--card-x', `${cursorPercentX}%`);
+        card.style.setProperty('--card-y', `${cursorPercentY}%`);
+    });
+});
+
+</script>
+
+         <!-- PAGE COMPONENT 4: ENHANCED CLIENT IMPACT SUMMARY PANEL -->
+<section id="client-impact-ledger" class="canvas-dynamic-page" aria-labelledby="summary-title">
+    
+    <!-- Immersive Background Canvas using requested img tag -->
+    <div class="summary-bg-canvas">
+        <img src="./Assests/digital doct.webp" 
+             alt="Vibrant abstract texture representing transparent data flow records and collective impact metrics" 
+             loading="lazy" 
+             class="summary-canvas-image">
+        <div class="summary-canvas-curtain"></div>
+    </div>
+
+    <!-- Soft Ambient Plasma Energy Fields -->
+    <div class="summary-plasma-orb orb-alpha-glow-summary"></div>
+    <div class="summary-plasma-orb orb-beta-glow-summary"></div>
+
+    <div class="summary-inner-grid">
+        
+        <!-- Header Utility Row -->
+        <header class="summary-panel-header">
+            <div class="header-strings">
+                <span class="telemetry-pill">INDIVIDUAL MILESTONE TELEMETRY</span>
+                <h2 id="summary-title">My Impact Summary</h2>
+            </div>
+            <!-- Creative 404 Navigation Anchor -->
+            <a href="404.html" class="summary-fallback-trigger" title="Simulate Impact Ledger Link Disconnect Route">
+                <span>SEVER SUMMARY LEDGER</span>
+                <svg class="trigger-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </header>
+
+        <!-- Asymmetrical Profile Summary Layout -->
+        <div class="summary-profile-layout">
+            
+            <!-- Left Side: Metric Display Plate -->
+            <article class="summary-glass-card dashboard-impact-plate" tabindex="0">
+                <header class="summary-card-header">
+                    <div class="summary-vector-frame">
+                        <svg class="summary-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="summary-node-id">LEDGER_LOG // SECURE_TRACK</span>
+                        <h3>Community Contribution Factor</h3>
+                    </div>
+                </header>
+
+                <p class="summary-card-desc">Your localized operational link accounts for multiple asset distribution clearances, supporting village water grids and open tablet modules.</p>
+                
+                <!-- Meter Telemetry -->
+                <div class="summary-meter-box">
+                    <div class="summary-meter-labels">
+                        <span class="summary-meter-meta">GENERATIONAL SUSTAINABILITY RATING</span>
+                        <span class="summary-meter-value">LEVEL 03 ACCELERATED</span>
+                    </div>
+                    <div class="summary-meter-bar-track">
+                        <div class="summary-meter-bar-fill glow-green-fill" style="width: 78%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Right Side: Key-Value Parameter Item Blocks -->
+            <div class="summary-metadata-stack">
+                <article class="summary-glass-card summary-matrix-item" tabindex="0">
+                    <span class="summary-meta-label">TOTAL BENEFICIARY FOOTPRINT RESCURED</span>
+                    <h4 class="summary-meta-value text-glow-sweep">240+ Lives Sustained</h4>
+                </article>
+
+                <article class="summary-glass-card summary-matrix-item" tabindex="0">
+                    <span class="summary-meta-label">VERIFIED DIGITAL LEDGER TRUST SCORE</span>
+                    <h4 class="summary-meta-value">99.2% OPTIMAL PROFILE FACTOR</h4>
+                </article>
+
+                <article class="summary-glass-card summary-matrix-item" tabindex="0">
+                    <span class="summary-meta-label">NEXT MILESTONE SYNCHRONIZATION</span>
+                    <h4 class="summary-meta-value">STAGE 04 CLEARANCE // IN TRANSIT</h4>
+                </article>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- ENHANCED CLIENT IMPACT SUMMARY INTERACTION MECHANICS --- */
+
+/* 1. Balanced Contrast Stacking Depth - Image Fully Visible & Colorful */
+.summary-bg-canvas {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Locked below content layout structures */
+    overflow: hidden;
+}
+
+.summary-canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Rich matrix hues remain fully visible without blinding typography layers */
+    filter: brightness(55%) contrast(105%) saturate(85%);
+    transform: scale(1.02);
+    animation: summaryCanvasPan 55s infinite alternate ease-in-out;
+}
+
+.summary-canvas-curtain {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 10, 14, 0.90) 0%,
+        rgba(10, 16, 26, 0.65) 60%,
+        #070a0e 100%
+    );
+    z-index: 2; /* Directly over image, under layout items */
+}
+
+/* 2. Soft Ambient Plasma Energy Fields */
+.summary-plasma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 2;
+    opacity: 0.12;
+    pointer-events: none;
+    animation: summaryOrbDrift 30s infinite alternate ease-in-out;
+}
+.orb-alpha-glow-summary {
+    width: 500px;
+    height: 500px;
+    background: #1b5e20;
+    top: -10%;
+    right: -5%;
+}
+.orb-beta-glow-summary {
+    width: 450px;
+    height: 450px;
+    background: #81c784;
+    bottom: -5%;
+    left: -5%;
+    animation-delay: -8s;
+}
+
+/* 3. Central Content Framing Layer */
+.summary-inner-grid {
+    position: relative;
+    z-index: 3; /* Unlocks absolute visibility and mouse click accessibility tracks */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Page Component Header Group */
+.summary-panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.summary-panel-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Creative 404 Route Button Trigger */
+.summary-fallback-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(198, 40, 40, 0.05);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.summary-fallback-trigger:hover {
+    background-color: #c62828;
+    color: #ffffff;
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 4. Asymmetrical 2-Segment Layout Grid */
+.summary-profile-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Glassmorphic Summary Container Items */
+.summary-glass-card {
+    position: relative;
+    background: rgba(14, 19, 26, 0.65);
+    border: 1px solid rgba(129, 199, 132, 0.12);
+    border-radius: 16px;
+    padding: 35px;
+    overflow: hidden;
+    outline: none;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+.summary-glass-card:hover, .summary-glass-card:focus {
+    transform: translateY(-4px);
+    border-color: rgba(129, 199, 132, 0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(46, 125, 50, 0.08);
+}
+
+/* Left Segment Specific Header Elements */
+.dashboard-impact-plate .summary-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.summary-vector-frame {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.summary-svg {
+    width: 20px;
+    height: 20px;
+}
+
+.dashboard-impact-plate:hover .summary-vector-frame,
+.dashboard-impact-plate:focus .summary-vector-frame {
+    color: #81c784;
+    background-color: rgba(46, 125, 50, 0.12);
+    border-color: rgba(129, 199, 132, 0.2);
+}
+
+.summary-node-id {
+    display: block;
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--dash-neon-welfare);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.dashboard-impact-plate h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+}
+
+.summary-card-desc {
+    font-size: 0.92rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Progress Meters */
+.summary-meter-box {
+    margin-top: auto;
+}
+
+.summary-meter-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.summary-meter-meta {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.summary-meter-value {
+    color: #ffffff;
+}
+
+.summary-meter-bar-track {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.summary-meter-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.glow-green-fill { background-color: #2e7d32; box-shadow: 0 0 8px #2e7d32; }
+
+/* Right Segment Parameter Stack list items */
+.summary-metadata-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-matrix-item {
+    padding: 24px 30px;
+    justify-content: center;
+}
+
+.summary-matrix-item .summary-meta-label {
+    font-size: 0.62rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.summary-matrix-item .summary-meta-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* Shifting Text Capital Glow Effect */
+.summary-metadata-stack .text-glow-sweep {
+    background: linear-gradient(90deg, #ffffff, #81c784, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: summaryTitleSweep 6s linear infinite;
+    font-weight: 800;
+}
+
+/* 5. Keyframes System */
+@keyframes summaryCanvasPan {
+    0% { transform: scale(1.02) translate(0px, 0px); }
+    100% { transform: scale(1.06) translate(-12px, -8px); }
+}
+
+@keyframes summaryOrbDrift {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(30px, -15px) scale(1.04); }
+}
+
+@keyframes summaryTitleSweep {
+    to { background-position: 200% center; }
+}
+
+/* Viewport Responsiveness Adjustments for Summary Grids */
+@media (max-width: 900px) {
+    .summary-profile-layout {
+        grid-template-columns: 1fr;
+    }
+    .summary-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .summary-fallback-trigger {
+        width: 100%;
+    }
+}
+
+</style>
+
+<script>
+    // --- 8. CLIENT SUMMARY CARDS FLASHLIGHT LIGHTING TRACK LOOP ---
+const summaryImpactCards = document.querySelectorAll('.summary-glass-card');
+
+summaryImpactCards.forEach(card => {
+    // Inject the structural flashlight sweep node at runtime to maintain cleaner parent HTML
+    const flashlightNode = document.createElement('div');
+    flashlightNode.className = 'card-flashlight-sweep';
+    card.appendChild(flashlightNode);
+
+    card.addEventListener('mousemove', (e) => {
+        // Calculate bounds offsets
+        const propertiesBox = card.getBoundingClientRect();
+        const computeX = ((e.clientX - propertiesBox.left) / propertiesBox.width) * 100;
+        const computeY = ((e.clientY - propertiesBox.top) / propertiesBox.height) * 100;
+
+        // Push layout properties live into inline styling contexts
+        card.style.setProperty('--sweep-x', `${computeX}%`);
+        card.style.setProperty('--sweep-y', `${computeY}%`);
+    });
+});
+
+</script>
+
+        </main>
+
+    </div>
+
+    <style>
+        /* --- WELFARE DASHBOARD SYSTEM INTERACTIVE LAYOUT DESIGN LAWS --- */
+:root {
+    --dash-neon-welfare: #81c784;     
+    --dash-emerald-core: #2e7d32;     
+    --dash-abyss-void: #070a0e;       
+    --dash-plate-dark: #0e131a;       
+    --dash-input-bg: #05070a;        
+    --dash-border-slate: #1e293b;     
+    --dash-text-pure: #ffffff;
+    --dash-text-slate: #94a3b8;
+    --dash-text-ghost: rgba(255, 255, 255, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.client-dash-body {
+    background-color: var(--dash-abyss-void);
+    color: var(--dash-text-pure);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* 1. Universal Scroll Lock Configuration Rule */
+body.scroll-locked {
+    overflow: hidden;
+}
+
+body.scroll-locked .dash-content-canvas-panel {
+    overflow-y: hidden;
+    touch-action: none;
+}
+
+/* ==========================================================
+   FINAL LAYOUT OVERRIDE
+   Place at the VERY END of client-dashboard.css
+========================================================== */
+
+/* ---------- Fixed Header ---------- */
+
+.dash-master-header{
+    position:fixed !important;
+    top:0;
+    left:0;
+    right:0;
+    height:75px;
+    width:100%;
+    z-index:9999;
+}
+
+/* ---------- Main Layout ---------- */
+
+.dash-viewport-wrapper{
+    display:flex !important;
+    flex:1;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* ---------- Sidebar ---------- */
+
+.dash-sidebar-panel{
+
+    width:280px !important;
+    min-width:280px;
+
+    margin-top:75px !important;
+
+    height:calc(100vh - 75px) !important;
+
+    flex:0 0 280px;
+
+    overflow-y:auto;
+
+    position:relative;
+
+}
+
+/* ---------- Main Content ---------- */
+
+.dash-content-canvas-panel{
+
+    flex:1 !important;
+
+    min-width:0;
+
+    margin-top:75px !important;
+
+    height:calc(100vh - 75px) !important;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:35px !important;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:900px){
+
+.dash-sidebar-panel{
+
+    position:fixed !important;
+
+    top:75px;
+
+    left:0;
+
+    margin-top:0 !important;
+
+    width:85vw !important;
+
+    max-width:340px;
+
+    height:calc(100vh - 75px) !important;
+
+    transform:translateX(-100%);
+
+    transition:.35s ease;
+
+    z-index:9998;
+
+}
+
+.dash-sidebar-panel.sidebar-opened{
+
+    transform:translateX(0);
+
+}
+
+.dash-content-canvas-panel{
+
+    margin-top:75px !important;
+
+    height:calc(100vh - 75px) !important;
+
+    padding:25px 18px !important;
+
+}
+
+.sidebar-blur-overlay{
+
+    position:fixed;
+
+    top:75px;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    z-index:9997;
+
+}
+
+}
+
+
+/* Master Header Layout */
+.dash-master-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    width: 100%;
+    background-color: var(--dash-plate-dark);
+    border-bottom: 1px solid var(--dash-border-slate);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(20px, 4vw);
+    z-index: 1200;
+}
+
+.header-left-cluster {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-brand-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.brand-logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--dash-border-slate);
+}
+
+.brand-logo-text {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--dash-text-pure);
+}
+
+.brand-logo-text span {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--dash-text-slate);
+}
+
+/* Dynamic Hamburger Trigger Button */
+.hamburger-menu-btn {
+    display: none; /* Invisible on standard layout views */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 200;
+    outline: none;
+}
+
+.hamburger-bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--dash-text-pure);
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+}
+
+/* Morphing transform parameters inside open state loops */
+.hamburger-menu-btn.menu-activated .bar-top { transform: translateY(8px) rotate(45deg); background-color: #ef5350;}
+.hamburger-menu-btn.menu-activated .bar-mid { opacity: 0; transform: translateX(-10px); }
+.hamburger-menu-btn.menu-activated .bar-bottom { transform: translateY(-8px) rotate(-45deg); background-color: #ef5350;}
+
+/* Header Profiles and Indicators */
+.header-profile-ecosystem {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.bell-alert-trigger {
+    position: relative;
+    color: var(--dash-text-slate);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+}
+
+.header-vector-icon { width: 22px; height: 22px; }
+.bell-alert-trigger:hover { color: var(--dash-neon-welfare); }
+
+.bell-pulse-indicator {
+    position: absolute;
+    top: -2px;
+    right: -1px;
+    width: 6px;
+    height: 6px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #4caf50;
+}
+
+.header-divider { width: 1px; height: 30px; background-color: var(--dash-border-slate); }
+.user-terminal-display { display: flex; align-items: center; gap: 14px; }
+
+.user-avatar-sphere {
+    width: 40px;
+    height: 40px;
+    background-color: var(--dash-input-bg);
+    border: 1px solid var(--dash-border-slate);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dash-text-slate);
+}
+
+.avatar-vector { width: 18px; height: 18px; }
+.user-meta-strings { display: flex; flex-direction: column; text-align: left; }
+.meta-label { font-size: 0.62rem; font-weight: 800; color: var(--dash-text-ghost); }
+.parsed-user-string { font-size: 0.92rem; font-weight: 700; color: var(--dash-neon-welfare); text-transform: capitalize; }
+
+/* 2. Main Viewport & Sidebar Grid Structure */
+.dash-viewport-wrapper{
+    flex:1;
+    display:flex;
+    width:100%;
+    position:relative;
+}
+
+/* Mobile Screen Dark Blur Backdrop Overlay Layer */
+.sidebar-blur-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(5, 7, 10, 0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 85;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.sidebar-blur-overlay.overlay-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dash-sidebar-panel {
+    width: 280px;
+    height: calc(100vh - 75px);
+    background-color: var(--dash-plate-dark);
+    border-right: 1px solid var(--dash-border-slate);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 15px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    z-index: 90;
+    box-sizing: border-box;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.sidebar-links-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.side-nav-anchor, .sidebar-logout-trigger {
+    width: 100%;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 16px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--dash-text-slate);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    text-align: left;
+}
+
+.sidebar-vector, .logout-vector { width: 16px; height: 16px; flex-shrink: 0; }
+
+.side-nav-anchor:hover, .side-nav-anchor:focus {
+    color: var(--dash-text-pure);
+    background-color: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.side-nav-anchor.active {
+    background-color: rgba(46, 125, 50, 0.08);
+    border-color: rgba(129, 199, 132, 0.2);
+    color: var(--dash-neon-welfare);
+}
+
+.sidebar-logout-trigger {
+    background: rgba(198, 40, 40, 0.04);
+    border: 1px solid rgba(198, 40, 40, 0.2);
+    color: #ef5350;
+    margin-top: 30px;
+    flex-shrink: 0;
+}
+
+.sidebar-logout-trigger:hover {
+    background-color: #c62828;
+    color: var(--dash-text-pure);
+    border-color: #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+}
+
+/* 3. Main Dynamic Content Canvas Panel */
+.dash-content-canvas-panel{
+    flex: 1;
+    overflow-y: auto;
+    background: var(--dash-abyss-void);
+    padding: 40px 20px;
+}
+
+.canvas-dynamic-page { display: none; width: 100%; animation: contentFadeIn 0.4s ease-out; }
+.canvas-dynamic-page.active-page { display: block; }
+
+.isolated-testing-header {
+    background-color: var(--dash-plate-dark);
+    border: 1px solid var(--dash-border-slate);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: left;
+    max-width: 800px;
+    border-left: 4px solid var(--dash-emerald-core);
+}
+
+.dashboard-content-wrapper{
+    width: 100%;
+    max-width: 1400px;      /* Change to 1200px, 1300px, 1600px as needed */
+    margin: 0 auto;
+}
+
+.isolated-testing-header h2 { font-size: 1.4rem; font-weight: 800; color: var(--dash-text-pure); margin-bottom: 10px; }
+.isolated-testing-header p { font-size: 0.92rem; color: var(--dash-text-slate); line-height: 1.5; }
+
+@keyframes contentFadeIn {
+    0% { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Full Viewport Responsive Breakpoints */
+@media (max-width: 900px) {
+    .hamburger-menu-btn {
+        display: flex; /* Displays icon trigger cleanly */
+    }
+
+    .dash-sidebar-panel {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 85vw;
+    max-width: 340px;
+    height: calc(100vh - 75px);
+    transform: translateX(-100%);
+    transition: transform .35s ease;
+    z-index: 1100;
+    overflow-y: auto;
+}
+
+.dash-sidebar-panel.sidebar-opened {
+    transform: translateX(0);
+}
+
+    .dash-sidebar-panel {
+        position: fixed;
+        left: 0;
+        top: 75px;
+        bottom: 0;
+        height: calc(100vh - 75px);
+        width: 280px;
+        background: #0e131a;
+        border-right: 1px solid #1e293b;
+        transform: translateX(-100%); /* Slides completely out of view */
+        z-index: 90;
+        box-shadow: 20px 0 40px rgba(0,0,0,0.5);
+    }
+
+    .dash-sidebar-panel.sidebar-opened {
+        transform: translateX(0);
+    }
+}
+
+    </style>
+
+    <script>
+ document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- OBLIGATORY INITIALIZATION DOM SELECTORS ---
+    // FIX: Re-introduced missing variable nodes to prevent "undefined" terminal crash breaks
+    const profileTextNode = document.getElementById('headerProfileName');
+    const sidebarAnchors = document.querySelectorAll('.side-nav-anchor');
+    const structuralPages = document.querySelectorAll('.canvas-dynamic-page');
+    const menuToggleBtn = document.getElementById('mobileMenuToggle');
+    const sidebarPanel = document.getElementById('dashSidebar');
+    const blurOverlay = document.getElementById('sidebarOverlay');
+    const logoutTrigger = document.getElementById('dashLogoutTrigger'); 
+    const brandRefreshTrigger = document.getElementById('dashBrandRefresh');
+    const bodyContainer = document.body;
+
+    // --- 1. DYNAMIC CLIENT MAIL IDENTITY PARSING AND DISPLAY ---
+    const dynamicSessionEmail = localStorage.getItem('userEmailAddress') || "client@stackly.com"; 
+
+    const parseClientNameFromEmail = (emailString) => {
+        if (!emailString || !emailString.includes('@')) {
+            return "Client Profile";
+        }
+        const namePart = emailString.split('@');
+        return namePart[0]; 
+    };
+
+    if (profileTextNode) {
+        profileTextNode.textContent = parseClientNameFromEmail(dynamicSessionEmail);
+    }
+
+    // --- 2. MULTI-PAGE CANVAS TRANSITION STATE CONTROLS ---
+    sidebarAnchors.forEach(anchor => {
+        anchor.addEventListener('click', () => {
+            const targetPageId = anchor.getAttribute('data-target-section');
+
+            sidebarAnchors.forEach(btn => btn.classList.remove('active'));
+            anchor.classList.add('active');
+
+            structuralPages.forEach(page => {
+                if (page.getAttribute('id') === targetPageId) {
+                    page.classList.add('active-page');
+                } else {
+                    page.classList.remove('active-page');
+                }
+            });
+        });
+    });
+
+    
+
+    // --- 3. MOBILE HAMBURGER MENUS & SCROLL LOCK ENGINE ---
+   const contentPanel = document.querySelector(".dash-content-canvas-panel");
+
+const toggleMobileNavigation = () => {
+
+    if (!sidebarPanel || !menuToggleBtn || !blurOverlay) return;
+
+    const isOpen = sidebarPanel.classList.contains("sidebar-opened");
+
+    if (!isOpen) {
+
+        sidebarPanel.classList.add("sidebar-opened");
+        blurOverlay.classList.add("overlay-visible");
+        menuToggleBtn.classList.add("menu-activated");
+        menuToggleBtn.setAttribute("aria-expanded", "true");
+
+        // Disable scrolling
+        contentPanel.style.overflowY = "hidden";
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+
+    } else {
+
+        sidebarPanel.classList.remove("sidebar-opened");
+        blurOverlay.classList.remove("overlay-visible");
+        menuToggleBtn.classList.remove("menu-activated");
+        menuToggleBtn.setAttribute("aria-expanded", "false");
+
+        // Enable scrolling
+        contentPanel.style.overflowY = "auto";
+        document.documentElement.style.overflow = "";
+        document.body.style.overflow = "";
+
+    }
+
+};
+
+menuToggleBtn.addEventListener("click", toggleMobileNavigation);
+blurOverlay.addEventListener("click", toggleMobileNavigation);
+
+sidebarAnchors.forEach(item => {
+    item.addEventListener("click", () => {
+        if (sidebarPanel.classList.contains("sidebar-opened")) {
+            toggleMobileNavigation();
+        }
+    });
+});
+
+    // --- 4. NAVIGATION DESTRUCTION OVERRIDES (LOGOUT FIX) ---
+    // FIX: Enclosed within protective validation checks to ensure runtime security stability
+    if (logoutTrigger) {
+        logoutTrigger.addEventListener('click', () => {
+            if (confirm("Are you sure you want to terminate your secure client integration session?")) {
+                // Completely wipes the string cache out of browser storage arrays
+                localStorage.removeItem('userEmailAddress'); 
+                // Direct route back to login page
+                window.location.href = 'login.html'; 
+            }
+        });
+    }
+
+    // Optional Brand Click Refresh Action
+    if (brandRefreshTrigger) {
+        brandRefreshTrigger.addEventListener('click', () => {
+            window.location.reload();
+        });
+    }
+});
+
+
+    </script>
+</body>
+</html>
