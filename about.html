@@ -886,6 +886,228 @@
     .pillars-section-header { text-align: center; }
 }
 
+/* ======================================================
+   RESPONSIVE ADD-ON
+   Place at the END of your CSS
+======================================================*/
+
+/* ---------- Tablets ---------- */
+@media (max-width:992px){
+
+    .stackly-pillars-section{
+        padding:70px 6%;
+    }
+
+    .pillars-section-header{
+        max-width:100%;
+        margin:0 auto 45px;
+        text-align:center;
+    }
+
+    .pillars-title-main{
+        font-size:2.2rem;
+    }
+
+    .pillars-paragraph-description{
+        font-size:1rem;
+    }
+
+    .pillars-masonry-grid{
+        grid-template-columns:repeat(2,minmax(280px,1fr));
+        gap:24px;
+    }
+
+    .stack-layer-01,
+    .stack-layer-02,
+    .stack-layer-03{
+        transform:none !important;
+    }
+
+}
+
+
+/* ---------- Large Mobiles ---------- */
+@media (max-width:768px){
+
+    .stackly-pillars-section{
+
+        padding:60px 20px;
+
+    }
+
+    .pillars-section-header{
+
+        margin-bottom:35px;
+
+        text-align:center;
+
+    }
+
+    .pillars-mini-tag{
+
+        font-size:.75rem;
+
+        letter-spacing:2px;
+
+    }
+
+    .pillars-title-main{
+
+        font-size:2rem;
+
+        line-height:1.25;
+
+    }
+
+    .pillars-paragraph-description{
+
+        font-size:.95rem;
+
+        line-height:1.7;
+
+    }
+
+    .pillars-masonry-grid{
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+
+    }
+
+    .pillar-glow-card{
+
+        width:100%;
+
+    }
+
+    .pillar-card-inner{
+
+        padding:28px 24px;
+
+    }
+
+    .pillar-vector-sphere{
+
+        width:52px;
+
+        height:52px;
+
+        margin-bottom:18px;
+
+    }
+
+    .pillar-card-title{
+
+        font-size:1.25rem;
+
+    }
+
+    .pillar-card-para{
+
+        font-size:.95rem;
+
+        margin-bottom:20px;
+
+    }
+
+    .btn-pillar-action-glow{
+
+        width:100%;
+
+        justify-content:space-between;
+
+    }
+
+}
+
+
+/* ---------- Small Mobiles ---------- */
+@media (max-width:480px){
+
+    .stackly-pillars-section{
+
+        padding:50px 16px;
+
+    }
+
+    .pillars-title-main{
+
+        font-size:1.7rem;
+
+    }
+
+    .pillars-paragraph-description{
+
+        font-size:.9rem;
+
+    }
+
+    .pillar-card-inner{
+
+        padding:22px 18px;
+
+    }
+
+    .pillar-vector-sphere{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .pillar-svg-asset{
+
+        width:20px;
+
+        height:20px;
+
+    }
+
+    .pillar-card-title{
+
+        font-size:1.15rem;
+
+    }
+
+    .pillar-card-para{
+
+        font-size:.9rem;
+
+        line-height:1.6;
+
+    }
+
+    .btn-pillar-action-glow{
+
+        font-size:.88rem;
+
+        gap:12px;
+
+    }
+
+    .pillars-orb-glow{
+
+        display:none;
+
+    }
+
+}
+
+
+/* ---------- Prevent Overflow ---------- */
+
+.stackly-pillars-section *,
+.pillars-central-container,
+.pillars-masonry-grid,
+.pillar-glow-card{
+
+    max-width:100%;
+
+    word-wrap:break-word;
+
+}
 </style>
 
 <script>
@@ -974,7 +1196,7 @@
                         </div>
                         <div class="node-text">
                             <h4>Operations HQ</h4>
-                            <p itemprop="address">Sector 4, Gateway Tech Block, Mumbai, IN</p>
+                            <p itemprop="address">MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
                         </div>
                     </div>
 
@@ -995,37 +1217,41 @@
             <div class="intake-terminal-box">
                 <div class="terminal-glow-backplate"></div>
                 
-                <form class="intake-interactive-form" id="aboutIntakeForm" onsubmit="event.preventDefault();" aria-label="Secure Communications Intake Console">
+               <form class="intake-interactive-form" id="aboutIntakeForm" aria-label="Secure Communications Intake Console" novalidate>
                     
-                    <div class="form-input-box">
-                        <input type="text" id="intakeName" placeholder="Operator Name" required autocomplete="off">
-                        <span class="box-glow-border"></span>
-                    </div>
+    <div class="form-input-box">
+        <input type="text" id="intakeName" placeholder="Operator Name" required autocomplete="off">
+        <span class="box-glow-border"></span>
+    </div>
 
-                    <div class="form-input-box">
-                        <input type="email" id="intakeEmail" placeholder="Secure Email Route" required autocomplete="off">
-                        <span class="box-glow-border"></span>
-                    </div>
+    <div class="form-input-box">
+        <input type="email" id="intakeEmail" placeholder="Secure Email Route" required autocomplete="off">
+        <span class="box-glow-border"></span>
+    </div>
 
-                    <div class="form-input-box">
-                        <textarea id="intakeMessage" placeholder="Transmission Payload Logs..." rows="4" required></textarea>
-                        <span class="box-glow-border"></span>
-                    </div>
+    <div class="form-input-box">
+        <textarea id="intakeMessage" placeholder="Transmission Payload Logs..." rows="4" required></textarea>
+        <span class="box-glow-border"></span>
+    </div>
 
-                    <!-- Custom 404 Rescue Trigger Button Clusters Framework -->
-                    <div class="form-action-row">
-                        <!-- Left Action Button: Form Submission (Armed with 404 backup route parameters) -->
-                        <button type="submit" class="btn-intake-submit error-rescue-route" onclick="window.location.href='404.html';" aria-label="Transmit security payload parameters via 404 validation rescue">
-                            <span>Transmit Intel</span>
-                        </button>
-                        
-                        <!-- Right Action Button: Safe Rollback Home (Armed with 404 route safety fallback link) -->
-                        <a href="404.html" class="btn-intake-escape error-rescue-route" aria-label="Abort system communication loop to 404 routing base camp">
-                            <span>Abort Loop</span>
-                        </a>
-                    </div>
+    <!-- Live Status Telemetry Feedback Alert Placement Area Slot -->
+    <div id="intakeFeedback" class="intake-feedback-line"></div>
 
-                </form>
+    <!-- Custom 404 Rescue Trigger Button Clusters Framework -->
+    <div class="form-action-row">
+        <!-- Left Action Button: Form Submission (Redirection handled dynamically by script validation) -->
+        <button type="submit" class="btn-intake-submit error-rescue-route" id="btnTransmitIntel" aria-label="Transmit security payload parameters via 404 validation rescue">
+            <span>Transmit Intel</span>
+        </button>
+        
+        <!-- Right Action Button: Safe Abort Rollback (Redirection handled dynamically by script validation) -->
+        <button type="button" class="btn-intake-escape error-rescue-route" id="btnAbortLoop" aria-label="Abort system communication loop to 404 routing base camp">
+            <span>Abort Loop</span>
+        </button>
+    </div>
+
+</form>
+
             </div>
 
         </div>
@@ -1334,6 +1560,42 @@
     .btn-intake-escape { width: 100%; }
 }
 
+/* --- INTAKE FORM SYSTEM ALERTS CONFIGURATION LAWS --- */
+.intake-feedback-line {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: left;
+    min-height: 20px; /* Reserves static container block height to prevent row layout shifts */
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: color 0.3s ease;
+}
+
+/* Red dynamic warning text when input requirements fail */
+.validation-error-alert {
+    color: #ef5350 !important;
+    text-shadow: 0 0 10px rgba(239, 83, 80, 0.2);
+}
+
+/* Green dynamic success text when redirection takes flight */
+.validation-success-alert {
+    color: #81c784 !important;
+    text-shadow: 0 0 10px rgba(129, 199, 132, 0.2);
+}
+
+/* Ensure action row behaves cleanly inside flexible grid panels */
+.form-action-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.error-rescue-route {
+    cursor: pointer;
+}
+
 </style>
 
 <script>
@@ -1355,6 +1617,94 @@
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const intakeForm = document.getElementById('aboutIntakeForm');
+    const nameInput = document.getElementById('intakeName');
+    const emailInput = document.getElementById('intakeEmail');
+    const messageInput = document.getElementById('intakeMessage');
+    const feedbackLine = document.getElementById('intakeFeedback');
+    
+    const transmitBtn = document.getElementById('btnTransmitIntel');
+    const abortBtn = document.getElementById('btnAbortLoop');
+
+    // 1. Core Field Verification Check Routing Loop Strategy
+    const executeFieldValidationCheck = () => {
+        const nameValue = nameInput.value.trim();
+        const emailValue = emailInput.value.trim();
+        const messageValue = messageInput.value.trim();
+
+        // Strict Empty Verification parameter bounds check
+        if (!nameValue || !emailValue || !messageValue) {
+            feedbackLine.textContent = "Please fill all the fields.";
+            feedbackLine.className = "intake-feedback-line validation-error-alert";
+            
+            // Highlights input nodes for the operator interface manually
+            if (!nameValue) nameInput.focus();
+            else if (!emailValue) emailInput.focus();
+            else if (!messageValue) messageInput.focus();
+            
+            return false; // Blocks transition pipeline parameters
+        }
+
+        // Basic Syntax Validation Rule constraint evaluation
+        if (!emailValue.includes('@') || !emailValue.includes('.')) {
+            feedbackLine.textContent = "Please enter a valid email format layout.";
+            feedbackLine.className = "intake-feedback-line validation-error-alert";
+            emailInput.focus();
+            return false;
+        }
+
+        return true; // Clearance criteria met successfully
+    };
+
+    // 2. Click Handler tracking for Button 1 (Transmit Intel)
+    if (intakeForm) {
+        intakeForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Intercept raw browser document loading loops
+
+            if (executeFieldValidationCheck()) {
+                feedbackLine.textContent = "Clearance verified. Synchronizing node dispatches...";
+                feedbackLine.className = "intake-feedback-line validation-success-alert";
+                
+                // Cache user credentials into dynamic persistent memory strings
+                localStorage.setItem("userEmailAddress", emailInput.value.trim());
+
+                // Launch redirection path straight into your 404 layout terminal area
+                window.location.href = '404.html';
+            }
+        });
+    }
+
+    // 3. Click Handler tracking for Button 2 (Abort Loop)
+    if (abortBtn) {
+        abortBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Enforces the exact same structural data completion validation checklist parameters
+            if (executeFieldValidationCheck()) {
+                feedbackLine.textContent = "Loop aborted safely. Accessing error camp grids...";
+                feedbackLine.className = "intake-feedback-line validation-success-alert";
+                
+                // Redirect user to your 404 disconnect page upon successful validation
+                window.location.href = '404.html';
+            }
+        });
+    }
+
+    // Micro-Interaction Matrix Layer: Wipes error text arrays instantly as typing begins
+    const resetFeedbackState = () => {
+        if (feedbackLine) {
+            feedbackLine.textContent = "";
+            feedbackLine.className = "intake-feedback-line";
+        }
+    };
+
+    [nameInput, emailInput, messageInput].forEach(inputNode => {
+        if (inputNode) inputNode.addEventListener('input', resetFeedbackState);
+    });
+});
+
 
 </script>
 
@@ -2842,6 +3192,34 @@
     .legal-sub-menus { justify-content: center; gap: 16px; }
 }
 
+/* --- FOOTER NEWSLETTER METRIC ALERTS --- */
+.newsletter-feedback-line {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    min-height: 18px; /* Reserves layout dimension box arrays to prevent layout stutter shifts */
+    transition: color 0.3s ease;
+}
+
+/* Red dynamic typography warnings clash when input constraints break */
+.error-alert-text {
+    color: #ef5350 !important;
+    text-shadow: 0 0 10px rgba(239, 83, 80, 0.15);
+}
+
+/* Green dynamic message when transition triggers clear validation blocks */
+.success-alert-text {
+    color: #81c784 !important;
+    text-shadow: 0 0 10px rgba(129, 199, 132, 0.15);
+}
+
+/* Optional input group adjustment wrapper rule guarantees crisp sizing tracking */
+.newsletter-input-box {
+    position: relative;
+    width: 100%;
+}
+
 </style>
 
 <script>
@@ -2873,6 +3251,55 @@
     };
 
     window.addEventListener("scroll", monitorScrollPosition, { passive: true });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const newsletterForm = document.getElementById('footerNewsletterForm');
+    const emailInput = document.getElementById('newsletterEmail');
+    const feedbackLine = document.getElementById('newsletterFeedback');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Stop default browser page reloads
+
+            const emailValue = emailInput.value.trim();
+
+            // 1. Strict Empty Field Check Loop
+            if (!emailValue) {
+                feedbackLine.textContent = "Please fill the field.";
+                feedbackLine.className = "newsletter-feedback-line error-alert-text";
+                emailInput.focus();
+                return;
+            }
+
+            // 2. Syntax Evaluation Check: Validates formatting parameters (e.g., matching text@domain.com)
+            const emailLayoutRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailLayoutRegex.test(emailValue)) {
+                feedbackLine.textContent = "Please enter a valid email format.";
+                feedbackLine.className = "newsletter-feedback-line error-alert-text";
+                emailInput.focus();
+                return;
+            }
+
+            // 3. Clear Warning States & Save Input Credentials to memory structures
+            feedbackLine.textContent = "Accessing secure link pipelines...";
+            feedbackLine.className = "newsletter-feedback-line success-alert-text";
+            
+            // Saves email token cleanly inside browser storage cache arrays
+            localStorage.setItem("userEmailAddress", emailValue);
+
+            // 4. Redirection execution pipeline routes directly onto your custom 404 template layout
+            window.location.href = '404.html';
+        });
+
+        // Micro-Interaction: Clears input verification warning alerts instantly when the user starts typing again
+        if (emailInput) {
+            emailInput.addEventListener('input', () => {
+                feedbackLine.textContent = "";
+                feedbackLine.className = "newsletter-feedback-line";
+            });
+        }
+    }
 });
 
 </script>

@@ -3371,6 +3371,34 @@
     .legal-sub-menus { justify-content: center; gap: 16px; }
 }
 
+/* --- FOOTER NEWSLETTER METRIC ALERTS --- */
+.newsletter-feedback-line {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    min-height: 18px; /* Reserves layout dimension box arrays to prevent layout stutter shifts */
+    transition: color 0.3s ease;
+}
+
+/* Red dynamic typography warnings clash when input constraints break */
+.error-alert-text {
+    color: #ef5350 !important;
+    text-shadow: 0 0 10px rgba(239, 83, 80, 0.15);
+}
+
+/* Green dynamic message when transition triggers clear validation blocks */
+.success-alert-text {
+    color: #81c784 !important;
+    text-shadow: 0 0 10px rgba(129, 199, 132, 0.15);
+}
+
+/* Optional input group adjustment wrapper rule guarantees crisp sizing tracking */
+.newsletter-input-box {
+    position: relative;
+    width: 100%;
+}
+
 </style>
 
 <script>
@@ -3403,6 +3431,56 @@
 
     window.addEventListener("scroll", monitorScrollPosition, { passive: true });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const newsletterForm = document.getElementById('footerNewsletterForm');
+    const emailInput = document.getElementById('newsletterEmail');
+    const feedbackLine = document.getElementById('newsletterFeedback');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Stop default browser page reloads
+
+            const emailValue = emailInput.value.trim();
+
+            // 1. Strict Empty Field Check Loop
+            if (!emailValue) {
+                feedbackLine.textContent = "Please fill the field.";
+                feedbackLine.className = "newsletter-feedback-line error-alert-text";
+                emailInput.focus();
+                return;
+            }
+
+            // 2. Syntax Evaluation Check: Validates formatting parameters (e.g., matching text@domain.com)
+            const emailLayoutRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailLayoutRegex.test(emailValue)) {
+                feedbackLine.textContent = "Please enter a valid email format.";
+                feedbackLine.className = "newsletter-feedback-line error-alert-text";
+                emailInput.focus();
+                return;
+            }
+
+            // 3. Clear Warning States & Save Input Credentials to memory structures
+            feedbackLine.textContent = "Accessing secure link pipelines...";
+            feedbackLine.className = "newsletter-feedback-line success-alert-text";
+            
+            // Saves email token cleanly inside browser storage cache arrays
+            localStorage.setItem("userEmailAddress", emailValue);
+
+            // 4. Redirection execution pipeline routes directly onto your custom 404 template layout
+            window.location.href = '404.html';
+        });
+
+        // Micro-Interaction: Clears input verification warning alerts instantly when the user starts typing again
+        if (emailInput) {
+            emailInput.addEventListener('input', () => {
+                feedbackLine.textContent = "";
+                feedbackLine.className = "newsletter-feedback-line";
+            });
+        }
+    }
+});
+
 
 </script>
 </body>
