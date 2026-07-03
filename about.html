@@ -1357,4 +1357,1523 @@
 });
 
 </script>
+
+<!-- SEO-Optimized About Section with Inline SVG Vectors -->
+<section class="creative-about-section" aria-labelledby="about-heading">
+    
+    <!-- Background Infrastructure using semantic img tag -->
+    <figure class="about-bg-wrapper">
+        <img src="https://unsplash.com" 
+             alt="Diverse children smiling together, representing global community unity" 
+             loading="lazy" 
+             class="about-bg-image">
+        <div class="about-bg-overlay"></div>
+    </figure>
+
+    <!-- Ambient Decorative Elements for Modern Visual Depth -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <div class="about-inner-container">
+        
+        <!-- Left Side: Interactive Vision Statement -->
+        <article class="about-story-block">
+            <span class="about-badge">OUR GENESIS</span>
+            <h2 id="about-heading" class="about-main-title">
+                Architecting Hope Through <br><span class="glow-text">Collective Impact.</span>
+            </h2>
+            <p class="about-description">
+                We believe that transformation doesn't happen in isolation. By establishing decentralized resource routing frameworks, our global collective delivers clean infrastructure, foundational education, and rapid-response medical aid directly to marginalized coordinates.
+            </p>
+            <p class="about-description">
+                Every initiative is engineered for absolute transparent delivery, ensuring your baseline metrics convert directly into generational self-sustainability.
+            </p>
+            
+            <div class="action-wrapper">
+                <a href="#manifesto" class="creative-btn">
+                    <span>EXPLORE OUR MANIFESTO</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </article>
+
+        <!-- Right Side: Glowing Framework Metric Matrix Cards -->
+        <div class="about-matrix-grid">
+            
+            <!-- Card 1: Eco Restoration -->
+            <div class="matrix-card" tabindex="0">
+                <div class="card-glow-layer"></div>
+                <div class="card-icon-sphere">
+                    <!-- Leaf Vector Icon -->
+                    <svg class="vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.58 1 9.2a7 7 0 0 1-14 2.8z"></path>
+                        <path d="M19 2L9.8 11.2"></path>
+                    </svg>
+                </div>
+                <h3 class="matrix-title">Eco Restoration</h3>
+                <p class="matrix-text">Deploying localized green energy matrices and structural agriculture tools to drying microclimates.</p>
+            </div>
+
+            <!-- Card 2: Open Education -->
+            <div class="matrix-card" tabindex="0">
+                <div class="card-glow-layer"></div>
+                <div class="card-icon-sphere">
+                    <!-- Book Vector Icon -->
+                    <svg class="vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+                <h3 class="matrix-title">Open Education</h3>
+                <p class="matrix-text">Provisioning decentralized cloud learning platforms to isolated youth networks lacking core systems.</p>
+            </div>
+
+            <!-- Card 3: Crisis Guard -->
+            <div class="matrix-card" tabindex="0">
+                <div class="card-glow-layer"></div>
+                <div class="card-icon-sphere">
+                    <!-- Shield/Heart Vector Icon -->
+                    <svg class="vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3 class="matrix-title">Crisis Guard</h3>
+                <p class="matrix-text">Real-time emergency operational logistical deployment channels routing vital elements to hot zones.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- CREATIVE ABOUT SECTION GLOW & MATRIX STYLES --- */
+:root {
+    --ngo-primary-glow: #2e7d32;
+    --ngo-secondary-glow: #81c784;
+    --dark-matte: #070a0e;
+    --glass-card: rgba(14, 20, 28, 0.55);
+    --glass-border: rgba(46, 125, 50, 0.15);
+    --text-white: #f8fafc;
+    --text-slate: #94a3b8;
+}
+
+.creative-about-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px max(20px, 6vw);
+    background-color: var(--dark-matte);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* 1. Background Image and Overlay Architecture */
+.about-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.about-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+    filter: grayscale(40%) contrast(110%);
+    animation: slowBackgroundPan 40s infinite alternate ease-in-out;
+}
+
+.about-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(7, 10, 14, 0.98) 35%, 
+        rgba(11, 25, 15, 0.88) 75%,
+        rgba(7, 10, 14, 0.95) 100%
+    );
+}
+
+/* 2. Floating Ambient Glow Orbs */
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 2;
+    opacity: 0.25;
+    pointer-events: none;
+    animation: orbFloat 20s infinite alternate ease-in-out;
+}
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--ngo-primary-glow);
+    top: -5%;
+    left: 10%;
+}
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: #1b5e20;
+    bottom: -10%;
+    right: 5%;
+    animation-delay: -5s;
+}
+
+/* 3. Main Grid Container Layout */
+.about-inner-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Content Styles */
+.about-story-block {
+    text-align: left;
+}
+
+.about-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--ngo-secondary-glow);
+    border: 1px solid var(--glass-border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(46, 125, 50, 0.08);
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(46, 125, 50, 0.05);
+}
+
+.about-main-title {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+/* High Creativity Kinetic Text Glow Effect */
+.glow-text {
+    background: linear-gradient(to right, #ffffff, var(--ngo-secondary-glow), #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 6s linear infinite;
+    text-shadow: 0 0 30px rgba(129, 199, 132, 0.15);
+}
+
+.about-description {
+    font-size: 1.05rem;
+    color: var(--text-slate);
+    line-height: 1.65;
+    margin-bottom: 20px;
+    max-width: 580px;
+}
+
+/* Creative Interactive Action Button */
+.creative-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-white);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 16px 32px;
+    border-radius: 30px;
+    border: 1px solid var(--ngo-secondary-glow);
+    background: rgba(46, 125, 50, 0.05);
+    margin-top: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.creative-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--ngo-primary-glow);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+}
+
+.creative-btn:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 25px rgba(129, 199, 132, 0.3);
+    transform: translateY(-2px);
+}
+
+.creative-btn:hover::before {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+}
+
+.btn-arrow {
+    margin-left: 10px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.creative-btn:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* 4. Right Side Card Matrix Layout with Glow Effects */
+.about-matrix-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.matrix-card {
+    position: relative;
+    background: var(--glass-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 30px;
+    overflow: hidden;
+    outline: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* Glow trail backdrop overlay logic */
+.card-glow-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(129, 199, 132, 0.12) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.matrix-card:hover .card-glow-layer,
+.matrix-card:focus .card-glow-layer {
+    opacity: 1;
+}
+
+.matrix-card:hover, .matrix-card:focus {
+    transform: translateX(10px) translateY(-2px);
+    border-color: rgba(129, 199, 132, 0.4);
+    box-shadow: -5px 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(46, 125, 50, 0.1);
+}
+
+/* Vector Icon Container Settings */
+.card-icon-sphere {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 2;
+    color: var(--text-slate);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.vector-icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* Changes vector colors elegantly based on the container hover states */
+.matrix-card:hover .card-icon-sphere,
+.matrix-card:focus .card-icon-sphere {
+    color: var(--ngo-secondary-glow);
+    background-color: rgba(46, 125, 50, 0.1);
+    border-color: rgba(129, 199, 132, 0.3);
+}
+
+.matrix-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    letter-spacing: -0.2px;
+}
+
+.matrix-text {
+    font-size: 0.92rem;
+    color: var(--text-slate);
+    line-height: 1.55;
+    position: relative;
+    z-index: 2;
+}
+
+/* 5. Fluid Responsive System Keyframe Animations */
+@keyframes slowBackgroundPan {
+    0% { transform: scale(1.05) translate(0px, 0px); }
+    100% { transform: scale(1.12) translate(-20px, -10px); }
+}
+
+@keyframes orbFloat {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    100% { transform: translate(40px, 30px) rotate(45deg); }
+}
+
+@keyframes textShine {
+    to { background-position: 200% center; }
+}
+
+/* Responsive Adaptive Interface Rules */
+@media (max-width: 992px) {
+    .about-inner-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .creative-about-section {
+        padding: 80px 24px;
+    }
+    .matrix-card:hover, .matrix-card:focus {
+        transform: translateY(-5px); 
+    }
+}
+
+@media (max-width: 576px) {
+    .creative-about-section {
+        padding: 60px 16px;
+    }
+    .about-main-title {
+        font-size: 2rem;
+    }
+    .matrix-card {
+        padding: 24px;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const matrixCards = document.querySelectorAll('.matrix-card');
+
+    matrixCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+            card.style.setProperty('--mouse-x', `${x}%`);
+            card.style.setProperty('--mouse-y', `${y}%`);
+        });
+    });
+});
+
+</script>
+
+<!-- SEO-Groundbound High Creativity Engagement Ecosystem -->
+<section class="welfare-activation-section" aria-label="Volunteer and Partner Opportunities">
+    
+    <!-- Vector Canvas Layer holding native image and layout overlays -->
+    <figure class="activation-canvas">
+        <img src="./Assests/hero- bg.webp" 
+             alt="Community advocates organizing sustainable logistics in a local neighborhood center" 
+             loading="lazy" 
+             class="canvas-img">
+        <div class="canvas-tint-matrix"></div>
+    </figure>
+
+    <!-- Moving Organic Cosmic Mesh -->
+    <div class="energy-vortex vortex-alpha"></div>
+    <div class="energy-vortex vortex-beta"></div>
+
+    <div class="activation-fluid-frame">
+        
+        <!-- Left Wing: Split Focal Interactive Card -->
+        <article class="split-focal-card" tabindex="0">
+            <div class="kinetic-edge-glow"></div>
+            
+            
+                <span class="context-pill">FIELD OPERATIONS</span>
+                <h2>Become The <br><span class="kinetic-shine-text">Catalyst For Shift.</span></h2>
+            </header>
+
+            <p class="focal-body-text">
+                Your presence on our delivery channels isn't transactional—it is foundational. By joining our rapid network deployment cells, you transform raw resources directly into localized empowerment pipelines.
+            </p>
+
+            <div class="interactive-control-block">
+                <a href="#apply" class="premium-activation-anchor">
+                    <span class="anchor-surface-text">LAUNCH AGENT PROFILE</span>
+                    <div class="anchor-glow-flare"></div>
+                    <svg class="anchor-vector-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <!-- Right Wing: Linear Structural Progression Mesh -->
+        <aside class="progression-mesh">
+            
+            <!-- Step Element 01 -->
+            <div class="mesh-node" tabindex="0">
+                <div class="node-beam-glow"></div>
+                <div class="node-vector-frame">
+                    <svg class="node-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <div class="node-copy-tier">
+                    <h3>01 / Real-Time Zero Delay Mapping</h3>
+                    <p>We trace supply vectors instantly across active regions, keeping deployment completely transparent and error-free.</p>
+                </div>
+            </div>
+
+            <!-- Step Element 02 -->
+            <div class="mesh-node" tabindex="0">
+                <div class="node-beam-glow"></div>
+                <div class="node-vector-frame">
+                    <svg class="node-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <div class="node-copy-tier">
+                    <h3>02 / Decentralized Group Assemblies</h3>
+                    <p>Local teams operate with independent autonomy, allowing for swift micro-calibrations tailored to cultural environments.</p>
+                </div>
+            </div>
+
+            <!-- Step Element 03 -->
+            <div class="mesh-node" tabindex="0">
+                <div class="node-beam-glow"></div>
+                <div class="node-vector-frame">
+                    <svg class="node-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <div class="node-copy-tier">
+                    <h3>03 / Closed-Loop Resource Security</h3>
+                    <p>Every donation converts entirely into infrastructure assets, audited publicly via programmatic ledger records.</p>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+</section>
+
+<style>
+    /* --- WELFARE ACTIVATION ECOSYSTEM INTERACTION MECHANICS --- */
+:root {
+    --welfare-neon: #81c784;
+    --welfare-deep: #1b5e20;
+    --welfare-core: #2e7d32;
+    --void-shadow: #05070a;
+    --glint-plate: rgba(18, 26, 36, 0.65);
+    --glint-rim: rgba(129, 199, 132, 0.12);
+    --milk-tint: #f1f5f9;
+    --fog-tint: #64748b;
+}
+
+.welfare-activation-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px max(20px, 6vw);
+    background-color: var(--void-shadow);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* 1. Immersive Vector Graphic Image Mapping */
+.activation-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.canvas-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.02);
+    filter: saturate(30%) brightness(40%);
+    animation: cosmicPulse 25s infinite alternate ease-in-out;
+}
+
+.canvas-tint-matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(5, 7, 10, 0.99) 20%,
+        rgba(9, 24, 13, 0.9) 65%,
+        rgba(5, 7, 10, 0.97) 100%
+    );
+}
+
+/* 2. Magnetic Energy Fields */
+.energy-vortex {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(160px);
+    z-index: 2;
+    opacity: 0.18;
+    pointer-events: none;
+    animation: vortexWaltz 30s infinite alternate linear;
+}
+.vortex-alpha {
+    width: 600px;
+    height: 600px;
+    background: var(--welfare-core);
+    bottom: -15%;
+    left: -5%;
+}
+.vortex-beta {
+    width: 450px;
+    height: 450px;
+    background: var(--welfare-neon);
+    top: -10%;
+    right: 10%;
+    animation-delay: -7s;
+}
+
+/* 3. Grid Grid Layout */
+.activation-fluid-frame {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* 4. Left Focal Interactive Card Panel with Edge Glow Loop */
+.split-focal-card {
+    position: relative;
+    background: rgb(29, 70, 2);
+    border: 1px solid var(--glint-rim);
+    padding: 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+    outline: none;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.5s, box-shadow 0.5s;
+}
+
+/* Shifting kinetic background border loop imitation */
+.kinetic-edge-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent 40%, var(--glint-rim), var(--welfare-neon), transparent 60%);
+    animation: rotatingRay 12s linear infinite;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.split-focal-card::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: var(--glint-plate);
+    border-radius: 19px;
+    z-index: 2;
+}
+
+/* Raising internal content priorities above pseudo boundaries */
+.card-identity, .focal-body-text, .interactive-control-block {
+    position: relative;
+    z-index: 3;
+}
+
+.context-pill {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: rgb(250, 248, 248);
+    margin-bottom: 20px;
+}
+
+.split-focal-card h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+/* Shifting Text Glow */
+.kinetic-shine-text {
+    background: linear-gradient(90deg, #ffffff, var(--welfare-neon), #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientSweep 8s linear infinite;
+    color: white
+}
+
+.focal-body-text {
+    font-size: 1.05rem;
+    color:white;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* Premium Activation Button with Laser Flare Effect */
+.premium-activation-anchor {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--welfare-neon);
+    padding: 18px 36px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anchor-surface-text {
+    position: relative;
+    z-index: 2;
+}
+
+.anchor-glow-flare {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.anchor-vector-arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: 12px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Active Anchor Interactions */
+.premium-activation-anchor:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(129, 199, 132, 0.4);
+}
+
+.premium-activation-anchor:hover .anchor-glow-flare {
+    left: 200%;
+}
+
+.premium-activation-anchor:hover .anchor-vector-arrow {
+    transform: translateX(4px);
+}
+
+/* Card Hover Responses */
+.split-focal-card:hover, .split-focal-card:focus {
+    transform: translateY(-4px);
+    border-color: rgba(129, 199, 132, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(46, 125, 50, 0.15);
+}
+
+/* 5. Right Section: Linear Vertical Progression Grid Layout */
+.progression-mesh {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mesh-node {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    background: rgba(14, 20, 28, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 28px;
+    overflow: hidden;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+}
+
+/* Spotlight tracker background matrix layer */
+.node-beam-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--beam-x, 50%) var(--beam-y, 50%), rgba(129, 199, 132, 0.08) 0%, transparent 65%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.mesh-node:hover .node-beam-glow,
+.mesh-node:focus .node-beam-glow {
+    opacity: 1;
+}
+
+.mesh-node:hover, .mesh-node:focus {
+    transform: translateX(12px);
+    border-color: var(--glint-rim);
+    background: rgba(18, 26, 36, 0.5);
+}
+
+/* Vector Container Matrix Settings */
+.node-vector-frame {
+    width: 46px;
+    height: 46px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 22px;
+    flex-shrink: 0;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.node-vector {
+    width: 20px;
+    height: 20px;
+}
+
+.mesh-node:hover .node-vector-frame,
+.mesh-node:focus .node-vector-frame {
+    color: var(--welfare-neon);
+    background: rgba(46, 125, 50, 0.12);
+    border-color: rgba(129, 199, 132, 0.2);
+    box-shadow: 0 0 15px rgba(46, 125, 50, 0.1);
+}
+
+.node-copy-tier h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.1px;
+}
+
+.node-copy-tier p {
+    font-size: 0.92rem;
+    color: white;
+    line-height: 1.55;
+}
+
+/* 6. System Motion Components */
+@keyframes cosmicPulse {
+    0% { transform: scale(1.02) rotate(0deg); }
+    100% { transform: scale(1.08) rotate(1deg); }
+}
+
+@keyframes vortexWaltz {
+    0% { transform: translate(0px, 0px) scale(1); }
+    100% { transform: translate(30px, -40px) scale(1.1); }
+}
+
+@keyframes rotatingRay {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes gradientSweep {
+    to { background-position: 200% center; }
+}
+
+/* Clean Viewport Breakdowns */
+@media (max-width: 992px) {
+    .activation-fluid-frame {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .welfare-activation-section {
+        padding: 90px 24px;
+    }
+    .mesh-node:hover, .mesh-node:focus {
+        transform: translateY(-4px); /* Convert horizontal tracking into elegant vertical liftoff elements */
+    }
+}
+
+@media (max-width: 576px) {
+    .welfare-activation-section {
+        padding: 60px 16px;
+    }
+    .split-focal-card {
+        padding: 30px 20px;
+    }
+    .mesh-node {
+        padding: 22px;
+        flex-direction: column;
+    }
+    .node-vector-frame {
+        margin-bottom: 15px;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const progressiveNodes = document.querySelectorAll('.mesh-node');
+
+    progressiveNodes.forEach(node => {
+        node.addEventListener('mousemove', (e) => {
+            // Retrieve boundary properties for the container under focus
+            const propertiesBound = node.getBoundingClientRect();
+            
+            // Map percentage offsets
+            const computeX = ((e.clientX - propertiesBound.left) / propertiesBound.width) * 100;
+            const computeY = ((e.clientY - propertiesBound.top) / propertiesBound.height) * 100;
+
+            // Push relative positioning variables live into the node context
+            node.style.setProperty('--beam-x', `${computeX}%`);
+            node.style.setProperty('--beam-y', `${computeY}%`);
+        });
+    });
+});
+
+</script>
+
+<section class="stackly-cta-banner-bright" aria-label="Stackly Foundation Urgent Mobilization Call to Action">
+    
+    <!-- Background Cinematic Framing with Explicit Image Tag -->
+    <div class="banner-media-backdrop">
+        <!-- Bright, emotionally resonant community cooperation asset -->
+        <img src="./Assests/hand shake.webp" alt="Joyful humanitarian volunteers joining forces to stack layers of change" class="banner-asset-img">
+        <div class="banner-light-matte"></div>
+    </div>
+
+    <!-- Radiant Sunshine Flow Plates -->
+    <div class="banner-orb-glow-bright"></div>
+
+    <div class="banner-central-container">
+        <!-- Unified Single-Line Stacking Flex Layout Grid -->
+        <div class="banner-single-line-row">
+            
+            <!-- Continuous Text Group -->
+            <div class="banner-text-group">
+                <span class="banner-badge-dot"></span>
+                <h2 class="banner-heading-inline">
+                    Ready to stack change? <span class="glow-text-highlight">Join our global field expert network today.</span>
+                </h2>
+            </div>
+
+            <!-- Precision Trigger Button Cluster -->
+            <div class="banner-action-group">
+                <a href="404.html" class="btn-banner-solid-green" aria-label="Navigate to volunteer portal registration terminals">
+                    <span>Deploy With Us</span>
+                    <!-- Custom Vector Arrow Icon Only SVG -->
+                    <svg class="banner-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* CTA Banner Design Tokens Configuration - Bright Humanitarian Palette */
+:root {
+    --welfare-sky-start: #fff3e0;   /* Warm amber sunset/sunrise hue */
+    --welfare-sky-end: #e8f5e9;     /* Life-giving clean light emerald green */
+    --fixed-contrast-black: #111111; /* Enforced solid black text blocks for supreme visibility */
+    
+    --stackly-active-green: #2e7d32;
+    --stackly-hover-green: #1b5e20;
+    --stackly-neon-glow: #4caf50;
+    --pure-white-base: #ffffff;
+    --cubic-fluid: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* === Structural Frame & Tighter Padding Groundwork === */
+.btn-banner-solid-green, .btn-banner-solid-green * {
+    box-sizing: border-box;
+}
+
+.stackly-cta-banner-bright {
+    position: relative;
+    width: 100%;
+    /* Tight padding parameters explicitly compresses dead vertical spaces between blocks */
+    padding: 32px 8%; 
+    background: linear-gradient(90deg, var(--welfare-sky-start) 0%, var(--welfare-sky-end) 100%);
+    overflow: hidden;
+    z-index: 1;
+    border-top: 1px solid rgba(46, 125, 50, 0.1);
+    border-bottom: 1px solid rgba(46, 125, 50, 0.1);
+}
+
+/* Cinematic Background Adjustments */
+.banner-media-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.banner-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    /* Brightened image setup with soft visibility allowing details to pop cleanly */
+    filter: brightness(0.94) contrast(0.96) saturate(1.05);
+    mix-blend-mode: multiply; /* Elegantly blends graphics lines into sunrise gradients */
+    transform: scale(1.01);
+    transition: transform 1.2s var(--cubic-fluid);
+}
+
+.stackly-cta-banner-bright:hover .banner-asset-img {
+    transform: scale(1.03);
+}
+
+.banner-light-matte {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, transparent 100%);
+}
+
+/* Ambient Radial Backplate Glow */
+.banner-orb-glow-bright {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(165,214,167,0.4) 0%, transparent 75%);
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+    filter: blur(60px);
+}
+
+/* === Core Content Presentation Container === */
+.banner-central-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+/* Single-Line Flex Row Matrix Mapping */
+.banner-single-line-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: nowrap; /* Forces layout to remain strictly inside a single line format */
+    opacity: 0;
+    transform: translateY(15px);
+    animation: entranceReveal 0.7s var(--cubic-fluid) forwards;
+}
+
+/* Left Column Content Elements Group */
+.banner-text-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.banner-badge-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--stackly-active-green);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.4);
+    flex-shrink: 0;
+    animation: broadcastPulse 2s infinite ease-in-out;
+}
+
+.banner-heading-inline {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--fixed-contrast-black); /* Locked Solid Black Visibility */
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+}
+
+/* Custom Typography Text Hover Glow Matrix */
+.glow-text-highlight {
+    color: white; /* Clear deep charcoal contrast fallback */
+    transition: all 0.4s var(--cubic-fluid);
+    display: inline-block;
+}
+
+.stackly-cta-banner-bright:hover .glow-text-highlight {
+    color: var(--stackly-active-green);
+    text-shadow: 0 0 20px rgba(46, 125, 50, 0.25);
+    transform: translateX(2px);
+}
+
+/* Right Column Execution Button Group */
+.banner-action-group {
+    flex-shrink: 0;
+}
+
+.btn-banner-solid-green {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    text-decoration: none;
+    color: var(--pure-white-base);
+    background-color: var(--stackly-active-green);
+    border: 1px solid var(--stackly-active-green);
+    padding: 14px 34px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.22);
+    transition: all 0.4s var(--cubic-fluid);
+    white-space: nowrap;
+}
+
+.banner-arrow-svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.btn-banner-solid-green:hover {
+    background-color: var(--stackly-hover-green);
+    border-color: var(--stackly-hover-green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.35);
+}
+
+.btn-banner-solid-green:hover .banner-arrow-svg {
+    transform: translateX(6px);
+}
+
+/* === System Keyframes Timelines === */
+@keyframes entranceReveal {
+    to { transform: translateY(0); opacity: 1; }
+}
+@keyframes broadcastPulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.25); opacity: 1; }
+}
+
+/* === Strict Device Sizing Responsiveness === */
+@media (max-width: 992px) {
+    .banner-heading-inline { font-size: 1.35rem; }
+}
+
+@media (max-width: 768px) {
+    .stackly-cta-banner-bright {
+        padding: 35px 6%; /* Dynamic touch margin compression formatting for mobile screens */
+    }
+
+    /* Breaks single-line layout formatting smoothly into vertical centered rows on tiny mobile displays */
+    .banner-single-line-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .banner-text-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner-heading-inline { font-size: 1.2rem; }
+    .banner-action-group { width: 100%; }
+    .btn-banner-solid-green { width: 100%; justify-content: center; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    const ctaBannerRow = document.querySelector(".banner-single-line-row");
+    
+    const bannerObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Injects animation trigger hook rules parameters properties back into DOM node arrays
+                ctaBannerRow.style.animationPlayState = "running";
+                observer.unobserve(entry.target); // Exits task thread loop safely
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Lock baseline initial state matrix properties to pause timeline before inview triggers
+    if (ctaBannerRow) {
+        ctaBannerRow.style.animationPlayState = "paused";
+        bannerObserver.observe(ctaBannerRow);
+    }
+});
+
+</script>
+
+<footer class="cyber-master-footer">
+    
+    <!-- Background Narrative Media Layer with Explicit Image Tag -->
+
+
+    <!-- Radiant Ambient Light Accumulators -->
+    <div class="footer-orb-glow glow-emerald"></div>
+    <div class="footer-orb-glow glow-amber"></div>
+
+    <div class="footer-layout-wrapper">
+        
+        <!-- Grid Multi-Column Chassis Splitting (Forces 4 Columns Layout side-by-side on desktop) -->
+        <div class="footer-columns-matrix">
+            
+            <!-- Column 1: Brand Node Description & Social Channels -->
+            <div class="footer-column brand-summary-node">
+                
+                <!-- FIXED: Pointed href back to the #home section ID to lock your smooth scroll view resets -->
+                <a href="#home" class="footer-brand-logo" id="footerLogoBtn" aria-label="VoltEdge Home Reset">
+                    <!-- FIXED: Integrated native img tag pointing to your exact physical directory asset file path -->
+                    <img src="./Assests/Social welfare - logo.webp" 
+                         alt="VoltEdge Official Luxury Emblem" 
+                         class="footer-logo-img-asset"
+                         onerror="this.style.display='none';">
+                   
+                </a>
+                
+                <p class="brand-pitch-text">
+                    Engineered for high-density social impact, transparent resource tracking, and 100% direct-to-field execution loops. Uplifting community foundations with permanent infrastructure.
+                </p>
+
+                <!-- Native SVG Social Media Icon Links -->
+                <div class="footer-social-deck">
+                    <!-- Twitter / X Icon Link -->
+                    <a href="404.html" class="social-flux-link" aria-label="X Channel">
+                        <svg class="social-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+                    </a>
+                    <!-- Facebook Icon Link -->
+                    <a href="404.html" class="social-flux-link" aria-label="Facebook Link">
+                        <svg class="social-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <!-- Instagram Icon Link -->
+                    <a href="404.html" class="social-flux-link" aria-label="Instagram Link">
+                        <svg class="social-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Active Quick Links Navigation Menu Menu Tree -->
+            <div class="footer-column links-directory-node">
+                <h4 class="column-heading">THE FLEET SQUAD</h4>
+                <ul class="directory-list-tree">
+                    <li><a href="index.html" class="directory-item-link">Home </a></li>
+                    <li><a href="#about" class="directory-item-link">About Us</a></li>
+                    <li><a href="#campaigns" class="directory-item-link">Campaigns</a></li>
+                    <li><a href="#blog" class="directory-item-link">Blogs</a></li>
+                    <li><a href="#contact" class="directory-item-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Active Dashboard Navigation Menu Menu Tree -->
+            <div class="footer-column links-directory-node">
+                <h4 class="column-heading">CORE COCKPIT</h4>
+             <ul class="directory-list-tree">
+    <!-- Links safely to your registration portal structure -->
+    <li><a href="signup.html" class="directory-item-link">Volunteer Registration</a></li>
+    <!-- Links safely to your login portal structure -->
+    <li><a href="login.html" class="directory-item-link">Field Expert Portal</a></li>
+    <!-- Jumps straight to your homepage contact node section -->
+    <li><a href="#contact" class="directory-item-link">Emergency Relief Desk</a></li>
+    <!-- Jumps straight to your homepage 404 rescue routing matrix section -->
+    <li><a href="#rescue-panel" class="directory-item-link">Resource Accountability</a></li>
+</ul>
+
+            </div>
+
+            <!-- Column 4: High-Contrast Newsletter Input Console -->
+            <div class="footer-column newsletter-console-node">
+                <h4 class="column-heading">NEWSLETTER</h4>
+                <p class="newsletter-pitch-text">Get priority notifications on active resource drops, field campaign deployment updates, and weekly community impact logs.</p>
+
+                <form id="footerNewsletterForm" class="footer-newsletter-form" novalidate>
+                    <div class="newsletter-input-box">
+                        <input type="email" id="newsletterEmail" placeholder="your@email.com" required autocomplete="off">
+                        <span class="box-glow-border"></span>
+                    </div>
+                    <button type="submit" class="newsletter-submit-btn">Subscribe</button>
+                </form>
+                <div id="newsletterFeedback" class="newsletter-feedback-line"></div>
+            </div>
+
+        </div>
+
+        <!-- Lower Baseline Row Zone Matrix links -->
+        <div class="footer-baseline-bar">
+            <div class="copyright-block">
+                <p>&copy; 2026 Stackly Welfare Foundations. Systems Nominal. All Rights Reserved.</p>
+            </div>
+            
+            <div class="legal-sub-menus">
+                <a href="404.html" class="legal-link">Privacy Policy</a>
+                <a href="404.html" class="legal-link">Terms of Service</a>
+                <a href="404.html" class="legal-link">Cookie Policy</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Floating Back to Top Anchor Action Trigger Button Node -->
+    <button class="floating-scroll-top-trigger" id="scrollTopBtn" aria-label="Scroll Back to Top Base">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
+</footer>
+
+<style>
+    /* Deep Velvet Theme Tokens Map - Sourced from Preloading Blueprint */
+:root {
+    --preloader-dark-bg: #0a0f0b; 
+    --font-pure-white: #ffffff;
+    --font-muted-white: #b0bec5;
+    
+    --stackly-welfare-green: #2e7d32;
+    --stackly-neon-glow: #4caf50;
+    --card-surface-charcoal: rgba(25, 35, 28, 0.45);
+    --card-border-subtle: rgba(255, 255, 255, 0.08);
+    --fluid-bezier: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* === Structural Frame & Layout Groundwork === */
+.cyber-master-footer {
+    position: relative;
+    width: 100%;
+    padding: 60px 8% 30px 8%; 
+    
+    /* FIX: Completely removed the green tint to align with the deep preloader canvas */
+    background: linear-gradient(90deg, 
+                    rgba(14, 31, 1, 0.98) 0%, 
+                    rgba(1, 37, 8, 0.9) 50%, 
+                    rgba(3, 72, 16, 0.4) 100%),
+                linear-gradient(0deg, 
+                    rgb(1, 24, 5) 0%, 
+                    transparent 30%);
+
+    overflow: hidden;
+    z-index: 1;
+    border-top: 1px solid var(--card-border-subtle);
+}
+
+.footer-media-backdrop { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.footer-asset-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.04; filter: saturate(0.2); }
+.footer-matte-mask { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, var(--preloader-dark-bg) 0%, transparent 50%, var(--preloader-dark-bg) 100%); }
+
+.footer-orb-glow { position: absolute; border-radius: 50%; z-index: 2; pointer-events: none; filter: blur(80px); opacity: 0.35; }
+.glow-emerald { width: 300px; height: 300px; background: radial-gradient(circle, rgba(165, 214, 167, 0.3) 0%, transparent 70%); top: -10%; left: 10%; }
+.glow-amber { width: 250px; height: 250px; background: radial-gradient(circle, rgba(255, 183, 77, 0.12) 0%, transparent 75%); bottom: -5%; right: 5%; }
+
+.footer-layout-wrapper { width: 100%; max-width: 1440px; margin: 0 auto; position: relative; z-index: 3; }
+
+/* === CRITICAL ALIGNMENT FIX: FORCES 4 COLUMNS SIDE-BY-SIDE ON DESKTOP VIEWS === */
+.footer-columns-matrix {
+    display: grid;
+    /* Grid setting forces all columns to align side-by-side on desktop layouts [INDEX] */
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-bottom: 18px; }
+.footer-logo-img-asset { width: 150px; height: 70px; object-fit: contain; }
+.footer-logo-text { font-size: 1.5rem; font-weight: 800; color: white; letter-spacing: -0.5px; }
+.brand-pitch-text { font-size: 0.95rem; line-height: 1.6; color: white; margin-bottom: 24px; max-width: 320px; }
+
+.footer-social-deck { display: flex; gap: 12px; }
+.social-flux-link { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255, 255, 255, 0.03); color: var(--font-pure-white); border: 1px solid var(--card-border-subtle); transition: var(--fluid-bezier) 0.3s; text-decoration: none; }
+.social-svg-icon { width: 18px; height: 18px; }
+.social-flux-link:hover { background-color: var(--stackly-active-green); border-color: var(--stackly-neon-glow); color:white; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3); }
+
+/* Navigation Sub-Menu Items Links Mapping */
+.column-heading { font-size: 0.85rem; font-weight: 800; color: white; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+.directory-list-tree { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.directory-item-link { text-decoration: none; font-size: 0.95rem; font-weight: 600; color: white; position: relative; padding: 2px 0; transition: color 0.3s ease; width: fit-content; }
+.directory-item-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--stackly-neon-glow); transition: var(--fluid-bezier) 0.3s; }
+.directory-item-link:hover { color: var(--stackly-neon-glow); }
+.directory-item-link:hover::after { width: 100%; }
+
+.newsletter-pitch-text { font-size: 0.95rem; line-height: 1.55; color: white; margin-bottom: 20px; }
+
+/* Newsletter Form Input console rounded specifications */
+.footer-newsletter-form { display: flex; flex-direction: column; width: 100%; gap: 12px; }
+.newsletter-input-box { position: relative; width: 100%; }
+.newsletter-input-box input { width: 100%; background-color: rgba(255, 255, 255, 0.03); border: 1px solid var(--card-border-subtle); padding: 14px 20px; border-radius: 8px; font-size: 0.9rem; color: white; outline: none; font-weight: 600; transition: border-color 0.3s; }
+.newsletter-input-box input:focus { border-color: var(--stackly-neon-glow); }
+
+.newsletter-submit-btn { display: inline-flex; align-items: center; justify-content: center; width: 100%; background-color: var(--stackly-active-green); border: 1px solid var(--stackly-active-green); padding: 14px; border-radius: 8px; color:white; font-size: 0.95rem; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(46, 125, 50, 0.25); transition: var(--fluid-bezier) 0.3s; }
+.newsletter-submit-btn:hover { background-color: var(--stackly-hover-green); border-color: var(--stackly-hover-green); box-shadow: 0 6px 20px rgba(76, 175, 80, 0.45); }
+.newsletter-feedback-line { font-size: 0.85rem; margin-top: 6px; font-weight: 600; }
+
+/* Footer Baselines Row Panels */
+.footer-baseline-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--card-border-subtle); padding-top: 25px; margin-top: 25px; }
+.copyright-block p { font-size: 0.85rem; font-weight: 600; color: white; }
+.legal-sub-menus { display: flex; gap: 24px; }
+.legal-link { text-decoration: none; font-size: 0.85rem; font-weight: 700; color:white; transition: color 0.3s ease; }
+.legal-link:hover { color: var(--stackly-neon-glow); }
+
+/* Floating Back-To-Top Circular Button Trigger Spec [INDEX] */
+.floating-scroll-top-trigger {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--card-surface-charcoal);
+    border: 1px solid var(--card-border-subtle);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s var(--fluid-bezier);
+}
+
+.floating-scroll-top-trigger.reveal-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.floating-scroll-top-trigger:hover {
+    background-color: var(--stackly-active-green);
+    border-color: var(--stackly-neon-glow);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* === SYSTEM RESPONSE RESPONSIVENESS MEDIA OVERLAYS === */
+@media (max-width: 1200px) {
+    .footer-columns-matrix { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+@media (max-width: 768px) {
+    .cyber-master-footer { padding: 45px 6% 25px 6%; }
+    /* Breaks cleanly into standalone stacking rows on small mobile displays [INDEX] */
+    .footer-columns-matrix { grid-template-columns: 1fr; gap: 30px; } 
+    .brand-pitch-text { max-width: 100%; }
+    .footer-column, .footer-newsletter-form { align-items: stretch; }
+    .footer-baseline-bar { flex-direction: column-reverse; text-align: center; align-items: center; }
+    .legal-sub-menus { justify-content: center; gap: 16px; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    const footerLogoBtn = document.getElementById("footerLogoBtn");
+
+    // 1. Scroll-Top Engine - Runs a smooth software tracking glide to baseline zero coordinates [INDEX]
+    const performSmoothScrollToTop = (event) => {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    };
+
+    if (scrollTopBtn) scrollTopBtn.addEventListener("click", performSmoothScrollToTop);
+    if (footerLogoBtn) footerLogoBtn.addEventListener("click", performSmoothScrollToTop);
+
+    // 2. Window Monitor - Fades circular tracking trigger icon once page bounds slide past 300px
+    const monitorScrollPosition = () => {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add("reveal-btn");
+        } else {
+            scrollTopBtn.classList.remove("reveal-btn");
+        }
+    };
+
+    window.addEventListener("scroll", monitorScrollPosition, { passive: true });
+});
+
+</script>
 </body>
